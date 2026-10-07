@@ -26,5 +26,4 @@ jobs:
       - run: uv run python calibration/scripts/fetch_corpus.py
       - run: uv run python calibration/scripts/measure.py --out calibration/cache/ci-measure
       - name: Compare reproduced corpus measurements
-        run: |
-          uv run python -c "import json; from pathlib import Path; assert json.loads(Path('calibration/data/measure.json').read_text()) == json.loads(Path('calibration/cache/ci-measure/measure.json').read_text())"
+        run: uv run python scripts/compare_measurements.py calibration/cache/ci-measure/measure.json

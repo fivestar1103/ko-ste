@@ -905,9 +905,9 @@
       },
       "imperative": {
         "n": 0,
-        "median": NaN,
-        "p75": NaN,
-        "p90": NaN,
+        "median": null,
+        "p75": null,
+        "p90": null,
         "over_14": null,
         "over_17": null,
         "clauses_ge2_pct": null
@@ -986,9 +986,9 @@
       },
       "imperative": {
         "n": 0,
-        "median": NaN,
-        "p75": NaN,
-        "p90": NaN,
+        "median": null,
+        "p75": null,
+        "p90": null,
         "over_14": null,
         "over_17": null,
         "clauses_ge2_pct": null
@@ -1073,9 +1073,9 @@
       },
       "imperative": {
         "n": 0,
-        "median": NaN,
-        "p75": NaN,
-        "p90": NaN,
+        "median": null,
+        "p75": null,
+        "p90": null,
         "over_14": null,
         "over_17": null,
         "clauses_ge2_pct": null
@@ -1424,10 +1424,10 @@
         "emoji": 0
       },
       "eojeol": {
-        "median": NaN,
-        "p75": NaN,
-        "p90": NaN,
-        "p95": NaN,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
         "mean": null,
         "over_14": null,
         "over_17": null,
@@ -1435,17 +1435,17 @@
       },
       "imperative": {
         "n": 0,
-        "median": NaN,
-        "p75": NaN,
-        "p90": NaN,
+        "median": null,
+        "p75": null,
+        "p90": null,
         "over_14": null,
         "over_17": null,
         "clauses_ge2_pct": null
       },
       "declarative": {
         "n": 0,
-        "median": NaN,
-        "p90": NaN,
+        "median": null,
+        "p90": null,
         "over_17": null,
         "over_25": null
       },
@@ -1454,8 +1454,8 @@
       "noun_run_ge4_pct": null,
       "noun_run_ge5_pct": null,
       "clauses": {
-        "median": NaN,
-        "p90": NaN,
+        "median": null,
+        "p90": null,
         "ge3_pct": null,
         "ge4_pct": null,
         "aux_share_of_ec_pct": 0.0

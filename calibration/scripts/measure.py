@@ -52,9 +52,9 @@ def line_signals(md: str, c: Counter) -> None:
                 c[k] += 1
 
 
-def pct(values: list[int], p: float) -> float:
+def pct(values: list[int], p: float) -> float | None:
     if not values:
-        return float("nan")
+        return None
     s = sorted(values)
     k = (len(s) - 1) * p
     f = int(k)
@@ -66,7 +66,12 @@ def docs_for_source(src: dict, cache: Path) -> list[tuple[str, str]]:
     root = cache / src["id"]
     files: list[Path] = []
     for pat in src["paths"]:
-        files.extend(sorted(root.glob(pat)))
+        # Path의 기본 정렬은 Windows와 POSIX에서 다르다. 고정 seed의
+        # 표본도 입력 순서에 의존하므로 기존 Windows 순서를 명시한다.
+        files.extend(sorted(root.glob(pat), key=lambda p: (
+            tuple(part.lower() for part in p.relative_to(root).parts),
+            p.relative_to(root).as_posix(),
+        )))
     out = []
     for f in dict.fromkeys(files):
         rel = f.relative_to(root).as_posix()
@@ -227,7 +232,7 @@ def main() -> None:
     }
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    (out / "measure.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out / "measure.json").write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
 
     # 규칙에 걸린 사람 글 문장 표본: 오탐 검토용 (원문이므로 cache에만)
     review = cache / "review"
