@@ -1,0 +1,263 @@
+{
+  "checked_on": "2026-10-08",
+  "scope": "Fixed source revisions and optional Kiwi 0.24.0; license identifiers describe observed notices, not clearance of every embedded third-party work.",
+  "sources": [
+    {
+      "id": "toss-tw",
+      "repository": "https://github.com/toss/technical-writing",
+      "ref": "68ba335cbe35c877775f092e98177b60da5f3d95",
+      "license_observed": "CC-BY-NC-SA-4.0",
+      "evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/toss/technical-writing/blob/68ba335cbe35c877775f092e98177b60da5f3d95/README.md",
+          "sha256": "12707b293e76498f4fa7c184663b10ad3500358665c753361adea683852d7e88"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "kiwipiepy",
+      "repository": "https://github.com/bab2min/kiwipiepy",
+      "ref": "aa5ce04bcb4c25903eaef70e67f34ff9f9556e9e",
+      "license_observed": "LGPL-2.1-or-later",
+      "evidence": [
+        {
+          "path": "LICENSE.txt",
+          "url": "https://github.com/bab2min/kiwipiepy/blob/aa5ce04bcb4c25903eaef70e67f34ff9f9556e9e/LICENSE.txt",
+          "sha256": "e4aac7916a568db1d99a1c04f9273e9810a0fbf70fc4204cd3d436348032d263"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "soynlp",
+      "repository": "https://github.com/lovit/soynlp",
+      "ref": "503eaee28799e9a3baf01483c6fc59e0db524fa3",
+      "license_observed": "LGPL-3.0",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/lovit/soynlp/blob/503eaee28799e9a3baf01483c6fc59e0db524fa3/LICENSE",
+          "sha256": "797f9a317fc280eb3308f57cc1a9c110041f9bf0770567e95cdac89f62135cfc"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "khaiii",
+      "repository": "https://github.com/kakao/khaiii",
+      "ref": "328d5a8af456a5941130383354c07d1cd0e47cf5",
+      "license_observed": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/kakao/khaiii/blob/328d5a8af456a5941130383354c07d1cd0e47cf5/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "NOTICE.md",
+          "url": "https://github.com/kakao/khaiii/blob/328d5a8af456a5941130383354c07d1cd0e47cf5/NOTICE.md",
+          "sha256": "fb7db9ff215f4c91b9623e8ca50346da5da548d3e88849f4931dc97af45c86eb"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "khaiii-wiki",
+      "repository": "https://github.com/kakao/khaiii/wiki",
+      "ref": "c3af1cbc441113b3e4c8cd00c3a0fd6018cecf61",
+      "license_observed": null,
+      "evidence": [],
+      "status": "no_root_license_notice",
+      "inspection": "Server git ls-tree at the fixed wiki commit contained no LICENSE/NOTICE file; a search of the cached Markdown found no license for the wiki text. Corpus redistribution restrictions discussed in some pages are not a license for the wiki itself."
+    },
+    {
+      "id": "kcbert",
+      "repository": "https://github.com/Beomi/KcBERT",
+      "ref": "0da95b2d052bd026994594bcdfcfa006636cc5b8",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/Beomi/KcBERT/blob/0da95b2d052bd026994594bcdfcfa006636cc5b8/LICENSE",
+          "sha256": "483b1c09ca4baf77cba585c9ecbf297eab33fe27f6e06e1e4025ec2389d9d766"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "koelectra",
+      "repository": "https://github.com/monologg/KoELECTRA",
+      "ref": "024fbdd600e653b6e4bdfc64ceec84181b5ce6c4",
+      "license_observed": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/monologg/KoELECTRA/blob/024fbdd600e653b6e4bdfc64ceec84181b5ce6c4/LICENSE",
+          "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "kochat",
+      "repository": "https://github.com/hyunwoongko/kochat",
+      "ref": "b23308bdac63e58c347906c3bd45d3c14302a6c4",
+      "license_observed": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/hyunwoongko/kochat/blob/b23308bdac63e58c347906c3bd45d3c14302a6c4/LICENSE",
+          "sha256": "4443b7d247abc53dd6ac6a184744d07e176202367a6b31e8498917215da3e329"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "pykospacing",
+      "repository": "https://github.com/haven-jeon/PyKoSpacing",
+      "ref": "e1979f7eeb4fcf1a456521152713482517fba627",
+      "license_observed": "GPL-3.0",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/haven-jeon/PyKoSpacing/blob/e1979f7eeb4fcf1a456521152713482517fba627/LICENSE",
+          "sha256": "c0fc51bccf7ffe80a80189ded9ba1da1d44c736f02b5d2c34bc0dd2d72e7b3bf"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "kogpt2",
+      "repository": "https://github.com/SKT-AI/KoGPT2",
+      "ref": "e2bba02ef26b04efa4ad0a3957fc494cfef072bb",
+      "license_observed": "CC-BY-NC-SA-4.0",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/SKT-AI/KoGPT2/blob/e2bba02ef26b04efa4ad0a3957fc494cfef072bb/LICENSE",
+          "sha256": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "fe-news",
+      "repository": "https://github.com/naver/fe-news",
+      "ref": "bc487aa1f30f1b8a057f52ce82093ffcb4bb09ec",
+      "license_observed": null,
+      "evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/naver/fe-news/blob/bc487aa1f30f1b8a057f52ce82093ffcb4bb09ec/README.md",
+          "sha256": "9dd29e64021b524091aa184f42ffc35a2ef5f79f1501a1c0531239cbfb750bb2"
+        }
+      ],
+      "status": "no_root_license_notice"
+    },
+    {
+      "id": "interview-beginner",
+      "repository": "https://github.com/JaeYeopHan/Interview_Question_for_Beginner",
+      "ref": "604853dd194c1ab66df0357c1fb0ed8af21e0d24",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/604853dd194c1ab66df0357c1fb0ed8af21e0d24/LICENSE",
+          "sha256": "5a4df3ad75adf1b81cdb7786654fe93266c5d3aa1486d34172c269cd059b7dd8"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "tech-interview",
+      "repository": "https://github.com/gyoogle/tech-interview-for-developer",
+      "ref": "5fbd70c7f515d94931af549691614b97696cba55",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/gyoogle/tech-interview-for-developer/blob/5fbd70c7f515d94931af549691614b97696cba55/LICENSE",
+          "sha256": "27dadc65a370cba26240ee7164b2dffab3b58be38fb7e69c02e9d229b2c6621e"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "frontend-fundamentals",
+      "repository": "https://github.com/toss/frontend-fundamentals",
+      "ref": "161d3d6a0d6d372eacd75036de567511643f6265",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://github.com/toss/frontend-fundamentals/blob/161d3d6a0d6d372eacd75036de567511643f6265/LICENSE.md",
+          "sha256": "e47a3407cba27b6b2269fe22e09517588f7b6948310e328294a55fd672de67f1"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "danyu",
+      "repository": "https://github.com/danyuchn/asd-ste100-skill",
+      "ref": "32511c6",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/danyuchn/asd-ste100-skill/blob/32511c6992ecb5f1971e46a2943f2e6adceedafe/LICENSE",
+          "sha256": "d3c674e8592076c9021a59b55177adbcba6fd7e1710082becb922522b22ec672"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "slop",
+      "repository": "https://github.com/beamonic/no-ai-slop-ko",
+      "ref": "e9e3371",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/beamonic/no-ai-slop-ko/blob/e9e337106d1227bd1cbf74cf0f429267366a9093/LICENSE",
+          "sha256": "32d5093edd16445eb4b707f846f3ecff0ed61b08ed5cbf92ecbd4d4d4675895e"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "kiwipiepy-runtime",
+      "repository": "https://github.com/bab2min/kiwipiepy",
+      "ref": "v0.24.0",
+      "license_observed": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "LICENSE.txt",
+          "url": "https://github.com/bab2min/kiwipiepy/blob/778d297003cf3c916f1418027b95b05c49775af6/LICENSE.txt",
+          "sha256": "cd5887085a1b1110bd7b57833c2d3cd1649f49cdcaee2f73f95cda4361cf65db"
+        },
+        {
+          "path": "NOTICE",
+          "url": "https://github.com/bab2min/kiwipiepy/blob/778d297003cf3c916f1418027b95b05c49775af6/NOTICE",
+          "sha256": "08684ab73d77ebd38f2a69eba29ec34784aaf0b23a3859485b6e01392207a234"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "jevgrep",
+      "repository": "https://github.com/dzhng/jevgrep",
+      "ref": "HEAD",
+      "license_observed": "MIT",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/dzhng/jevgrep/blob/703aba1a36a3b854be405244ea748f607cd630c0/LICENSE",
+          "sha256": "653bb41fb060605c0e01fd72e6e6be72bffef192e0ab6ae8b0cd4abf9ba8d040"
+        }
+      ],
+      "status": "verified"
+    }
+  ]
+}

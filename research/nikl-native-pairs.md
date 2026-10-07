@@ -1,5 +1,7 @@
 # 사람이 고친 전후 쌍
 
+> 국립국어원의 보기·권장 표현은 공공누리 제3유형을 따르며 MIT 자료가 아닙니다. [원문 이용 고지](NIKL-NOTICE.md)를 함께 보존하세요. 인용문을 다듬거나 변형하지 마세요.
+
 이 파일은 실제로 고치는 방식의 본보기다. 규칙을 설명하려고 LLM이 만든 예문은 [설명용 LLM 예문](https://github.com/fivestar1103/ko-ste/blob/main/skills/ko-ste/references/02-examples.md)에 따로 둔다.
 
 같은 유형의 문장을 고칠 때는 다음 순서로 참고한다.

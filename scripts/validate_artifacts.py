@@ -38,14 +38,28 @@ def main():
     for source in manifest["sources"]:
         assert lock[source["id"]]["repo"] == source["repo"]
         assert re.fullmatch(r"[0-9a-f]{40}", lock[source["id"]]["commit"])
+    provenance = json.loads((ROOT / "docs/license-sources.json").read_text(encoding="utf-8"))
+    sources = {s["id"]: s for s in provenance["sources"]}
+    for source_id, pinned in lock.items():
+        assert sources[source_id]["ref"] == pinned["commit"], f"Stale license record: {source_id}"
+    for source in sources.values():
+        for evidence in source["evidence"]:
+            assert re.fullmatch(r"[0-9a-f]{64}", evidence["sha256"]), source["id"]
+    for notice in ("LICENSE", "NOTICE.md", "UPSTREAM-LICENSES.md"):
+        assert (SKILL / notice).is_file(), f"Missing installed license notice: {notice}"
+    assert (SKILL / "LICENSE").read_bytes() == (ROOT / "LICENSE").read_bytes()
+    for relative in ("research/NIKL-NOTICE.md", "evals/NOTICE.md", "docs/license-review.md"):
+        assert (ROOT / relative).is_file(), f"Missing provenance notice: {relative}"
     for path in (ROOT / "calibration/data").glob("*.json"):
         json.loads(path.read_text(encoding="utf-8"))
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for relative in re.findall(r'(?:src|srcset)="(assets/[^"]+)"', readme):
+    images = re.findall(r'(?:src|srcset)="(assets/[^"]+)"', readme)
+    images += re.findall(r'!\[[^\]]*\]\((assets/[^)]+)\)', readme)
+    for relative in images:
         assert (ROOT / relative).is_file(), relative
     for graphic in (ROOT / "assets").glob("*.svg"):
         ET.fromstring(graphic.read_text(encoding="utf-8"))
-    print("Python syntax, skill/plugin manifests, reference files and corpus lock: OK")
+    print("Python syntax, skill/plugin manifests, notices, reference files and corpus/license locks: OK")
 
 
 if __name__ == "__main__":
