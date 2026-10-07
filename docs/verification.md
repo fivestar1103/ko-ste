@@ -9,11 +9,13 @@
 | pytest | 오류·미판정 집계, 출력 추출, 코드·경로·표지 대조, 측정 함수의 회귀 사례 |
 | 형식·출처 검사 | Python 구문, 스킬 참조, plugin 버전 일치, 말뭉치 lock |
 | 설치 | 공개 GitHub 저장소를 skills CLI 1.7.1로 받아 Claude Code·Codex에 실제 복사 설치 |
-| marketplace | Claude Code 2.1.292의 공식 `plugin validate`로 manifest 검사 |
+| marketplace | Claude Code 2.1.292로 manifest 검사 후 공개 GitHub marketplace 추가·플러그인 설치 |
 | 측정 재현 | 고정 말뭉치와 Kiwi 0.24.0으로 기존 집계 JSON과 일치 |
 | 동작 | 개발 사례, 별도 Codex 입력과 독립 판정. 실패와 불확실한 판정을 모두 보존 |
 
 CI는 모델을 호출하지 않는다. 공개 소스의 고정 커밋을 받아 설치·자동 검사·말뭉치 집계를 다시 확인한다.
+
+2026-10-07에 공개 커밋 [`62b0023`](https://github.com/fivestar1103/ko-ste/commit/62b0023adea9c02c827e7d1fed8a80ac32d4c11d)의 설치를 별도 테스트 디렉터리에서 확인했다. skills CLI와 marketplace로 설치한 `SKILL.md`의 SHA-256이 원본과 같았다. [Linux CI](https://github.com/fivestar1103/ko-ste/actions/runs/37639856405)에서는 31개 테스트와 고정 집계의 전체 값 대조를 통과했다.
 
 ## 로컬 검사
 
