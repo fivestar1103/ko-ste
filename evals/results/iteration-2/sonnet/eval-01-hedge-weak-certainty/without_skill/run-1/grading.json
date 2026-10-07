@@ -1,0 +1,28 @@
+{
+  "expectations": [
+    {
+      "text": "결과가 원인을 추정으로 남긴다(가능성/수 있/보입니다/것 같 중 하나 포함)",
+      "id": "keeps_hedge",
+      "passed": true,
+      "evidence": "수 있"
+    },
+    {
+      "text": "결과가 '아직 확인 중'의 뜻을 유지한다",
+      "id": "keeps_pending",
+      "passed": true,
+      "evidence": "확인 중"
+    },
+    {
+      "text": "결과에 '고갈 때문에 발생했습니다'처럼 원인을 단정하는 문장이 없다",
+      "id": "no_assertion",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "'DB 커넥션 풀'을 유지한다",
+      "id": "keeps_term",
+      "passed": true,
+      "evidence": "DB 커넥션 풀"
+    }
+  ]
+}

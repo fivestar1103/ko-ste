@@ -1,0 +1,54 @@
+1 without_skill done 5.6 
+1 with_skill done 7.7 
+2 with_skill done 12.0 
+2 without_skill done 9.4 
+3 without_skill done 4.0 
+3 with_skill done 11.0 
+4 with_skill done 9.6 
+4 without_skill done 9.2 
+5 without_skill done 6.8 
+6 with_skill done 8.7 
+6 without_skill done 8.0 
+7 with_skill done 5.9 
+5 with_skill done 21.1 
+7 without_skill done 5.9 
+8 without_skill done 11.0 
+8 with_skill done 12.0 
+9 with_skill done 10.2 
+9 without_skill done 8.0 
+10 without_skill done 4.0 
+10 with_skill done 8.2 
+11 without_skill done 6.2 
+11 with_skill done 7.6 
+12 with_skill done 11.6 
+12 without_skill done 7.4 
+14 with_skill done 8.2 
+13 without_skill done 11.1 
+13 with_skill done 18.0 
+15 with_skill done 10.0 
+15 without_skill done 10.8 
+14 without_skill done 14.9 
+16 without_skill done 3.9 
+16 with_skill done 7.0 
+17 with_skill done 10.0 
+17 without_skill done 8.6 
+| eval | with_skill | without_skill |
+|---|---|---|
+| hedge-weak-certainty | 4/4 | 4/4 |
+| conditions-numbers-strict | 8/8 | 8/8 |
+| subject-change | 3/3 | 2/3 |
+| negation-scope | 1/1 | 1/1 |
+| can-ambiguity-strict | 2/2 | 1/2 |
+| calque-vs-normal-terms | 4/5 | 3/5 |
+| already-natural | 2/2 | 2/2 |
+| pr-80-mode | 3/3 | 3/3 |
+| pr-strict-mode | 4/4 | 4/4 |
+| translate-en-ko | 3/3 | 3/3 |
+| code-and-paths | 5/5 | 5/5 |
+| nikl-ambiguous-host | 0/1 | 0/1 |
+| write-answer | 2/2 | 1/2 |
+| error-message-already-good-strict | 2/2 | 0/2 |
+| weekly-report-fragments-80 | 5/5 | 5/5 |
+| banmal-style-preserve | 2/3 | 2/3 |
+| procedure-steps-strict | 3/3 | 2/3 |
+| 합계 | 53/56 | 46/56 |

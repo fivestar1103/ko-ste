@@ -1,0 +1,9 @@
+{
+  "name": "ko-ste",
+  "version": "0.1.0",
+  "description": "Korean plain-language writing with preserved meaning, conditions and modality.",
+  "author": {"name": "Hwany", "url": "https://github.com/fivestar1103"},
+  "repository": "https://github.com/fivestar1103/ko-ste",
+  "homepage": "https://github.com/fivestar1103/ko-ste",
+  "license": "MIT"
+}

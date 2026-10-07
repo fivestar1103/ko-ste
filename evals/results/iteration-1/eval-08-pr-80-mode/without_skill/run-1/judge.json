@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [
+    "'이를 통해'가 빠지면서 캐싱 추가가 응답 시간 감소의 원인이라는 인과 관계가 명시되지 않고 문장 배열로만 암시됨"
+  ],
+  "certainty_changed": [],
+  "obligation_changed": [],
+  "silent_pick": false,
+  "notes_quality": "noise"
+}

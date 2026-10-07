@@ -1,0 +1,12 @@
+{
+  "added": [],
+  "dropped": [
+    "원문 '할 수 있습니다'에 담긴 재량의 의미, 곧 재시작 여부를 담당자가 판단한다는 뜻이 본문에서 사라졌습니다."
+  ],
+  "certainty_changed": [],
+  "obligation_changed": [
+    "'재시작할 수 있습니다'(허용/능력)가 '재시작하십시오'(명령/의무)로 바뀌었습니다."
+  ],
+  "silent_pick": false,
+  "notes_quality": "useful"
+}

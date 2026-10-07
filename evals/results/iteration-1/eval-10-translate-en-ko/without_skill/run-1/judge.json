@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [],
+  "certainty_changed": [],
+  "obligation_changed": [
+    "'You should back up'(권고)이 '백업하세요'(직접 지시)로 바뀌어 권고가 지시로 강해짐"
+  ],
+  "silent_pick": false,
+  "notes_quality": "noise"
+}

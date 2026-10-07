@@ -1,0 +1,28 @@
+{
+  "expectations": [
+    {
+      "text": "'약' 유지",
+      "id": "approx",
+      "passed": true,
+      "evidence": "약 120"
+    },
+    {
+      "text": "120ms, 40ms, 5분 유지",
+      "id": "nums",
+      "passed": true,
+      "evidence": "모두 있음"
+    },
+    {
+      "text": "'변경이 가능' 명사화를 고친다",
+      "id": "b_fixed",
+      "passed": false,
+      "evidence": "발견: 변경이 가능"
+    },
+    {
+      "text": "'설정 파일을 통해'를 고친다",
+      "id": "b_fixed2",
+      "passed": true,
+      "evidence": "없음"
+    }
+  ]
+}

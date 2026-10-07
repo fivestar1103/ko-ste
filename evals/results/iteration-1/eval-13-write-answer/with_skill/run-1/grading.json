@@ -1,0 +1,16 @@
+{
+  "expectations": [
+    {
+      "text": "맺음 제안('궁금한 점', '필요하시면', '도움이 되')이 없다",
+      "id": "no_offer",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "굵게(**) 구간이 4개 이하",
+      "id": "bold_limited",
+      "passed": true,
+      "evidence": "1개"
+    }
+  ]
+}

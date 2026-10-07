@@ -1,0 +1,10 @@
+{
+  "added": [
+    "원문에 없던 설치 명령어 코드 블록(`npm install <패키지명>`)이 본문에 추가됨. 실행할 구체적 명령(행동 지시)이 새로 생겼고, 자리표시자 <패키지명>도 원문에 없음"
+  ],
+  "dropped": [],
+  "certainty_changed": [],
+  "obligation_changed": [],
+  "silent_pick": false,
+  "notes_quality": "noise"
+}

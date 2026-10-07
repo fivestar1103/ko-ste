@@ -1,0 +1,638 @@
+{
+  "date": "2026-10-07",
+  "note": "stdict는 표제어 수, 나머지는 용례 문장 수. 부분 문자열 일치. 줄기 사이 중복 일치 가능.",
+  "pairs": [
+    {
+      "english": "make a decision",
+      "literal": {
+        "결정을 만들": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "결정을 만든": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "결정을 만드": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "결정을 내리": {
+          "opendict": 38,
+          "krdict": 17,
+          "stdict": 12
+        },
+        "결정을 내린": {
+          "opendict": 11,
+          "krdict": 3,
+          "stdict": 2
+        },
+        "결정을 내렸": {
+          "opendict": 30,
+          "krdict": 18,
+          "stdict": 5
+        },
+        "결정을 내려": {
+          "opendict": 9,
+          "krdict": 5,
+          "stdict": 2
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 88,
+        "krdict": 43,
+        "stdict": 21
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "pay attention",
+      "literal": {
+        "주의를 지불": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "주의를 기울": {
+          "opendict": 37,
+          "krdict": 16,
+          "stdict": 4
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 37,
+        "krdict": 16,
+        "stdict": 4
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "pay attention (관심)",
+      "literal": {
+        "관심을 지불": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "관심을 기울": {
+          "opendict": 36,
+          "krdict": 9,
+          "stdict": 7
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 36,
+        "krdict": 9,
+        "stdict": 7
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "make a mistake",
+      "literal": {
+        "실수를 만들": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "실수를 만든": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "실수를 만드": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "실수를 저지르": {
+          "opendict": 10,
+          "krdict": 8,
+          "stdict": 7
+        },
+        "실수를 저질": {
+          "opendict": 6,
+          "krdict": 10,
+          "stdict": 4
+        },
+        "실수를 하": {
+          "opendict": 21,
+          "krdict": 70,
+          "stdict": 12
+        },
+        "실수를 한": {
+          "opendict": 8,
+          "krdict": 35,
+          "stdict": 5
+        },
+        "실수를 했": {
+          "opendict": 9,
+          "krdict": 30,
+          "stdict": 5
+        },
+        "실수를 해": {
+          "opendict": 8,
+          "krdict": 25,
+          "stdict": 6
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 62,
+        "krdict": 178,
+        "stdict": 39
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "make an effort",
+      "literal": {
+        "노력을 만들": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "노력을 만든": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "노력을 만드": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "노력을 기울": {
+          "opendict": 92,
+          "krdict": 24,
+          "stdict": 21
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 92,
+        "krdict": 24,
+        "stdict": 21
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "reach/make a conclusion",
+      "literal": {
+        "결론을 만들": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "결론을 만든": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "결론을 만드": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "결론을 내리": {
+          "opendict": 29,
+          "krdict": 12,
+          "stdict": 11
+        },
+        "결론을 내린": {
+          "opendict": 5,
+          "krdict": 3,
+          "stdict": 1
+        },
+        "결론을 내렸": {
+          "opendict": 20,
+          "krdict": 7,
+          "stdict": 4
+        },
+        "결론을 내려": {
+          "opendict": 4,
+          "krdict": 0,
+          "stdict": 2
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 58,
+        "krdict": 22,
+        "stdict": 18
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "have an effect",
+      "literal": {
+        "영향을 가지": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "영향을 가진": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "영향을 가졌": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "영향을 갖": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "영향을 미치": {
+          "opendict": 153,
+          "krdict": 28,
+          "stdict": 5
+        },
+        "영향을 미친": {
+          "opendict": 76,
+          "krdict": 24,
+          "stdict": 15
+        },
+        "영향을 미쳤": {
+          "opendict": 43,
+          "krdict": 15,
+          "stdict": 8
+        },
+        "영향을 주": {
+          "opendict": 105,
+          "krdict": 23,
+          "stdict": 8
+        },
+        "영향을 준": {
+          "opendict": 36,
+          "krdict": 10,
+          "stdict": 2
+        },
+        "영향을 줬": {
+          "opendict": 1,
+          "krdict": 1,
+          "stdict": 0
+        },
+        "영향을 끼치": {
+          "opendict": 40,
+          "krdict": 10,
+          "stdict": 7
+        },
+        "영향을 끼친": {
+          "opendict": 18,
+          "krdict": 10,
+          "stdict": 3
+        },
+        "영향을 끼쳤": {
+          "opendict": 17,
+          "krdict": 19,
+          "stdict": 3
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 489,
+        "krdict": 140,
+        "stdict": 51
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "have a meaning",
+      "literal": {
+        "의미를 가지": {
+          "opendict": 10,
+          "krdict": 9,
+          "stdict": 2
+        },
+        "의미를 가진": {
+          "opendict": 9,
+          "krdict": 4,
+          "stdict": 1
+        },
+        "의미를 가졌": {
+          "opendict": 4,
+          "krdict": 0,
+          "stdict": 2
+        },
+        "의미를 갖": {
+          "opendict": 40,
+          "krdict": 2,
+          "stdict": 3
+        }
+      },
+      "natural": {
+        "의미가 있": {
+          "opendict": 73,
+          "krdict": 27,
+          "stdict": 4
+        },
+        "의미가 없": {
+          "opendict": 50,
+          "krdict": 11,
+          "stdict": 8
+        }
+      },
+      "literal_sum": {
+        "opendict": 63,
+        "krdict": 15,
+        "stdict": 8
+      },
+      "natural_sum": {
+        "opendict": 123,
+        "krdict": 38,
+        "stdict": 12
+      },
+      "verdict": "자동 판정 안 함"
+    },
+    {
+      "english": "have a good time",
+      "literal": {
+        "시간을 가지": {
+          "opendict": 9,
+          "krdict": 4,
+          "stdict": 2
+        },
+        "시간을 가진": {
+          "opendict": 3,
+          "krdict": 4,
+          "stdict": 1
+        },
+        "시간을 가졌": {
+          "opendict": 62,
+          "krdict": 32,
+          "stdict": 7
+        },
+        "시간을 갖": {
+          "opendict": 42,
+          "krdict": 28,
+          "stdict": 7
+        }
+      },
+      "natural": {
+        "시간을 보내": {
+          "opendict": 89,
+          "krdict": 60,
+          "stdict": 17
+        },
+        "시간을 보낸": {
+          "opendict": 16,
+          "krdict": 9,
+          "stdict": 5
+        },
+        "시간을 보냈": {
+          "opendict": 56,
+          "krdict": 79,
+          "stdict": 17
+        }
+      },
+      "literal_sum": {
+        "opendict": 116,
+        "krdict": 68,
+        "stdict": 17
+      },
+      "natural_sum": {
+        "opendict": 161,
+        "krdict": 148,
+        "stdict": 39
+      },
+      "verdict": "자동 판정 안 함"
+    },
+    {
+      "english": "make a change",
+      "literal": {
+        "변화를 만들": {
+          "opendict": 1,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "변화를 만든": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "변화를 만드": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "변화를 일으키": {
+          "opendict": 6,
+          "krdict": 2,
+          "stdict": 2
+        },
+        "변화를 일으킨": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "변화를 일으켰": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "변화를 가져오": {
+          "opendict": 11,
+          "krdict": 4,
+          "stdict": 1
+        },
+        "변화를 가져온": {
+          "opendict": 2,
+          "krdict": 1,
+          "stdict": 0
+        },
+        "변화를 가져왔": {
+          "opendict": 8,
+          "krdict": 8,
+          "stdict": 2
+        }
+      },
+      "literal_sum": {
+        "opendict": 1,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 27,
+        "krdict": 15,
+        "stdict": 5
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "make a difference",
+      "literal": {
+        "차이를 만들": {
+          "opendict": 1,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "차이를 만든": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "차이를 만드": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "natural": {
+        "차이가 나는": {
+          "opendict": 16,
+          "krdict": 8,
+          "stdict": 2
+        },
+        "차이가 나다": {
+          "opendict": 1,
+          "krdict": 2,
+          "stdict": 1
+        },
+        "차이가 나서": {
+          "opendict": 0,
+          "krdict": 1,
+          "stdict": 0
+        },
+        "차이가 난": {
+          "opendict": 20,
+          "krdict": 11,
+          "stdict": 4
+        },
+        "차이가 났": {
+          "opendict": 9,
+          "krdict": 5,
+          "stdict": 1
+        },
+        "차이를 낳": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "literal_sum": {
+        "opendict": 1,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 46,
+        "krdict": 27,
+        "stdict": 8
+      },
+      "verdict": "검토 후보(빈도 차이; 번역투 판정 아님)"
+    },
+    {
+      "english": "(대조) slow response",
+      "literal": {},
+      "natural": {
+        "응답이 느리": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "응답이 느린": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "응답이 느려": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "verdict": "대조군"
+    },
+    {
+      "english": "(대조) read a value",
+      "literal": {},
+      "natural": {
+        "값을 읽": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        },
+        "값을 읽은": {
+          "opendict": 0,
+          "krdict": 0,
+          "stdict": 0
+        }
+      },
+      "literal_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "natural_sum": {
+        "opendict": 0,
+        "krdict": 0,
+        "stdict": 0
+      },
+      "verdict": "대조군"
+    }
+  ]
+}

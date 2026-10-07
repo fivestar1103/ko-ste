@@ -1,0 +1,16 @@
+{
+  "without_skill": {
+    "reviewed": 5,
+    "flagged": 2,
+    "useful_notes": 2,
+    "noise_notes": 0,
+    "unchanged_clear_inputs": 0
+  },
+  "with_skill": {
+    "reviewed": 5,
+    "flagged": 0,
+    "useful_notes": 2,
+    "noise_notes": 0,
+    "unchanged_clear_inputs": 2
+  }
+}

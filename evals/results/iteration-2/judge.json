@@ -1,0 +1,632 @@
+{
+  "schema_version": 2,
+  "model": "claude-opus-5-5",
+  "summary": {
+    "opus/with_skill": {
+      "expected": 32,
+      "completed": 0,
+      "pending": 32,
+      "fail": 0,
+      "added": 0,
+      "dropped": 0,
+      "certainty_changed": 0,
+      "obligation_changed": 0,
+      "ambiguous_rewrite": 0,
+      "noise_notes": 0
+    },
+    "opus/without_skill": {
+      "expected": 32,
+      "completed": 0,
+      "pending": 32,
+      "fail": 0,
+      "added": 0,
+      "dropped": 0,
+      "certainty_changed": 0,
+      "obligation_changed": 0,
+      "ambiguous_rewrite": 0,
+      "noise_notes": 0
+    },
+    "sonnet/with_skill": {
+      "expected": 16,
+      "completed": 0,
+      "pending": 16,
+      "fail": 0,
+      "added": 0,
+      "dropped": 0,
+      "certainty_changed": 0,
+      "obligation_changed": 0,
+      "ambiguous_rewrite": 0,
+      "noise_notes": 0
+    },
+    "sonnet/without_skill": {
+      "expected": 16,
+      "completed": 0,
+      "pending": 16,
+      "fail": 0,
+      "added": 0,
+      "dropped": 0,
+      "certainty_changed": 0,
+      "obligation_changed": 0,
+      "ambiguous_rewrite": 0,
+      "noise_notes": 0
+    }
+  },
+  "rows": [
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "opus/eval-01-hedge-weak-certainty/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "opus/eval-01-hedge-weak-certainty/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "opus/eval-01-hedge-weak-certainty/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "opus/eval-01-hedge-weak-certainty/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "opus/eval-02-conditions-numbers-strict/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "opus/eval-02-conditions-numbers-strict/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "opus/eval-02-conditions-numbers-strict/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "opus/eval-02-conditions-numbers-strict/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "subject-change",
+      "run": "opus/eval-03-subject-change/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "subject-change",
+      "run": "opus/eval-03-subject-change/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "subject-change",
+      "run": "opus/eval-03-subject-change/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "subject-change",
+      "run": "opus/eval-03-subject-change/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "negation-scope",
+      "run": "opus/eval-04-negation-scope/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "negation-scope",
+      "run": "opus/eval-04-negation-scope/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "negation-scope",
+      "run": "opus/eval-04-negation-scope/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "negation-scope",
+      "run": "opus/eval-04-negation-scope/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "opus/eval-05-can-ambiguity-strict/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "opus/eval-05-can-ambiguity-strict/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "opus/eval-05-can-ambiguity-strict/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "opus/eval-05-can-ambiguity-strict/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "opus/eval-06-calque-vs-normal-terms/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "opus/eval-06-calque-vs-normal-terms/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "opus/eval-06-calque-vs-normal-terms/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "opus/eval-06-calque-vs-normal-terms/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "already-natural",
+      "run": "opus/eval-07-already-natural/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "already-natural",
+      "run": "opus/eval-07-already-natural/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "already-natural",
+      "run": "opus/eval-07-already-natural/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "already-natural",
+      "run": "opus/eval-07-already-natural/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "opus/eval-08-pr-80-mode/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "opus/eval-08-pr-80-mode/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "opus/eval-08-pr-80-mode/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "opus/eval-08-pr-80-mode/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "opus/eval-09-pr-strict-mode/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "opus/eval-09-pr-strict-mode/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "opus/eval-09-pr-strict-mode/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "opus/eval-09-pr-strict-mode/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "opus/eval-10-translate-en-ko/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "opus/eval-10-translate-en-ko/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "opus/eval-10-translate-en-ko/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "opus/eval-10-translate-en-ko/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "opus/eval-11-code-and-paths/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "opus/eval-11-code-and-paths/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "opus/eval-11-code-and-paths/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "opus/eval-11-code-and-paths/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "opus/eval-12-nikl-ambiguous-host/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "opus/eval-12-nikl-ambiguous-host/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "opus/eval-12-nikl-ambiguous-host/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "opus/eval-12-nikl-ambiguous-host/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "opus/eval-14-error-message-already-good-strict/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "opus/eval-14-error-message-already-good-strict/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "opus/eval-14-error-message-already-good-strict/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "opus/eval-14-error-message-already-good-strict/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "opus/eval-15-weekly-report-fragments-80/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "opus/eval-15-weekly-report-fragments-80/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "opus/eval-15-weekly-report-fragments-80/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "opus/eval-15-weekly-report-fragments-80/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "opus/eval-16-banmal-style-preserve/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "opus/eval-16-banmal-style-preserve/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "opus/eval-16-banmal-style-preserve/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "opus/eval-16-banmal-style-preserve/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "opus/eval-17-procedure-steps-strict/with_skill/run-1",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "opus/eval-17-procedure-steps-strict/with_skill/run-2",
+      "group": "opus/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "opus/eval-17-procedure-steps-strict/without_skill/run-1",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "opus/eval-17-procedure-steps-strict/without_skill/run-2",
+      "group": "opus/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "sonnet/eval-01-hedge-weak-certainty/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "sonnet/eval-01-hedge-weak-certainty/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "sonnet/eval-02-conditions-numbers-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "sonnet/eval-02-conditions-numbers-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "subject-change",
+      "run": "sonnet/eval-03-subject-change/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "subject-change",
+      "run": "sonnet/eval-03-subject-change/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "negation-scope",
+      "run": "sonnet/eval-04-negation-scope/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "negation-scope",
+      "run": "sonnet/eval-04-negation-scope/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "sonnet/eval-05-can-ambiguity-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "sonnet/eval-05-can-ambiguity-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "sonnet/eval-06-calque-vs-normal-terms/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "sonnet/eval-06-calque-vs-normal-terms/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "already-natural",
+      "run": "sonnet/eval-07-already-natural/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "already-natural",
+      "run": "sonnet/eval-07-already-natural/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "sonnet/eval-08-pr-80-mode/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "sonnet/eval-08-pr-80-mode/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "sonnet/eval-09-pr-strict-mode/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "sonnet/eval-09-pr-strict-mode/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "sonnet/eval-10-translate-en-ko/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "sonnet/eval-10-translate-en-ko/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "sonnet/eval-11-code-and-paths/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "sonnet/eval-11-code-and-paths/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "sonnet/eval-12-nikl-ambiguous-host/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "sonnet/eval-12-nikl-ambiguous-host/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "sonnet/eval-14-error-message-already-good-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "sonnet/eval-14-error-message-already-good-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "sonnet/eval-15-weekly-report-fragments-80/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "sonnet/eval-15-weekly-report-fragments-80/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "sonnet/eval-16-banmal-style-preserve/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "sonnet/eval-16-banmal-style-preserve/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "sonnet/eval-17-procedure-steps-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "pending"
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "sonnet/eval-17-procedure-steps-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "pending"
+    }
+  ]
+}

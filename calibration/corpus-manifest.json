@@ -1,0 +1,36 @@
+{
+  "_note": "원문은 저장소에 넣지 않는다. fetch_corpus.py가 아래 커밋을 받아 calibration/cache/에 둔다(.gitignore). before가 있으면 그 날짜 이전 마지막 커밋을 쓴다.",
+  "sources": [
+    {"id": "toss-tw", "bundle": "toss", "repo": "https://github.com/toss/technical-writing.git", "commit": "68ba335cbe35c877775f092e98177b60da5f3d95",
+     "paths": ["docs/**/*.md", "docs/**/*.mdx"], "exclude_blocks": ["DoDont", "details", "DocExample"],
+     "origin": "한국어 원문(토스). 2024년 이후 작성. 초안 작성자와 AI 사용 여부 미상. 이 가이드는 'AI와 함께 쓰기' 장을 두고 있다."},
+
+    {"id": "kiwipiepy", "bundle": "pre2022", "repo": "https://github.com/bab2min/kiwipiepy.git", "before": "2022-10-31", "paths": ["README.md"],
+     "origin": "한국어 원문. 개인 개발자."},
+    {"id": "soynlp", "bundle": "pre2022", "repo": "https://github.com/lovit/soynlp.git", "before": "2022-10-31", "paths": ["README.md"],
+     "origin": "한국어 원문. 개인 개발자."},
+    {"id": "khaiii", "bundle": "pre2022", "repo": "https://github.com/kakao/khaiii.git", "before": "2022-10-31", "paths": ["README.md"],
+     "origin": "한국어 원문. 카카오."},
+    {"id": "khaiii-wiki", "bundle": "pre2022", "repo": "https://github.com/kakao/khaiii.wiki.git", "before": "2022-10-31", "paths": ["*.md"],
+     "origin": "한국어 원문. 카카오 위키."},
+    {"id": "kcbert", "bundle": "pre2022", "repo": "https://github.com/Beomi/KcBERT.git", "before": "2022-10-31", "paths": ["README.md"],
+     "origin": "한국어 원문. 개인 개발자."},
+    {"id": "koelectra", "bundle": "pre2022", "repo": "https://github.com/monologg/KoELECTRA.git", "before": "2022-10-31", "paths": ["README.md", "docs/*.md", "finetune/README.md"],
+     "origin": "한국어 원문(영문판 README_EN.md는 제외). 개인 개발자."},
+    {"id": "kochat", "bundle": "pre2022", "repo": "https://github.com/hyunwoongko/kochat.git", "before": "2022-10-31", "paths": ["README.md", "docs/*.md"],
+     "origin": "한국어 원문. 개인 개발자."},
+    {"id": "pykospacing", "bundle": "pre2022", "repo": "https://github.com/haven-jeon/PyKoSpacing.git", "before": "2022-10-31", "paths": ["README.md"],
+     "origin": "한국어 원문. 개인 개발자."},
+    {"id": "kogpt2", "bundle": "pre2022", "repo": "https://github.com/SKT-AI/KoGPT2.git", "before": "2022-10-31", "paths": ["README.md"],
+     "origin": "한국어 원문. SKT."},
+    {"id": "fe-news", "bundle": "pre2022", "repo": "https://github.com/naver/fe-news.git", "before": "2022-10-31", "paths": ["issues/2021-*.md", "issues/2022-*.md"],
+     "origin": "한국어 원문. 네이버 FE 뉴스레터. 외부 글 요약이 많다.", "cap_sentences": 600},
+    {"id": "interview-beginner", "bundle": "pre2022", "repo": "https://github.com/JaeYeopHan/Interview_Question_for_Beginner.git", "before": "2022-10-31", "paths": ["**/*.md"],
+     "origin": "한국어 원문. 여러 기여자.", "cap_sentences": 600},
+    {"id": "tech-interview", "bundle": "pre2022", "repo": "https://github.com/gyoogle/tech-interview-for-developer.git", "before": "2022-10-31", "paths": ["Computer Science/**/*.md"],
+     "origin": "한국어 원문. 학습 노트. 외부 글 인용이 섞였을 수 있다.", "cap_sentences": 600},
+
+    {"id": "frontend-fundamentals", "bundle": "post2023", "repo": "https://github.com/toss/frontend-fundamentals.git", "commit": "HEAD", "paths": ["fundamentals/code-quality/code/**/*.md"],
+     "origin": "한국어 원문(토스). 2024년 이후 작성. 작성 과정 미상.", "exclude_globs": ["**/en/**", "**/ja/**", "**/zh-hans/**"], "cap_sentences": 600}
+  ]
+}

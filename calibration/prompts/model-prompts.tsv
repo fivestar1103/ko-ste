@@ -1,0 +1,25 @@
+id	genre	prompt
+git-1	git	git rebase와 git merge의 차이를 설명해 줘.
+git-2	git	git stash는 언제 쓰는 거야? 사용법도 알려줘.
+git-3	git	실수로 main 브랜치에 커밋을 했는데 아직 push는 안 했어. 어떻게 되돌리지?
+err-1	error	npm install 하니까 ERESOLVE unable to resolve dependency tree 에러가 나. 어떻게 해결해?
+err-2	error	파이썬에서 ModuleNotFoundError: No module named 'requests' 가 떠. 설치는 했는데 왜 그래?
+err-3	error	도커 컨테이너가 시작하자마자 exited (137)로 꺼져. 원인이 뭘까?
+wiki-1	wiki	사내 위키에 올릴 'CI 파이프라인 개요' 문단을 하나 써 줘. GitHub Actions로 테스트, 빌드, 배포를 돌린다는 내용이야.
+wiki-2	wiki	팀 위키에 '코드 리뷰 원칙' 문단을 하나 써 줘.
+wiki-3	wiki	팀 위키에 'API 버전 관리 정책' 문단을 써 줘. URL에 v1, v2를 붙이는 방식이야.
+readme-1	readme	파이썬 CLI 도구 README의 설치 방법 섹션을 써 줘. pip로 설치하고 Python 3.10 이상이 필요해.
+readme-2	readme	Node.js 라이브러리 README에 들어갈 설치와 빠른 시작 섹션을 써 줘. 패키지 이름은 tiny-cache야.
+readme-3	readme	Docker Compose로 띄우는 웹 서비스 README의 로컬 실행 방법 섹션을 써 줘.
+weekly-1	weekly	이번 주 주간 보고를 써 줘. 로그인 API 응답 속도를 개선했고, 결제 모듈 테스트를 추가했고, 다음 주에는 알림 기능을 시작해.
+weekly-2	weekly	주간 보고 초안 써 줘. 이번 주에 DB 마이그레이션을 끝냈고 장애가 한 번 있었는데 30분 만에 복구했어.
+weekly-3	weekly	이번 주 업무 보고를 써 줘. 신규 온보딩 화면 디자인 리뷰 끝났고, 개발은 60% 정도 진행됐어.
+review-1	review	동료 PR에 리뷰 코멘트를 남기려고 해. 함수 하나가 200줄이 넘고 예외 처리가 없어. 코멘트를 써 줘.
+review-2	review	PR 리뷰 코멘트 써 줘. 변수 이름이 data, tmp, result2 같은 식이라 읽기 어려워.
+review-3	review	리뷰 코멘트를 써 줘. 테스트 코드가 실제 네트워크를 호출해서 CI에서 가끔 실패해.
+tech-1	tech	데이터베이스 인덱스가 왜 조회를 빠르게 하는지 설명해 줘.
+tech-2	tech	HTTP 캐시에서 ETag와 Cache-Control이 어떻게 다른지 설명해 줘.
+tech-3	tech	쿠버네티스에서 readiness probe와 liveness probe의 차이를 설명해 줘.
+onboard-1	onboard	신규 입사 개발자에게 보낼 첫 주 안내 메시지를 써 줘. 노트북 받고, 계정 만들고, 개발 환경 세팅하는 순서야.
+onboard-2	onboard	우리 오픈소스 프로젝트에 처음 기여하는 사람을 위한 안내 문단을 써 줘.
+onboard-3	onboard	새로 들어온 팀원에게 사내 배포 절차를 설명하는 안내문을 써 줘.

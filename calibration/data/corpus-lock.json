@@ -1,0 +1,72 @@
+{
+  "toss-tw": {
+    "repo": "https://github.com/toss/technical-writing.git",
+    "commit": "68ba335cbe35c877775f092e98177b60da5f3d95",
+    "commit_date": "2026-02-04T21:58:58+09:00"
+  },
+  "kiwipiepy": {
+    "repo": "https://github.com/bab2min/kiwipiepy.git",
+    "commit": "aa5ce04bcb4c25903eaef70e67f34ff9f9556e9e",
+    "commit_date": "2022-09-02T10:38:17+09:00"
+  },
+  "soynlp": {
+    "repo": "https://github.com/lovit/soynlp.git",
+    "commit": "503eaee28799e9a3baf01483c6fc59e0db524fa3",
+    "commit_date": "2021-02-01T22:10:04+09:00"
+  },
+  "khaiii": {
+    "repo": "https://github.com/kakao/khaiii.git",
+    "commit": "328d5a8af456a5941130383354c07d1cd0e47cf5",
+    "commit_date": "2020-12-22T13:13:22+09:00"
+  },
+  "khaiii-wiki": {
+    "repo": "https://github.com/kakao/khaiii.wiki.git",
+    "commit": "c3af1cbc441113b3e4c8cd00c3a0fd6018cecf61",
+    "commit_date": "2021-06-24T14:09:10+09:00"
+  },
+  "kcbert": {
+    "repo": "https://github.com/Beomi/KcBERT.git",
+    "commit": "0da95b2d052bd026994594bcdfcfa006636cc5b8",
+    "commit_date": "2022-10-08T15:50:46+09:00"
+  },
+  "koelectra": {
+    "repo": "https://github.com/monologg/KoELECTRA.git",
+    "commit": "024fbdd600e653b6e4bdfc64ceec84181b5ce6c4",
+    "commit_date": "2022-01-18T16:54:37+09:00"
+  },
+  "kochat": {
+    "repo": "https://github.com/hyunwoongko/kochat.git",
+    "commit": "b23308bdac63e58c347906c3bd45d3c14302a6c4",
+    "commit_date": "2021-06-07T00:51:21+09:00"
+  },
+  "pykospacing": {
+    "repo": "https://github.com/haven-jeon/PyKoSpacing.git",
+    "commit": "e1979f7eeb4fcf1a456521152713482517fba627",
+    "commit_date": "2022-07-23T15:05:44+09:00"
+  },
+  "kogpt2": {
+    "repo": "https://github.com/SKT-AI/KoGPT2.git",
+    "commit": "e2bba02ef26b04efa4ad0a3957fc494cfef072bb",
+    "commit_date": "2022-02-28T15:58:21+09:00"
+  },
+  "fe-news": {
+    "repo": "https://github.com/naver/fe-news.git",
+    "commit": "bc487aa1f30f1b8a057f52ce82093ffcb4bb09ec",
+    "commit_date": "2022-10-27T11:56:08+09:00"
+  },
+  "interview-beginner": {
+    "repo": "https://github.com/JaeYeopHan/Interview_Question_for_Beginner.git",
+    "commit": "604853dd194c1ab66df0357c1fb0ed8af21e0d24",
+    "commit_date": "2022-07-24T21:25:08+09:00"
+  },
+  "tech-interview": {
+    "repo": "https://github.com/gyoogle/tech-interview-for-developer.git",
+    "commit": "5fbd70c7f515d94931af549691614b97696cba55",
+    "commit_date": "2022-10-28T01:52:13+09:00"
+  },
+  "frontend-fundamentals": {
+    "repo": "https://github.com/toss/frontend-fundamentals.git",
+    "commit": "161d3d6a0d6d372eacd75036de567511643f6265",
+    "commit_date": "2026-03-08T14:00:01+09:00"
+  }
+}

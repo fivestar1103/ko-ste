@@ -1,0 +1,8 @@
+[
+  {"id": 1, "prompt": "ko-ste 엄격 모드로 이 안내를 다듬어줘.\n토큰이 만료된 경우에 한해서만 로그인 화면으로 돌아가며, 진행 중인 일부 요청은 30초 안에 취소됩니다. 토큰이 만료되지 않았다면 세션을 유지해야 합니다."},
+  {"id": 2, "prompt": "80% 모드로 읽기 쉽게 고쳐줘.\n프로젝트의 배포 담당자의 승인이 필요한 설정의 변경은 오늘 처리할 수 있습니다."},
+  {"id": 3, "prompt": "이 영어 기술 안내를 한국어로 옮겨줘.\nIf the cache is stale, the client may refresh it. The server must retain entries marked `pinned` for at least 72 hours, except when the owner deletes them. The refresh may fail; a failure does not prove that the data is corrupt."},
+  {"id": 4, "prompt": "ko-ste로 이 릴리스 설명을 다듬고 이유를 표로 보여줘.\n캐시의 초기화 수행이 필요합니다. 초기화 진행 중에는 설정을 바꾸면 안 됩니다. 새 오류가 원인일 수도 있지만 아직 확인하지 못했습니다."},
+  {"id": 5, "prompt": "엄격 모드로 이 설치 절차를 다듬어줘.\n설정 파일은 `./config/runtime.yaml`에 저장하세요. `timeout_ms: 1500`을 설정하면 요청이 1.5초 뒤에 취소됩니다. 로그에 다음 줄이 보이면 설정을 확인하세요.\n```text\nwarning: retry_count=2, timeout_ms=1500\n```"},
+  {"id": 6, "prompt": "ko-ste로 서비스 접속 안내를 써줘. 알려진 사실은 서비스 이름이 Maple이고 사내 VPN에 연결해야 한다는 것뿐이야. 접속 주소와 포트, 인증 방식은 아직 정해지지 않았어."}
+]

@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [],
+  "certainty_changed": [
+    "'발생했을 가능성이 있는 것으로 보이며'(여러 원인 중 하나일 가능성) → '때문으로 추정되며'(유력한 원인으로 추정): 추측은 유지되지만 확신의 정도가 높아짐"
+  ],
+  "obligation_changed": [],
+  "silent_pick": false,
+  "notes_quality": "noise"
+}

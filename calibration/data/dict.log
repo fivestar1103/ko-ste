@@ -1,0 +1,13 @@
+make a decision {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 88, 'krdict': 43, 'stdict': 21}
+pay attention {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 37, 'krdict': 16, 'stdict': 4}
+pay attention (관심) {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 36, 'krdict': 9, 'stdict': 7}
+make a mistake {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 62, 'krdict': 178, 'stdict': 39}
+make an effort {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 92, 'krdict': 24, 'stdict': 21}
+reach/make a conclusion {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 58, 'krdict': 22, 'stdict': 18}
+have an effect {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 489, 'krdict': 140, 'stdict': 51}
+have a meaning {'opendict': 63, 'krdict': 15, 'stdict': 8} {'opendict': 123, 'krdict': 38, 'stdict': 12}
+have a good time {'opendict': 116, 'krdict': 68, 'stdict': 17} {'opendict': 161, 'krdict': 148, 'stdict': 39}
+make a change {'opendict': 1, 'krdict': 0, 'stdict': 0} {'opendict': 27, 'krdict': 15, 'stdict': 5}
+make a difference {'opendict': 1, 'krdict': 0, 'stdict': 0} {'opendict': 46, 'krdict': 27, 'stdict': 8}
+(대조) slow response {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 0, 'krdict': 0, 'stdict': 0}
+(대조) read a value {'opendict': 0, 'krdict': 0, 'stdict': 0} {'opendict': 0, 'krdict': 0, 'stdict': 0}

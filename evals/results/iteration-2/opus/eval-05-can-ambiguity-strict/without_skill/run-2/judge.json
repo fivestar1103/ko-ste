@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [],
+  "certainty_changed": [],
+  "obligation_changed": [
+    "'재시작할 수 있습니다'(허용 또는 능력)가 '재시작하십시오'(지시·의무)로 바뀜"
+  ],
+  "silent_pick": false,
+  "notes_quality": "useful"
+}

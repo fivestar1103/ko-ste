@@ -1,0 +1,11 @@
+{
+  "added": [
+    "'등록된' 이메일이라는 한정어가 새로 생겼다. 원문은 그냥 '이메일로'라고만 했다.",
+    "만료 기준 시점 '발송 후'가 새로 생겼다. 원문의 '30분이 지나면'은 요청 시점 기준인지 발송 시점 기준인지 명시하지 않았다."
+  ],
+  "dropped": [],
+  "certainty_changed": [],
+  "obligation_changed": [],
+  "silent_pick": false,
+  "notes_quality": "useful"
+}

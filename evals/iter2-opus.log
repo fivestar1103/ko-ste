@@ -1,0 +1,88 @@
+1 without_skill done 7.2 
+1 without_skill done 9.6 
+1 with_skill done 11.7 
+1 with_skill done 12.2 
+2 without_skill done 13.7 
+2 without_skill done 17.9 
+2 with_skill done 25.8 
+3 with_skill done 11.0 
+3 with_skill done 10.5 
+3 without_skill done 8.8 
+3 without_skill done 10.0 
+4 with_skill done 11.3 
+2 with_skill done 42.3 
+4 with_skill done 11.2 
+4 without_skill done 8.8 
+4 without_skill done 10.0 
+5 without_skill done 12.8 
+5 with_skill done 16.3 
+5 with_skill done 18.6 
+5 without_skill done 13.8 
+6 with_skill done 11.0 
+6 without_skill done 9.3 
+6 with_skill done 12.2 
+6 without_skill done 9.8 
+7 with_skill done 7.3 
+7 without_skill done 6.8 
+7 with_skill done 9.4 
+7 without_skill done 7.8 
+8 with_skill done 8.8 
+8 without_skill done 9.8 
+8 without_skill done 12.5 
+8 with_skill done 20.1 
+9 with_skill done 17.0 
+9 with_skill done 21.6 
+9 without_skill done 13.1 
+10 without_skill done 5.8 
+9 without_skill done 15.9 
+10 with_skill done 8.1 
+10 with_skill done 10.8 
+10 without_skill done 3.9 
+11 without_skill done 8.7 
+11 with_skill done 11.1 
+11 without_skill done 9.6 
+11 with_skill done 12.2 
+12 with_skill done 11.0 
+12 without_skill done 9.4 
+12 without_skill done 10.5 
+12 with_skill done 14.9 
+13 without_skill done 15.3 
+13 without_skill done 15.1 
+13 with_skill done 23.2 
+13 with_skill done 28.1 
+14 with_skill done 12.8 
+14 with_skill done 14.8 
+14 without_skill done 20.1 
+15 with_skill done 12.7 
+14 without_skill done 15.9 
+15 with_skill done 14.3 
+15 without_skill done 9.0 
+15 without_skill done 11.3 
+16 with_skill done 14.2 
+16 without_skill done 6.8 
+16 with_skill done 14.3 
+16 without_skill done 8.3 
+17 with_skill done 12.2 
+17 without_skill done 12.7 
+17 without_skill done 12.4 
+17 with_skill done 19.3 
+| eval | with_skill | without_skill |
+|---|---|---|
+| hedge-weak-certainty | 8/8 | 8/8 |
+| conditions-numbers-strict | 16/16 | 12/16 |
+| subject-change | 6/6 | 6/6 |
+| negation-scope | 2/2 | 2/2 |
+| can-ambiguity-strict | 4/4 | 2/4 |
+| calque-vs-normal-terms | 8/10 | 9/10 |
+| already-natural | 4/4 | 0/4 |
+| pr-80-mode | 6/6 | 3/6 |
+| pr-strict-mode | 8/8 | 8/8 |
+| translate-en-ko | 6/6 | 6/6 |
+| code-and-paths | 10/10 | 10/10 |
+| nikl-ambiguous-host | 0/2 | 1/2 |
+| write-answer | 4/4 | 2/4 |
+| error-message-already-good-strict | 4/4 | 2/4 |
+| weekly-report-fragments-80 | 10/10 | 8/10 |
+| banmal-style-preserve | 4/6 | 4/6 |
+| procedure-steps-strict | 6/6 | 4/6 |
+| 합계 | 106/112 | 87/112 |

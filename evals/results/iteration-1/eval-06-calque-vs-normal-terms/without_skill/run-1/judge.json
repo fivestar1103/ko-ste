@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [
+    "'타임아웃을 발생시키고'(타임아웃 오류를 일으킨다)가 '타임아웃 처리하고'로 바뀌어, 오류를 일으킨다는 뜻이 '타임아웃을 처리한다'는 뜻으로도 읽히게 됨. 덧붙임에서 대안 표현을 언급했으나 본문에는 반영되지 않음"
+  ],
+  "certainty_changed": [],
+  "obligation_changed": [],
+  "silent_pick": false,
+  "notes_quality": "useful"
+}

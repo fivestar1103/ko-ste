@@ -1,0 +1,8 @@
+* text=auto eol=lf
+# Preserve raw model answers, source snapshots and process logs byte for byte.
+evals/results/**/output.md -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+evals/forward-2026-10-07/read-snapshot/* -text whitespace=cr-at-eol,-blank-at-eol
+*.log -text whitespace=cr-at-eol,-blank-at-eol
+evals/distribution-2026-10-07/*.json -text whitespace=cr-at-eol,-blank-at-eol
+evals/distribution-2026-10-07/read-snapshot/* -text whitespace=cr-at-eol,-blank-at-eol
+evals/distribution-2026-10-07/followup-output.md -text whitespace=cr-at-eol,-blank-at-eol

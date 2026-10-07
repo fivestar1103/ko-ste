@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [],
+  "certainty_changed": [],
+  "obligation_changed": [
+    "'You should back up the database'(권고)가 '백업해야 합니다'(의무)로 옮겨져 강도가 세졌을 수 있음. '백업하는 것이 좋습니다' 정도가 원문 강도에 가까움"
+  ],
+  "silent_pick": false,
+  "notes_quality": "none"
+}

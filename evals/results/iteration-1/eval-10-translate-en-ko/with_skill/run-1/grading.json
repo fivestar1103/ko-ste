@@ -1,0 +1,28 @@
+{
+  "expectations": [
+    {
+      "text": "`db:reset` 그대로",
+      "id": "code",
+      "passed": true,
+      "evidence": "`db:reset`"
+    },
+    {
+      "text": "롤백 필요를 가능성으로 옮긴다",
+      "id": "may",
+      "passed": true,
+      "evidence": "수도 있"
+    },
+    {
+      "text": "금지로 옮긴다",
+      "id": "dont",
+      "passed": true,
+      "evidence": "마십시오"
+    },
+    {
+      "text": "should를 권고로 옮기고 의무('반드시', '해야 합니다')로 올리지 않는다",
+      "id": "should",
+      "passed": null,
+      "evidence": "사람/모델 판정 필요"
+    }
+  ]
+}

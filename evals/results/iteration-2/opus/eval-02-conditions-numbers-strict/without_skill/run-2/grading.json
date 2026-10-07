@@ -1,0 +1,52 @@
+{
+  "expectations": [
+    {
+      "text": "20MB 유지",
+      "id": "num_20",
+      "passed": true,
+      "evidence": "20MB"
+    },
+    {
+      "text": "100MB 유지",
+      "id": "num_100",
+      "passed": true,
+      "evidence": "100MB"
+    },
+    {
+      "text": "50MB 유지",
+      "id": "num_50",
+      "passed": true,
+      "evidence": "50MB"
+    },
+    {
+      "text": "24시간 유지",
+      "id": "num_24h",
+      "passed": true,
+      "evidence": "24시간"
+    },
+    {
+      "text": "mp4, mov 유지",
+      "id": "ext",
+      "passed": true,
+      "evidence": "모두 있음"
+    },
+    {
+      "text": "'일부' 데이터 범위 유지",
+      "id": "partial",
+      "passed": false,
+      "evidence": "일치 없음"
+    },
+    {
+      "text": "동영상 제한이 계정 종류와 무관하다는 점 유지",
+      "id": "regardless",
+      "passed": false,
+      "evidence": "일치 없음"
+    },
+    {
+      "text": "한 문장으로 두지 않고 셋 이상의 문장이나 목록 항목으로 나눈다",
+      "id": "split",
+      "passed": false,
+      "evidence": "2개"
+    }
+  ]
+}

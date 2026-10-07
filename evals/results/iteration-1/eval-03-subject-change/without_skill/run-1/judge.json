@@ -1,0 +1,10 @@
+{
+  "added": [
+    "원문에 없던 만료 기준 시점 '발송 후'가 들어갔다. 원문의 '30분'은 요청 시점 기준으로도, 발송 시점 기준으로도 읽힐 수 있다. 덧붙임의 '기준 시점 밝히기'에서 이를 알렸다."
+  ],
+  "dropped": [],
+  "certainty_changed": [],
+  "obligation_changed": [],
+  "silent_pick": false,
+  "notes_quality": "useful"
+}

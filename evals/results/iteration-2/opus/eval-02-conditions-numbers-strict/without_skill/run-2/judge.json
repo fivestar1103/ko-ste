@@ -1,0 +1,10 @@
+{
+  "added": [],
+  "dropped": [
+    "'업로드된 일부 데이터'의 '일부'가 빠졌습니다. 본문은 '이미 업로드된 데이터'라고 써서 삭제 대상이 업로드된 데이터 전체로 넓어졌습니다. 덧붙임에서 이 변경을 언급했지만 원문의 범위 표지가 사라진 것은 그대로입니다."
+  ],
+  "certainty_changed": [],
+  "obligation_changed": [],
+  "silent_pick": true,
+  "notes_quality": "useful"
+}

@@ -1,0 +1,42 @@
+{
+  "item-01": {
+    "case": 2,
+    "config": "without_skill"
+  },
+  "item-02": {
+    "case": 1,
+    "config": "without_skill"
+  },
+  "item-03": {
+    "case": 4,
+    "config": "without_skill"
+  },
+  "item-04": {
+    "case": 5,
+    "config": "with_skill"
+  },
+  "item-05": {
+    "case": 1,
+    "config": "with_skill"
+  },
+  "item-06": {
+    "case": 2,
+    "config": "with_skill"
+  },
+  "item-07": {
+    "case": 3,
+    "config": "without_skill"
+  },
+  "item-08": {
+    "case": 5,
+    "config": "without_skill"
+  },
+  "item-09": {
+    "case": 3,
+    "config": "with_skill"
+  },
+  "item-10": {
+    "case": 4,
+    "config": "with_skill"
+  }
+}
