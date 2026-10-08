@@ -1,6 +1,6 @@
 # 자료 출처와 이용 조건
 
-직접 작성한 규칙·설명·예문·Python·CI 코드는 MIT로 제공한다. 설치되는 기본 스킬에는 변경·상업적 이용을 제한하는 외부 원문을 넣지 않는다. 외부 자료의 허락을 MIT로 바꾸지는 않는다.
+직접 작성한 규칙·설명·예문·Python·CI 코드는 MIT로 제공한다. 외부 인용문과 의존성에는 각 자료의 조건이 적용된다. 저장소 전체가 같은 조건의 MIT 자료는 아니다. 기본 스킬은 국립국어원 전후 쌍이나 보정 말뭉치 원문을 동봉하지 않는다.
 
 | 자료 | 이용 조건과 사용 범위 |
 |---|---|
@@ -10,8 +10,10 @@
 | beamonic/no-ai-slop-ko | [원 저장소](https://github.com/beamonic/no-ai-slop-ko), 커밋 `e9e3371`, MIT. 주장·문체 보존과 표현 검토에 참고했다. Copyright (c) 2026 Peter Yang; Copyright (c) 2026 Beamonic. 전문은 `skills/ko-ste/UPSTREAM-LICENSES.md`에 보존했다. |
 | ASD-STE100 / ASD STEMG | [공식 사이트](https://www.asd-ste100.org/). 공개 설명의 목적과 범주를 참고했다. Issue 9 규격 원문을 확보·검증하지 않았고 공식 규칙·승인 사전 전체를 포함하지 않는다. 제휴나 공인을 뜻하지 않는다. |
 | 국립국어원 사전 3종 | 표준국어대사전, 우리말샘, 한국어기초사전의 검색 건수만 기록했다. 용례 본문은 복제하지 않았다. 사전별 집계 단위가 다르고 활용형 검색이 중복될 수 있다. |
-| 공개 개발 문서 13개 저장소 | `calibration/corpus-manifest.json`에 URL, `calibration/data/corpus-lock.json`에 커밋을 기록했다. 원문은 Git에서 제외했다. 각 저장소의 라이선스는 원 저장소에서 확인한다. 집계가 원문 재배포 허락을 뜻하지 않는다. |
+| 공개 개발 문서 14개 자료(13개 저장소와 위키) | `calibration/corpus-manifest.json`에 URL, `calibration/data/corpus-lock.json`에 커밋을 기록했다. 원문과 검토 표본은 Git에서 제외했다. 고정 커밋의 고지는 [검토 기록](docs/license-review.md)에 있다. FE 뉴스·khaiii 위키의 재이용 조건은 확인이 더 필요하다. 집계 공개가 원문 재배포·변형·상업적 이용 허락을 뜻하지 않는다. |
+| 선택 Python 의존성 | `kiwipiepy`·`kiwipiepy_model` 0.24.0은 Apache-2.0이다. 패키지·모델·바이너리를 동봉하지 않고 사용자 환경에 별도로 설치한다. Kiwi의 [LICENSE.txt](https://github.com/bab2min/kiwipiepy/blob/v0.24.0/LICENSE.txt)·[NOTICE](https://github.com/bab2min/kiwipiepy/blob/v0.24.0/NOTICE), 다른 의존성의 조건도 각각 적용된다. 보정에 사용한 Kiwi의 2022년 커밋은 별도 LGPL 고지다. |
+| 과거 평가 자료 | `evals/`에는 국립국어원 문구를 사용한 과거 입력·스냅샷·모델 출력이 있다. 원출력은 보존하며 모두 MIT로 재허락하지 않는다. [평가 자료 고지](evals/NOTICE.md)와 [확인하지 못한 이용 범위](docs/license-review.md)를 함께 따른다. |
 
-조회일: 2026-10-07. 읽은 범위와 확보하지 못한 자료는 [보정 문서](skills/ko-ste/references/03-calibration.md)에 기록했다. 초안 조사는 Claude가 수행했고 후속 작업에서 국립국어원 고지와 토스·MIT 참조 저장소의 라이선스를 확인했다. STE 사이트는 후속 접속에서 403을 반환했다. 이전 확인 기록을 새 검증으로 주장하지 않는다.
+초안의 조회일과 읽은 범위는 [보정 문서](skills/ko-ste/references/03-calibration.md)에 기록했다. 2026-10-08에는 국립국어원·공공누리 고지, 고정 GitHub 커밋의 이용 조건, 설치하는 Kiwi 0.24.0을 다시 확인했다. ASD의 FAQ와 소프트웨어 안내도 확인했으나 Issue 9 규격 원문은 확보하지 않았다. [증거 URL·해시](docs/license-sources.json)와 [검토 결과](docs/license-review.md)를 보존한다.
 
-공개 그래픽은 직접 작성한 SVG와 그 렌더링이며 MIT로 제공한다. IBM Plex Sans KR·IBM Plex Mono를 렌더링에 사용했다. 폰트 소프트웨어는 저장소에 포함하지 않았고, IBM Plex의 [SIL Open Font License 1.1](https://github.com/IBM/plex/blob/master/LICENSE.txt)을 따른다. 디자인·생성 기록은 [assets/README.md](assets/README.md)에 있다.
+커버는 imagegen으로 생성했다. 프로젝트가 제공할 권한이 있는 범위에 MIT를 적용하며 이미지 전체의 독점권·저작권 성립·비침해를 보장하지 않는다. 폰트 소프트웨어는 포함하지 않는다. 참고한 디자인과 생성 프롬프트는 [assets/README.md](assets/README.md)에 있다.
