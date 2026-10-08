@@ -1,0 +1,922 @@
+{
+  "schema_version": 2,
+  "model": "claude-opus-5-5",
+  "summary": {
+    "sonnet/with_skill": {
+      "expected": 20,
+      "completed": 20,
+      "pending": 0,
+      "fail": 2,
+      "added": 0,
+      "dropped": 0,
+      "certainty_changed": 0,
+      "obligation_changed": 0,
+      "ambiguous_rewrite": 2,
+      "noise_notes": 3
+    },
+    "sonnet/without_skill": {
+      "expected": 20,
+      "completed": 20,
+      "pending": 0,
+      "fail": 15,
+      "added": 9,
+      "dropped": 9,
+      "certainty_changed": 4,
+      "obligation_changed": 6,
+      "ambiguous_rewrite": 6,
+      "noise_notes": 1
+    }
+  },
+  "rows": [
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "sonnet/eval-01-hedge-weak-certainty/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "1d6525861a9389638aa14a6df2cbaa5bd31df0125bcf7d5e8eadac8238e34ac9",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "hedge-weak-certainty",
+      "run": "sonnet/eval-01-hedge-weak-certainty/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "a5d838ce2a59c2e320e98a01b91c2c12cce08de5de85fa6ef705a3d0de487aa2",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [
+          "source: DB 커넥션 풀 고갈 때문에 발생했을 가능성이 있는 것으로 보이며 / result: DB 커넥션 풀 고갈이 원인으로 추정되며 / note: 덧붙인 짧은 대안 문장의 문제다. 원문은 '가능성이 있다'에 '것으로 보인다'를 겹친 약한 추측이다. 대안 문장의 '추정되며'는 유력한 원인이라는 뜻에 가까워 확신의 강도가 올라갔다. 본문의 '원인일 가능성이 있으며'는 추측의 강도가 원문과 거의 같다."
+        ],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "sonnet/eval-02-conditions-numbers-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "ce6e9901a8535fb70aebd5fc313c4065df6266058e31fa30458dcca65ede6107",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "conditions-numbers-strict",
+      "run": "sonnet/eval-02-conditions-numbers-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "782754593b63f80c7564652b375cbe082058a9a13e69569aa95eec1d8999d45c",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [
+          "original: 초과 시 업로드가 자동으로 취소되며 이미 업로드된 일부 데이터는 24시간 이내에 삭제됩니다 / result: 이미 업로드된 일부 데이터는 24시간 이내에 삭제됩니다. / issue: 원문에서 데이터 삭제는 '초과 시'라는 조건에 묶여 있다. 결과에서는 이 문장이 독립되면서 그 조건이 빠졌다. 그래서 업로드된 데이터가 일반적으로 24시간 안에 삭제된다는 뜻으로 읽힐 수 있다.",
+          "original: 초과 시 / result: 용량 제한을 초과하면 / issue: 원문의 '초과 시'는 바로 앞의 동영상 50MB 한도만 가리킨다고 읽을 수도 있다. 결과는 이를 모든 용량 제한으로 넓혔다. 따라서 적용 범위가 달라졌을 수 있다.",
+          "original: 최대 20MB까지 가능하며 단, 관리자 계정의 경우 100MB까지 허용되나 / result: 업로드 파일은 최대 20MB까지 가능합니다. / 관리자 계정은 최대 100MB까지 가능합니다. / issue: 예외 표지 '단'이 빠졌다. 그래서 20MB 규칙이 모든 계정에 적용되는 것처럼 단정되고, 다음 문장의 관리자 100MB와 충돌하는 것처럼 읽힐 수 있다."
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "subject-change",
+      "run": "sonnet/eval-03-subject-change/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "ea6359c1d90ccaea4c42a8774bf57de5270ec86459e74b4899f22d862fcf119b",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "subject-change",
+      "run": "sonnet/eval-03-subject-change/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "2656f0f53cfd32f90f5733bb3acc331d46e54f99ff3f8b51200ba32c5ff435e3",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "negation-scope",
+      "run": "sonnet/eval-04-negation-scope/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "b6027defad5ccd336e5bd899e3090776bb4b6deca10f7504dfecef948408f3f3",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "negation-scope",
+      "run": "sonnet/eval-04-negation-scope/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "ec6e741ecd948c97d3685e7f9e811ac725e6c6581debda4b616a2bd2348e117f",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "원문: 업그레이드 전에 확인하세요. / 결과: 업그레이드하기 전에 사용 중인 플러그인의 호환 여부를 확인해 주세요. / 설명: 첫 번째 안에서 확인할 대상('사용 중인 플러그인의 호환 여부')을 새로 정했다. 원문은 확인 대상을 밝히지 않으며 문맥상 유일하게 복원되는 성분도 아니다."
+        ],
+        "dropped": [],
+        "certainty_changed": [
+          "원문: 정상 동작하지 않습니다. / 결과: 정상적으로 동작하지 않을 수 있습니다. / 설명: 첫 번째 안에서 단정이 가능성 표현으로 약해졌다."
+        ],
+        "obligation_changed": [
+          "원문: 업그레이드 전에 확인하세요. / 결과: 업그레이드하기 전에 반드시 이 점을 확인해 주세요. / 설명: 두 번째 안에서 '반드시'가 더해져 지시가 강해졌다."
+        ],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "sonnet/eval-05-can-ambiguity-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "4f647ee2988a99f84fa1d8093a57883b0362816a98e548ad437b0adb5b80d552",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "can-ambiguity-strict",
+      "run": "sonnet/eval-05-can-ambiguity-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "c2b22d60d7cc202b71120bbd555ce31cb1bf713eeb5cc0ed80942b1d0db1312a",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [
+          "original: 재시작할 수 있습니다 / result: 재시작해도 됩니다 / issue: 원문의 '~할 수 있다'는 허용과 능력·가능성으로 모두 읽힌다. 결과는 이를 허용(해도 된다)으로만 좁혀 양태의 종류와 범위가 바뀌었다."
+        ],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "sonnet/eval-06-calque-vs-normal-terms/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "b7c743a3928affcb597e7ef314b04a836b516162881325c8b5a1f8f8740c0870",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "calque-vs-normal-terms",
+      "run": "sonnet/eval-06-calque-vs-normal-terms/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "c019e34d18dad410bbfd68203ebc7c5cd82fcdca1500464500079720b02358d2",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: 이 과정에 주의를 지불해야 합니다 / result: 이 과정은 특히 주의해야 합니다 / issue: 원문에 없던 강조 부사 '특히'가 추가되어 주의의 중요도가 높아짐",
+          "original: 타임아웃을 발생시키고 / result: 타임아웃 오류를 내고 / issue: 원문은 타임아웃 발생만 말하는데 '오류'라는 성격 규정이 추가됨(경미)"
+        ],
+        "dropped": [
+          "original: 결정을 만들어 다음 단계로 넘깁니다 / result: 판단한 뒤 다음 단계로 넘깁니다 / issue: 원문에서는 만들어진 '결정'이 다음 단계로 넘기는 대상으로 읽힐 수 있으나, 결과에서는 무엇을 넘기는지 사라짐"
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "already-natural",
+      "run": "sonnet/eval-07-already-natural/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "6d439cf1284c612a465bef4a127736ceccf676daa2a6dadad6487528189b40d6",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "noise"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "already-natural",
+      "run": "sonnet/eval-07-already-natural/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "9e78fd50723073ef9459a01705d4f82d65ed75d0b650c5fb870e7c83d61536d4",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "sonnet/eval-08-pr-80-mode/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "7b5b027f6fc607f6be9032e403ea105eec6678c38d36189cc2a4b5bb9b6b0b3f",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "pr-80-mode",
+      "run": "sonnet/eval-08-pr-80-mode/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "1f4359bb6838a8bdd5a8aec969fe8b1e764c1e097044a13dedd6cb880119d888",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: (해당 없음) / result: \"80% 모드\"가 ko-ste 스킬에 정의돼 있는지 먼저 확인하겠습니다. / issue: 원문에 없는 주제(80% 모드, ko-ste 스킬)와 행동 계획이 새로 들어갔다.",
+          "original: (해당 없음) / result: <invoke name=\"Grep\"> ... <parameter name=\"pattern\">80%</parameter> ... <parameter name=\"path\">D:\\kuiper-belt\\projects\\ko-ste\\skills\\ko-ste</parameter> ... / issue: 원문에 없는 도구 호출 텍스트와 파일 경로가 들어갔다. 편집 결과가 아니라 다른 작업의 출력이다."
+        ],
+        "dropped": [
+          "original: 이번 PR에서는 로그인 API에 대한 응답 캐싱을 추가하였으며 / result: (없음) / issue: PR에서 로그인 API에 응답 캐싱을 추가했다는 사실이 빠졌다.",
+          "original: 평균 응답 시간이 약 120ms에서 40ms로 감소하였습니다 / result: (없음) / issue: 평균 응답 시간 수치(약 120ms에서 40ms)와 근사 표지 '약'이 빠졌다.",
+          "original: 캐시 만료 시간은 5분으로 설정되어 있으며 / result: (없음) / issue: 캐시 만료 시간 5분이 빠졌다.",
+          "original: 설정 파일을 통해 변경이 가능합니다 / result: (없음) / issue: 설정 파일로 변경할 수 있다는 허용 정보가 빠졌다."
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "sonnet/eval-09-pr-strict-mode/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "61edd2c28a45ebb414386df20b7989b07e290c7273897265932a2027be973315",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "noise"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "pr-strict-mode",
+      "run": "sonnet/eval-09-pr-strict-mode/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "36d93233ae8b6434b7a968878cee28c6023e27a21c5297348374985efbc91817",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [
+          "original: 이번 PR에서는 / result: 로그인 API 응답을 캐싱해 / issue: 변경이 '이번 PR'에서 이루어졌다는 맥락이 본문에서 사라졌습니다. 덧붙임에서 삭제 사실과 다시 넣을 조건을 알렸지만, 본문 기준으로는 누락입니다."
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "sonnet/eval-10-translate-en-ko/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "fd1926c6d19f2bb2b05fa6cb76e266e7efd23b3f5349d99308a75566bf7c62c7",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "translate-en-ko",
+      "run": "sonnet/eval-10-translate-en-ko/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "b2545c64292a7b44a19aab48fa950aee4e998dd1ec5b2de5a5173ea05268109b",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "sonnet/eval-11-code-and-paths/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "b629015ba42712149c77925b2501c5bfcae892bed0954bdb234d1d1d43c4de79",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "code-and-paths",
+      "run": "sonnet/eval-11-code-and-paths/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "358f85b1f4600257f9157d10044dd13becad14c147680e3b46b32ebc5a4a21be",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [
+          "original: 재시도 수행이 가능합니다 / result: 재시도가 수행됩니다 / issue: 원문은 '가능'(능력/허용)이라고 했는데, 결과는 재시도가 실제로 수행된다고 단정합니다. 덧붙임의 대안 문장('재시도할 수 있습니다')은 원래 강도를 유지하지만 본문은 바뀌었습니다."
+        ],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "sonnet/eval-12-nikl-ambiguous-host/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "d2d5273fef9b77bc6c717b99277ad8480231f601a265cfdccb7adc72e622b7af",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "nikl-ambiguous-host",
+      "run": "sonnet/eval-12-nikl-ambiguous-host/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "cccd17082edec5f616806e346ddf7e68b1dea3a1599a063a29b3c67ff41a2777",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: 사람이 유일한 숙주임 / result: 두 유형 모두 사람이 유일한 숙주이다 / issue: 원문에는 '사람이 유일한 숙주'가 A형과 B형 모두에 해당한다는 범위 표지가 없다. 편집본은 '두 유형 모두'를 넣어 적용 범위를 두 유형으로 확정했다. 원문은 B형에만 해당하는 뜻으로도 읽힌다."
+        ],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "sonnet/eval-14-error-message-already-good-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "4c908f61eb4f3290f8700f0e23b87e126b27e9b30039259e0159ed5440cfad8b",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "error-message-already-good-strict",
+      "run": "sonnet/eval-14-error-message-already-good-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "657fd42ff24b0c0060ec67fba5a93f980f166d3338162f44a764531bac42ad19",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "원문: 파일을 저장할 수 없습니다. / 결과: `보고서.docx`를 저장하지 못했습니다. / 설명: 원문에 없는 파일명이 추가됨",
+          "원문: 디스크 공간이 부족하거나 / 결과: D: 드라이브의 여유 공간이 부족합니다. / 설명: 원문에 없는 드라이브(D:)가 추가됨",
+          "원문: 쓰기 권한이 없을 수 있습니다. / 결과: `D:\\문서` 폴더에 쓰기 권한이 없습니다. / 설명: 원문에 없는 경로가 추가됨",
+          "원문: (해당 없음) / 결과: 작성 중인 내용은 그대로 유지됩니다. / 설명: 작업 내용 보존이라는 새 사실이 추가됨",
+          "원문: (해당 없음) / 결과: 오류 코드(`E1042`)와 함께 문의해 주세요. / 설명: 원문에 없는 오류 코드가 추가됨",
+          "원문: 관리자에게 문의하십시오. / 결과: 불필요한 파일을 삭제하거나 다른 드라이브에 저장해 주세요. / 설명: 원문에 없는 행동 지시가 추가됨",
+          "원문: 관리자에게 문의하십시오. / 결과: 다른 폴더를 선택하거나 폴더 권한을 확인해 주세요. / 설명: 원문에 없는 행동 지시가 추가됨",
+          "원문: 관리자에게 문의하십시오. / 결과: 다른 위치에 저장해 보세요. / 설명: 원문에 없는 행동 지시가 추가됨",
+          "원문: 디스크 공간이 부족하거나 쓰기 권한이 없을 수 있습니다. / 결과: (ENOSPC와 EACCES는 코드로 구분됩니다.) / 설명: 외부 지식으로 원인을 구분할 수 있다는 주장이 추가됨",
+          "원문: (해당 없음) / 결과: \"읽기 전용 해제\" / 설명: 원문에 없는 조치가 추가됨"
+        ],
+        "dropped": [
+          "원문: 관리자에게 문의하십시오. / 결과: 디스크 공간 부족 / 권한 없음 개선안에는 문의 안내가 없음 / 설명: 관리자 문의 지시가 사라짐",
+          "원문: 관리자에게 / 결과: 계속 실패하면 ... 문의해 주세요. / 설명: 문의 대상인 '관리자'가 사라짐",
+          "원문: 디스크 공간이 부족하거나 쓰기 권한이 없을 수 있습니다. / 결과: 각 개선안이 원인을 하나만 제시함 / 설명: '~거나'로 묶인 두 원인 후보 중 하나가 각 문안에서 빠져 원인의 범위가 좁아짐"
+        ],
+        "certainty_changed": [
+          "원문: 디스크 공간이 부족하거나 ... 없을 수 있습니다. / 결과: D: 드라이브의 여유 공간이 부족합니다. / 설명: 추측이 단정으로 바뀜",
+          "원문: 쓰기 권한이 없을 수 있습니다. / 결과: `D:\\문서` 폴더에 쓰기 권한이 없습니다. / 설명: 추측이 단정으로 바뀜",
+          "원문: 파일을 저장할 수 없습니다. / 결과: 저장하지 못했습니다. / 설명: 일반적 불가능 진술이 일회성 실패 진술로 바뀜"
+        ],
+        "obligation_changed": [
+          "원문: 관리자에게 문의하십시오. / 결과: 계속 실패하면 ... 문의해 주세요. / 설명: 무조건 문의 지시가 조건부 문의로 바뀌고 '하십시오'가 '해 주세요'로 약화됨",
+          "원문: 관리자에게 문의하십시오. / 결과: 다른 위치에 저장해 보세요. / 설명: 지시가 시도를 권하는 권고로 바뀜",
+          "원문: 파일을 저장할 수 없습니다. / 결과: 저장하지 못했습니다. / 설명: 능력 부정('할 수 없다')이 결과 진술로 바뀜"
+        ],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "sonnet/eval-15-weekly-report-fragments-80/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "61de4048337e59c44bcc0c34250a361bb6026c1430ee6d102df4cd58280acbee",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "weekly-report-fragments-80",
+      "run": "sonnet/eval-15-weekly-report-fragments-80/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "97bc70e21c666a365b90a4893b76c809e796dde73edef552b32c50736e8139f2",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original:  / result: \"80% 모드\"가 뭔지 스킬 문서에서 먼저 확인할게요. / issue: 원문에 없는 '80% 모드' 언급과 스킬 문서 확인 행동이 추가됨",
+          "original:  / result: <invoke name=\"Grep\"> ... pattern: 80%|80 %|80퍼, path: D:\\kuiper-belt\\projects\\ko-ste\\skills\\ko-ste ...</invoke> / issue: 원문에 없는 도구 호출 블록이 추가됨"
+        ],
+        "dropped": [
+          "original: 로그인 API 성능 개선 작업 진행 완료 / result:  / issue: 로그인 API 성능 개선 작업 완료 사실이 사라짐",
+          "original: 평균 응답 속도 약 30% 향상된 것으로 보임 / result:  / issue: 수치(약 30%), 대상(평균 응답 속도), 추정 표현(것으로 보임)이 모두 사라짐",
+          "original: 결제 모듈 테스트 코드 추가 작업은 일부 진행 중 / result:  / issue: 결제 모듈 테스트 코드 작업과 진행 범위(일부)가 사라짐",
+          "original: 다음 주 완료 예정 / result:  / issue: 완료 시점과 계획 표지가 사라짐"
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "sonnet/eval-16-banmal-style-preserve/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "37ef8510c8427587c02f880e71ab02f74adf2ca2ac03a178a9b69e79872f1fe4",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "noise"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "banmal-style-preserve",
+      "run": "sonnet/eval-16-banmal-style-preserve/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "433a57298276c39e343012c639f50b618caba8ac96d21b5a545b13f04f647467",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "location: 세 번째 버전(조금 더 분명하게) / original: 바꾸면 서버가 안 뜰 수도 있어 / result: 잘못 바뀌면 서버가 안 뜰 수 있어 / issue: 원문에 없던 조건 '잘못'이 추가됨. 원문은 바꾸는 행위 자체가 위험할 수 있다는 뜻이지만, 결과는 잘못 바뀐 경우에만 위험하다는 뜻으로 좁혀짐."
+        ],
+        "dropped": [
+          "location: 두 번째 버전(조금 더 가볍게) / original: 바꾸면 서버가 안 뜰 수도 있어 / result: 바뀌면 서버가 안 뜰 수도 있어서 / issue: 행위 주체(청자가 바꾸면)가 사라지고 상태 변화(누가 바꾸든, 저절로 바뀌든)로 범위가 달라짐.",
+          "location: 세 번째 버전(조금 더 분명하게) / original: 바꾸면 / result: 잘못 바뀌면 / issue: 주체가 사라져 상태 변화로 바뀌었고, '잘못'이 붙어 조건 범위가 좁아짐."
+        ],
+        "certainty_changed": [
+          "location: 세 번째 버전 / original: 안 뜰 수도 있어 / result: 안 뜰 수 있어 / issue: '-ㄹ 수도 있다'에서 '수도'의 여러 가능성 중 하나라는 약한 추측 표지가 빠져 가능성 진술이 약간 더 단정적으로 읽힘. 경미함."
+        ],
+        "obligation_changed": [
+          "location: 첫 번째 버전(다듬은 버전) / original: 이 설정은 바꾸지 마 / result: 이 설정은 건드리지 말아줘 / issue: 금지 범위가 '변경'에서 '건드림(열람·접근 포함 가능)'으로 넓어짐.",
+          "location: 모든 버전 / original: 바꾸지 마 / result: 건드리지/바꾸지/변경하지 말아줘 / issue: 단정적 금지 명령이 부탁형 금지로 바뀌어 금지 강도가 약간 완화됨. 경미함."
+        ],
+        "ambiguous_rewrite": false,
+        "notes_quality": "noise"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "sonnet/eval-17-procedure-steps-strict/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "4c362c43d6eb53adb41099d034d1f84bc3f08a25cf93d9aa913422b6d00799ec",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "procedure-steps-strict",
+      "run": "sonnet/eval-17-procedure-steps-strict/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "e5f80854e44f2c7b5396eb25a87c3a56c36af68613f93df261b559af16c249c0",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: (없음) / result: \"엄격 모드\"가 정확히 무엇을 뜻하는지 스킬 문서에서 먼저 확인해 볼게요. / issue: 원문에 없는 주체(화자)와 행동(스킬 문서 확인 계획)이 추가됨. 이어지는 도구 호출 마크업과 끝의 'r​e'도 원문과 무관한 내용임."
+        ],
+        "dropped": [
+          "original: 설정 파일을 열어 / result: (없음) / issue: 설정 파일을 여는 단계가 사라짐.",
+          "original: port 값을 8080으로 바꾸고 / result: (없음) / issue: 변경 대상(port)과 수치(8080)가 사라짐.",
+          "original: 저장한 다음 / result: (없음) / issue: 저장 단계와 순서 표지가 사라짐.",
+          "original: 서버를 재시작하되 / result: (없음) / issue: 서버 재시작 지시가 사라짐.",
+          "original: 재시작 전에 기존 프로세스가 종료되었는지 확인하세요. / result: (없음) / issue: 선행 조건(재시작 전)과 확인 지시가 사라짐."
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-scope-chain",
+      "run": "sonnet/eval-18-heldout-ambiguous-scope-chain/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "c497d89b2f06b45bef41ef48f144677a29479c493ff10c4376260ca907b765b4",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-scope-chain",
+      "run": "sonnet/eval-18-heldout-ambiguous-scope-chain/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "83e81d88912cd3b9a3d30e716208049720b339b2be9fd31daa1bf17a02ae91ea",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-condition-carry-split",
+      "run": "sonnet/eval-19-heldout-condition-carry-split/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "2f99591d820202d0bec296ad8a9ae48cd18da86f061f96c78b409ca704400740",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-condition-carry-split",
+      "run": "sonnet/eval-19-heldout-condition-carry-split/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "461f8d455f585eea2ebe672aecf791ffb08d7a97ee261234a102fc6317941184",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-modifier",
+      "run": "sonnet/eval-20-heldout-ambiguous-modifier/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "58db6f2ff6d53be3da5c503dcd9e1e169f7dba7f9ddb9bb2bc5e6eacb540aeb8",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-modifier",
+      "run": "sonnet/eval-20-heldout-ambiguous-modifier/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "d7191d69b95f5e47dccf912b4857a4929d4f05e5fe2bb8c470d0880f81bd3ab1",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [
+          "original: 관리자와 운영자만 접근할 수 있는 대시보드와 로그 저장소는 / result: 대시보드와 로그 저장소는 관리자와 운영자만 접근할 수 있으며 / issue: 원문의 관형절은 외부망 차단 대상을 '관리자와 운영자만 접근할 수 있는' 대시보드·로그 저장소로 한정하는 범위 표지로 읽힐 수 있습니다. 편집 본문은 이를 독립된 서술로 바꿨습니다. 그 결과 모든 대시보드와 로그 저장소가 관리자·운영자 전용이며 외부망에서 접속할 수 없다는 뜻이 되어, 한정 범위가 사라졌습니다."
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-procedure-under-condition",
+      "run": "sonnet/eval-21-heldout-procedure-under-condition/with_skill/run-1",
+      "group": "sonnet/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "2846e48fdcf5d0a56ccfe58dcc8f984a97522b256acc4527750f1ef5cd276ba0",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-procedure-under-condition",
+      "run": "sonnet/eval-21-heldout-procedure-under-condition/without_skill/run-1",
+      "group": "sonnet/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "671b64a34390f2b2680fbf9926bb412d33aa22ea34b6832975039982cf5a128e",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: 담당자에게 알린 뒤 / result: 담당자에게 장애 발생 사실을 알린다. / issue: 원문에 없는 알림 내용 '장애 발생 사실'을 지정했다.",
+          "original: 배포가 실패하면 이전 버전으로 롤백하고 담당자에게 알린 뒤 장애 보고서를 작성하세요. / result: 이 순서를 바꾸거나 생략해서는 안 된다. / 순서를 바꾸거나 단계를 생략해서는 안 된다. / issue: 원문에 없는 금지 지시(순서 변경 금지, 생략 금지)를 추가했다."
+        ],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [
+          "original: 롤백하고 ... 작성하세요 / result: 반드시 이전 버전으로 롤백해야 하며 ... 작성해야 한다 / issue: 일반 지시(-하세요)를 '반드시 ... 해야 한다'로 바꿔 의무의 강도를 높였다.",
+          "original: 롤백하고 담당자에게 알린 뒤 / result: 이 순서를 바꾸거나 생략해서는 안 된다 / issue: 원문에 없는 금지를 명시해 의무 범위를 확대했다."
+        ],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    }
+  ]
+}

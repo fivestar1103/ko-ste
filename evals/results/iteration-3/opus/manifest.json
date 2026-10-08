@@ -1,0 +1,6 @@
+{
+  "model": "claude-opus-5-5",
+  "skill_sha256": "e89d06a2fe87774585291c3beaf909c108733a0812819f20a9b8123d743c786e",
+  "evals_sha256": "20a5e0c79a6163c7ffb40c6e756de98e1837f0b8b64f9432bce3009874f74070",
+  "protocol": 2
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "input_sha256": "97bc70e21c666a365b90a4893b76c809e796dde73edef552b32c50736e8139f2",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original:  / result: \"80% 모드\"가 뭔지 스킬 문서에서 먼저 확인할게요. / issue: 원문에 없는 '80% 모드' 언급과 스킬 문서 확인 행동이 추가됨",
+      "original:  / result: <invoke name=\"Grep\"> ... pattern: 80%|80 %|80퍼, path: D:\\kuiper-belt\\projects\\ko-ste\\skills\\ko-ste ...</invoke> / issue: 원문에 없는 도구 호출 블록이 추가됨"
+    ],
+    "dropped": [
+      "original: 로그인 API 성능 개선 작업 진행 완료 / result:  / issue: 로그인 API 성능 개선 작업 완료 사실이 사라짐",
+      "original: 평균 응답 속도 약 30% 향상된 것으로 보임 / result:  / issue: 수치(약 30%), 대상(평균 응답 속도), 추정 표현(것으로 보임)이 모두 사라짐",
+      "original: 결제 모듈 테스트 코드 추가 작업은 일부 진행 중 / result:  / issue: 결제 모듈 테스트 코드 작업과 진행 범위(일부)가 사라짐",
+      "original: 다음 주 완료 예정 / result:  / issue: 완료 시점과 계획 표지가 사라짐"
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

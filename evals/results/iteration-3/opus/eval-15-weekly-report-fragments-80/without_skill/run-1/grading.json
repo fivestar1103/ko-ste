@@ -1,0 +1,34 @@
+{
+  "expectations": [
+    {
+      "text": "'약 30%' 유지",
+      "id": "num",
+      "passed": true,
+      "evidence": "약 30%"
+    },
+    {
+      "text": "향상이 추정임을 유지",
+      "id": "hedge",
+      "passed": true,
+      "evidence": "추정"
+    },
+    {
+      "text": "'일부' 유지",
+      "id": "partial",
+      "passed": false,
+      "evidence": "일치 없음"
+    },
+    {
+      "text": "'예정' 유지",
+      "id": "plan",
+      "passed": true,
+      "evidence": "예정"
+    },
+    {
+      "text": "'작업 진행 완료' 명사 나열을 푼다",
+      "id": "nominal",
+      "passed": true,
+      "evidence": "없음"
+    }
+  ]
+}

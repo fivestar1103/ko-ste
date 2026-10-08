@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "input_sha256": "c0de581e616efe16bfed08cd9e3ae3ece29885e37e398b47b2bc2db67cb35165",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

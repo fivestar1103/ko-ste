@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "20232de4b44ff5563c9805610ba1df489840000f6bde009bf82d1feff485ef9a",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 사람이 유일한 숙주임 / result: A형과 B형 모두 사람이 유일한 숙주임 / reason: 원문은 숙주 서술이 B형에만 걸리는지 A형과 B형 모두에 걸리는지 정하지 않았다. 편집 본문은 주어를 'A형과 B형 모두'로 확정했다. 이 범위는 원문에 없고, 외부 지식(콕사키바이러스의 숙주 특성)에 근거해 추가되었다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

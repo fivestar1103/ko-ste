@@ -1,0 +1,371 @@
+{
+  "schema_version": 2,
+  "model": "claude-opus-5-5",
+  "summary": {
+    "opus-heldout/with_skill": {
+      "expected": 8,
+      "completed": 8,
+      "pending": 0,
+      "fail": 0,
+      "added": 0,
+      "dropped": 0,
+      "certainty_changed": 0,
+      "obligation_changed": 0,
+      "ambiguous_rewrite": 0,
+      "noise_notes": 0
+    },
+    "opus-heldout/without_skill": {
+      "expected": 8,
+      "completed": 8,
+      "pending": 0,
+      "fail": 5,
+      "added": 5,
+      "dropped": 1,
+      "certainty_changed": 0,
+      "obligation_changed": 1,
+      "ambiguous_rewrite": 3,
+      "noise_notes": 0
+    }
+  },
+  "rows": [
+    {
+      "eval": "heldout-ambiguous-scope-chain",
+      "run": "opus-heldout/eval-18-heldout-ambiguous-scope-chain/with_skill/run-1",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "d04345ce8382527df31a26efe8b1ed96cc81b87cc9a31a502112390e2aa2daf1",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-scope-chain",
+      "run": "opus-heldout/eval-18-heldout-ambiguous-scope-chain/with_skill/run-2",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "183a14a24acee003db994ed4bf91fdcd068d6ac5db544e5ee75f3b2233e72d72",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-scope-chain",
+      "run": "opus-heldout/eval-18-heldout-ambiguous-scope-chain/without_skill/run-1",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "2fb32cc8b905bfd0acfdbb91537f7ab5ede3fee0e62eae9e74367c66707bb543",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-scope-chain",
+      "run": "opus-heldout/eval-18-heldout-ambiguous-scope-chain/without_skill/run-2",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "569ebbf48793a9eb2bfbe11e7909555fdc116631a7ecb030a5dd2de9199800fe",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-condition-carry-split",
+      "run": "opus-heldout/eval-19-heldout-condition-carry-split/with_skill/run-1",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "cd94a355f13dca4f31144c71ff8304c92b8c6c6a393029c0fc48c79a7cc237fd",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-condition-carry-split",
+      "run": "opus-heldout/eval-19-heldout-condition-carry-split/with_skill/run-2",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "2f99591d820202d0bec296ad8a9ae48cd18da86f061f96c78b409ca704400740",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-condition-carry-split",
+      "run": "opus-heldout/eval-19-heldout-condition-carry-split/without_skill/run-1",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "d90e8e31915bf05bc67363aadb3f921d527b6d7d3561e5c57d6cb648b696482b",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "type: 주체 / original: 요청이 거부되며 / result: 서버는 요청을 거부합니다 / explanation: 원문은 거부 주체를 밝히지 않았는데 '서버'라는 주체를 새로 넣었다. 문맥상 주체가 하나로 정해지지 않으며(게이트웨이 등일 수 있음), 덧붙임에서도 이 가능성을 인정한다."
+        ],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [
+          "original: 새 토큰을 받기 전까지 같은 요청을 다시 보내지 않아야 합니다 / result: 새 토큰을 받은 후에만 같은 요청을 다시 보내야 합니다 / explanation: 원문은 새 토큰을 받기 전의 재전송을 금지할 뿐이며, 받은 후의 재전송은 허용(선택)으로 남긴다. 결과의 '보내야 합니다'는 새 토큰을 받은 후 재전송하라는 의무로 읽혀 금지가 의무로 바뀌었다. 덧붙임의 부정형 대안('받기 전에 … 다시 보내면 안 됩니다')은 원문 의미를 보존한다."
+        ],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-condition-carry-split",
+      "run": "opus-heldout/eval-19-heldout-condition-carry-split/without_skill/run-2",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "9a91cebe4b7ca9fcc3c06cb8effa48a7494144977a2f175050b3d72a5a7b5ed8",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "type: 주체 / original: 요청이 거부되며 / result: 서버는 요청을 거부합니다 / reason: 원문은 수동형이라 거부하는 주체를 밝히지 않습니다. 원문 문맥만으로는 행위자가 '서버'로 정해지지 않으므로, 유일한 생략 성분을 복원한 것이 아니라 외부 지식으로 주체를 새로 넣은 것입니다."
+        ],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-modifier",
+      "run": "opus-heldout/eval-20-heldout-ambiguous-modifier/with_skill/run-1",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "a7afaacee8c2d03763d1e6b9da3f516aa7298b07fce4ef7ec13f33868557507a",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-modifier",
+      "run": "opus-heldout/eval-20-heldout-ambiguous-modifier/with_skill/run-2",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "200a0ee3a9cafcea88727c101323b37ae1121e8a536a91de9bff91039a951faf",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-modifier",
+      "run": "opus-heldout/eval-20-heldout-ambiguous-modifier/without_skill/run-1",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "9f6512395dbd68c7829b79e9ef21d356acd97b1f28c0a4486592a21e1ca82661",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: 관리자와 운영자만 접근할 수 있는 대시보드와 로그 저장소는 외부망에서 열 수 없습니다. / result: (보안 안내문에 권장) / 보안 안내문에서는 \"접근\"이 더 정확하고 일관된 용어입니다. / issue: 원문에는 이 문장이 보안 안내문이라는 정보가 없다. 결과는 문서 성격을 새로 가정하고, 그 가정을 근거로 3번 안을 권장하며 용어 변경을 정당화한다."
+        ],
+        "dropped": [
+          "original: 외부망에서 열 수 없습니다 / result: 외부망에서 접근할 수 없습니다 / 외부망에서 접근 불가 / issue: '열다'를 '접근'으로 바꾸어 제한 대상 행위의 범위가 달라질 수 있다. 덧붙임에서 변경을 알렸지만 의미 범위가 같다는 근거는 없다.",
+          "original: 관리자와 운영자만 접근할 수 있는 대시보드와 로그 저장소 / result: 2) 대시보드만 관리자·운영자 전용인 경우 > 관리자와 운영자만 접근할 수 있는 대시보드와 로그 저장소는 모두 외부망에서 접근할 수 없습니다. / issue: 2번 안의 제목은 '대시보드만'으로 범위를 한정했다. 그러나 첫 번째 예문은 원문의 모호한 수식 구조를 그대로 두어 제목이 말하는 범위를 반영하지 못한다.",
+          "original: 관리자와 운영자만 접근할 수 있는 대시보드와 로그 저장소 / result: 3) - 대상: 대시보드, 로그 저장소 / - 접근 권한: 관리자, 운영자 / issue: 3번 안은 접근 권한 제한을 두 대상 모두에 적용한다. 이는 해석 1과 같으므로 해석 2의 범위가 사라진다."
+        ],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-ambiguous-modifier",
+      "run": "opus-heldout/eval-20-heldout-ambiguous-modifier/without_skill/run-2",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "49a49e6e7809fe8e1d2d533bf73ced4ba5b72a4534fb9b7ff2477b86411fb9dd",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-procedure-under-condition",
+      "run": "opus-heldout/eval-21-heldout-procedure-under-condition/with_skill/run-1",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "763d12f898d5e020d07fb5e45cc7fa3fee078255edc213dcfef48261979d4f4a",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-procedure-under-condition",
+      "run": "opus-heldout/eval-21-heldout-procedure-under-condition/with_skill/run-2",
+      "group": "opus-heldout/with_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "763d12f898d5e020d07fb5e45cc7fa3fee078255edc213dcfef48261979d4f4a",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": false,
+        "notes_quality": "none"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-procedure-under-condition",
+      "run": "opus-heldout/eval-21-heldout-procedure-under-condition/without_skill/run-1",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "4d4c0811829517d21b90605b34abb4609b65b9263af98ce5c157e45e25c5bcdd",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "original: 담당자에게 알린 뒤 / result: 2. 담당자에게 장애를 알리세요. / reason: 원문은 무엇을 알리는지 밝히지 않았다. 배포 실패, 롤백 사실, 장애 상황 등으로 읽힐 수 있어 문맥상 유일한 생략 성분 복원으로 보기 어렵다. 목적어 '장애를'이 새로 추가되었다.",
+          "original: 롤백하고 담당자에게 알린 뒤 / result: 다음 단계를 순서대로 하세요. 1. 이전 버전으로 롤백하세요. 2. 담당자에게 장애를 알리세요. / reason: 연결어미 '-고'는 순차로도 병렬로도 읽힌다. 편집 본문은 '순서대로'를 넣어 롤백을 마친 뒤 알리는 엄격한 순서 제약을 추가했다. '-ㄴ 뒤'로 표시된 알림→보고서 순서는 원문에 있던 것이다."
+        ],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "eval": "heldout-procedure-under-condition",
+      "run": "opus-heldout/eval-21-heldout-procedure-under-condition/without_skill/run-2",
+      "group": "opus-heldout/without_skill",
+      "status": "ok",
+      "schema_version": 2,
+      "input_sha256": "6089ea4fa96ddf5917e54dcafbfc8971b5206d6fe65fb75f0d609215bf80b875",
+      "judge_model": "claude-opus-5-5",
+      "result": {
+        "added": [
+          "type: 대상 범위 구체화 / 원문: 이전 버전으로 롤백하고 / 결과: 직전 버전으로 롤백하세요. / 설명: 원문 '이전 버전'은 바로 앞 버전, 마지막 안정 버전 등 여러 버전을 가리킬 수 있다. 결과는 '직전 버전' 하나로 한정했다.",
+          "type: 알릴 내용 추가 / 원문: 담당자에게 알린 뒤 / 결과: 담당자에게 장애 발생을 알리세요. / 설명: 원문은 무엇을 알리는지 밝히지 않았다. 알릴 내용은 배포 실패, 롤백 수행 여부 등 여러 가지가 될 수 있어 유일한 생략 성분 복원으로 보기 어렵다. 원문 조건은 '배포 실패'인데 결과는 이를 '장애 발생'으로 바꾸어 넣었다.",
+          "type: 순서 제약 추가 / 원문: 롤백하고 담당자에게 알린 뒤 / 결과: 다음 절차를 순서대로 수행하세요. 1. ... 롤백하세요. 2. 담당자에게 ... 알리세요. / 설명: 원문에서 순서가 정해진 곳은 '알린 뒤' 하나로, 알림 다음에 보고서를 작성한다는 것뿐이다. 롤백과 알림을 잇는 '-고'는 병렬로도 읽힌다. 결과는 '순서대로'와 번호를 붙여 롤백을 알림보다 먼저 하도록 정했다."
+        ],
+        "dropped": [],
+        "certainty_changed": [],
+        "obligation_changed": [],
+        "ambiguous_rewrite": true,
+        "notes_quality": "useful"
+      },
+      "actual_models": [
+        "claude-opus-5-5"
+      ]
+    }
+  ]
+}

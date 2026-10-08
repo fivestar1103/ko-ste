@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "36d93233ae8b6434b7a968878cee28c6023e27a21c5297348374985efbc91817",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "original: 이번 PR에서는 / result: 로그인 API 응답을 캐싱해 / issue: 변경이 '이번 PR'에서 이루어졌다는 맥락이 본문에서 사라졌습니다. 덧붙임에서 삭제 사실과 다시 넣을 조건을 알렸지만, 본문 기준으로는 누락입니다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

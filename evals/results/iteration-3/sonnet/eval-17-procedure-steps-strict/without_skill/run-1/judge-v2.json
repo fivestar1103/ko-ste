@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "input_sha256": "e5f80854e44f2c7b5396eb25a87c3a56c36af68613f93df261b559af16c249c0",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: (없음) / result: \"엄격 모드\"가 정확히 무엇을 뜻하는지 스킬 문서에서 먼저 확인해 볼게요. / issue: 원문에 없는 주체(화자)와 행동(스킬 문서 확인 계획)이 추가됨. 이어지는 도구 호출 마크업과 끝의 'r​e'도 원문과 무관한 내용임."
+    ],
+    "dropped": [
+      "original: 설정 파일을 열어 / result: (없음) / issue: 설정 파일을 여는 단계가 사라짐.",
+      "original: port 값을 8080으로 바꾸고 / result: (없음) / issue: 변경 대상(port)과 수치(8080)가 사라짐.",
+      "original: 저장한 다음 / result: (없음) / issue: 저장 단계와 순서 표지가 사라짐.",
+      "original: 서버를 재시작하되 / result: (없음) / issue: 서버 재시작 지시가 사라짐.",
+      "original: 재시작 전에 기존 프로세스가 종료되었는지 확인하세요. / result: (없음) / issue: 선행 조건(재시작 전)과 확인 지시가 사라짐."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

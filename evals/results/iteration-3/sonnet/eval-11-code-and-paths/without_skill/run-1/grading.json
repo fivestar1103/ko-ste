@@ -1,0 +1,34 @@
+{
+  "expectations": [
+    {
+      "text": "경로 그대로",
+      "id": "path",
+      "passed": true,
+      "evidence": "`~/.config/app/settings.json`"
+    },
+    {
+      "text": "키 그대로",
+      "id": "key",
+      "passed": true,
+      "evidence": "`retry_count`"
+    },
+    {
+      "text": "옵션 그대로",
+      "id": "opt",
+      "passed": true,
+      "evidence": "`--force`"
+    },
+    {
+      "text": "'3 이상' 유지",
+      "id": "ge3",
+      "passed": true,
+      "evidence": "3 이상"
+    },
+    {
+      "text": "'재시도 수행이 가능'을 풀어 쓴다",
+      "id": "nominal",
+      "passed": false,
+      "evidence": "발견: 수행이 가능"
+    }
+  ]
+}

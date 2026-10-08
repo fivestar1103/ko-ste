@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "input_sha256": "bfcf7c40c8b02d99337bb24fd39497f609f65d6810c00d64c6366a54357b0671",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "type: 주체 / source: A형은 포진성 구협염과 수족구병을 일으키며 / result: 콕사키바이러스 A형은 포진성 구협염과 수족구병을 / explanation: 원문에는 바이러스 이름이 없다. '콕사키바이러스'는 원문만으로 확정할 수 없는 주체를 외부 지식으로 채운 것이다.",
+      "type: 범위 / source: B형은 심근염과 흉막통을 유발하며, 사람이 유일한 숙주임. / result: 두 유형 모두 사람이 유일한 숙주이다. / explanation: 원문은 숙주 내용이 B형에만 걸리는지 A·B형 모두에 걸리는지 밝히지 않는다. 편집 본문은 '두 유형 모두'라는 범위를 새로 단정했다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

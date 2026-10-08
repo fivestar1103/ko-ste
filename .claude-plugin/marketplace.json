@@ -1,12 +1,27 @@
 {
   "name": "ko-ste",
   "description": "Korean writing skills",
-  "owner": {"name": "Hwany"},
+  "owner": {
+    "name": "Hwany"
+  },
   "plugins": [
     {
       "name": "ko-ste",
-      "source": "./",
-      "description": "한국어 글의 의미·조건·수치·확신·의무를 보존하며 읽기 쉽게 다듬는다."
+      "source": "./skills/ko-ste",
+      "description": "한국어 글의 의미·조건·수치·확신·의무를 보존하며 읽기 쉽게 다듬는다.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Hwany",
+        "url": "https://github.com/fivestar1103"
+      },
+      "homepage": "https://github.com/fivestar1103/ko-ste",
+      "repository": "https://github.com/fivestar1103/ko-ste",
+      "license": "MIT",
+      "keywords": [
+        "korean",
+        "technical-writing",
+        "plain-language"
+      ]
     }
   ]
 }

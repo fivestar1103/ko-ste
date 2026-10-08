@@ -1,0 +1,16 @@
+{
+  "expectations": [
+    {
+      "text": "원문과 결과의 문자 유사도가 0.85 이상",
+      "id": "near_identical",
+      "passed": true,
+      "evidence": "0.92"
+    },
+    {
+      "text": "원문에 없는 명령어(npm install 등)를 더하지 않는다",
+      "id": "no_new_cmd",
+      "passed": true,
+      "evidence": "없음"
+    }
+  ]
+}

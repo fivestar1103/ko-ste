@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "5add06c234c9006d00b37bdead2a1db774a516c854841eba25cb0a89b84ef4f9",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [
+      "original: 바꾸면 서버가 안 뜰 수도 있어 / result: 바꾸면 서버가 안 뜰 수 있어 / issue: '수도'가 빠지면서 서버가 뜨지 않을 가능성이 '일어날 수도 있는 일'에서 더 분명한 경고로 강해졌다. 덧붙임에서도 '경고가 더 분명하게 들려요'라고 이 변화를 인정한다."
+    ],
+    "obligation_changed": [
+      "original: 이 설정은 바꾸지 마 / result: 이 설정은 건드리지 말아 줘 / issue: 명령형 금지 '바꾸지 마'가 요청형 '말아 줘'로 바뀌어 금지의 강도가 약해졌다. 또 금지 대상이 '바꾸다'에서 더 넓은 '건드리다'로 달라졌다. 이 때문에 '꼭 바꿔야 하면'이라는 예외 조건이 금지 범위와 정확히 맞지 않게 된다."
+    ],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

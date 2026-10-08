@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "input_sha256": "d832baf6e665046e3eade1f9b3124d83f8c17024a7b16294ffffa575e2135d4d",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: B형은 심근염과 흉막통을 유발하며 / result: B형은 심근염과 유행성 흉막통을 일으킴 / reason: 원문에 없던 '유행성'이 추가되어 일반 증상인 '흉막통'이 특정 질병명(유행성 흉막통)으로 바뀜. 외부 지식에 근거한 내용 변경임.",
+      "original: 사람이 유일한 숙주임. / result: 두 형 모두 사람이 유일한 숙주임. / reason: 원문에 없던 '두 형 모두'가 추가되어 숙주 서술의 적용 범위가 A형과 B형 모두로 단정됨. 외부 지식으로 원문의 빈 곳을 채운 것임."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

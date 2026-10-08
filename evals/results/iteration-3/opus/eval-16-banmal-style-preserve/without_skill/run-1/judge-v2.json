@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "input_sha256": "510d11100639e0a1b416f265562226d702301b1b9c43985447c9ade488f7d89f",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 꼭 바꿔야 하면 나한테 먼저 말해 줘. / result: 꼭 바꿔야 할 일이 생기면 먼저 나한테 얘기해 줘. 같이 확인하고 바꾸자. / reason: 원문에 없던 공동 확인 후 변경이라는 행동 계획과 지시가 추가됨 (두 번째 버전)"
+    ],
+    "dropped": [
+      "original: 바꾸면 서버가 안 뜰 수도 있어. / result: 잘못 바꾸면 서버가 안 뜰 수 있어. / reason: 원문은 변경 자체를 위험 조건으로 제시했으나 결과는 '잘못' 바꾼 경우로 조건 범위를 좁힘. 올바르게 바꾸면 괜찮다는 함의가 생김 (첫 번째 버전)",
+      "original: 바꾸면 서버가 안 뜰 수도 있어. / result: 값이 바뀌면 서버가 안 뜰 수 있어. / reason: '바꾸면'의 주체인 상대방이 사라지고 값의 변화 일반으로 범위가 달라짐 (두 번째 버전)"
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "original: 이 설정은 바꾸지 마. / result: 이 설정은 건드리지 말아 줘. / reason: 명령형 금지 '-지 마'가 부탁형 '-지 말아 줘'로 약해짐. 금지 대상도 '바꾸다'에서 '건드리다'로 넓어짐 (두 버전 공통)"
+    ],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

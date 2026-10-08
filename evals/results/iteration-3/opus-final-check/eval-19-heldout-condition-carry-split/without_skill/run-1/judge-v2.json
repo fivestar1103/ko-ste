@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "897eaa2cfa028307ec8eecbf8e52b3b36fdb1340db03fff7049147a8574b9984",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "type: 주체 / source: 요청이 거부되며 / result: 서버는 요청을 거부합니다 / reason: 원문은 피동형이라 거부 주체가 없습니다. 편집본은 '서버'를 주체로 넣었습니다. 덧붙임도 'API 게이트웨이', '인증 서버' 같은 다른 후보를 언급하므로, 문맥상 하나로 정해지는 생략 성분의 복원이 아닙니다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

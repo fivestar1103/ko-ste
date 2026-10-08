@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {
+      "text": "'약' 유지",
+      "id": "approx",
+      "passed": true,
+      "evidence": "약 120"
+    },
+    {
+      "text": "120ms, 40ms, 5분 유지",
+      "id": "nums",
+      "passed": true,
+      "evidence": "모두 있음"
+    },
+    {
+      "text": "'평균' 유지",
+      "id": "avg",
+      "passed": true,
+      "evidence": "평균"
+    }
+  ]
+}

@@ -28,8 +28,11 @@ def main():
         assert plugin["name"] == meta["name"] and plugin["version"] == version
         assert plugin["license"] == "MIT"
     marketplace = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
-    assert marketplace["name"] == "ko-ste" and marketplace["plugins"][0]["source"] == "./"
-    assert marketplace["plugins"][0]["name"] == meta["name"]
+    entry = marketplace["plugins"][0]
+    # 스킬 폴더만 플러그인으로 설치한다. 저장소 전체(평가 원출력, 말뭉치 집계)를 복사하지 않는다.
+    assert marketplace["name"] == "ko-ste" and entry["source"] == "./skills/ko-ste"
+    assert entry["name"] == meta["name"] and entry["version"] == version and entry["license"] == "MIT"
+    assert not (SKILL / ".claude-plugin").exists() and not (SKILL / "skills").exists(), "skill folder must load as a single-skill plugin"
     for filename in re.findall(r"references/[\w.-]+\.md|scripts/[\w.-]+\.py", text):
         assert (SKILL / filename).is_file(), filename
     manifest = json.loads((ROOT / "calibration/corpus-manifest.json").read_text(encoding="utf-8"))
@@ -45,11 +48,15 @@ def main():
     for source in sources.values():
         for evidence in source["evidence"]:
             assert re.fullmatch(r"[0-9a-f]{64}", evidence["sha256"]), source["id"]
-    for notice in ("LICENSE", "NOTICE.md", "UPSTREAM-LICENSES.md"):
+    for notice in ("LICENSE", "NOTICE.md", "UPSTREAM-LICENSES.md", "NIKL-NOTICE.md"):
         assert (SKILL / notice).is_file(), f"Missing installed license notice: {notice}"
     assert (SKILL / "LICENSE").read_bytes() == (ROOT / "LICENSE").read_bytes()
-    for relative in ("research/NIKL-NOTICE.md", "evals/NOTICE.md", "docs/license-review.md"):
+    for relative in ("skills/ko-ste/NIKL-NOTICE.md", "evals/NOTICE.md", "docs/license-review.md"):
         assert (ROOT / relative).is_file(), f"Missing provenance notice: {relative}"
+    pairs = (SKILL / "references/04-native-pairs.md").read_text(encoding="utf-8")
+    assert len(re.findall(r"^\| NP-\d\d \|", pairs, re.M)) == 55, "native pairs missing from installed skill"
+    assert len(re.findall(r"^\| X-\d\d \|", pairs, re.M)) == 20
+    assert "../NIKL-NOTICE.md" in pairs and "공공누리 제3유형" in pairs
     for path in (ROOT / "calibration/data").glob("*.json"):
         json.loads(path.read_text(encoding="utf-8"))
     readme = (ROOT / "README.md").read_text(encoding="utf-8")

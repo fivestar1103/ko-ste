@@ -1,0 +1,58 @@
+{
+  "heldout-ambiguous-scope-chain": {
+    "with_skill": {
+      "pass": 6,
+      "total": 6,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 6,
+      "total": 6,
+      "judge": 0,
+      "error": 0
+    }
+  },
+  "heldout-condition-carry-split": {
+    "with_skill": {
+      "pass": 4,
+      "total": 4,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 1,
+      "total": 4,
+      "judge": 0,
+      "error": 0
+    }
+  },
+  "heldout-ambiguous-modifier": {
+    "with_skill": {
+      "pass": 6,
+      "total": 6,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 6,
+      "total": 6,
+      "judge": 0,
+      "error": 0
+    }
+  },
+  "heldout-procedure-under-condition": {
+    "with_skill": {
+      "pass": 6,
+      "total": 6,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 5,
+      "total": 6,
+      "judge": 0,
+      "error": 0
+    }
+  }
+}

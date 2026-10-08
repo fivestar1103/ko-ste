@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "input_sha256": "a942b0dbcc7f88919d5115e7de8f4f52b55339b17332f29a3b8eb101f2972e49",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 캐시 만료 시간은 5분으로 설정되어 있으며 / result: 캐시 만료 시간은 기본 5분입니다. / issue: 원문은 '5분으로 설정되어 있다'고만 했는데 결과는 '기본'값이라는 성격을 붙였다. 변경 가능하다는 문맥에서 추론할 수는 있지만 원문에 명시되지 않은 규정이다."
+    ],
+    "dropped": [
+      "original: 이번 PR에서는 로그인 API에 대한 응답 캐싱을 추가하였으며 / result: 로그인 API에 응답 캐싱을 추가했습니다. / issue: 변경 범위를 나타내는 '이번 PR에서는'이 본문에서 사라졌다. 제목에도 PR 언급은 없다.",
+      "original: 이를 통해 평균 응답 시간이 약 120ms에서 40ms로 감소하였습니다. / result: 평균 응답 시간이 약 120ms에서 40ms로 줄었습니다. / issue: '이를 통해'가 빠져 캐싱 때문에 응답 시간이 줄었다는 인과 관계가 명시되지 않는다. 문장이 인접해 있어 암시만 남는다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

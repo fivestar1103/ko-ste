@@ -15,6 +15,6 @@ uv run python calibration/scripts/report.py --check
 
 말뭉치 측정은 `calibration/scripts/fetch_corpus.py`와 `calibration/scripts/measure.py`로 재현한다. 새 스킬 버전의 성과를 주장하려면 스킬 해시, 모델 식별자, 입력, 원출력과 미판정 수를 기록한다. 수정에 사용한 사례의 성적을 독립적인 최종 성능으로 쓰지 않는다.
 
-기여한 코드와 직접 작성한 문서는 저장소의 MIT 조건으로 제공한다. `research/nikl-native-pairs.md`의 국립국어원 원문 인용은 공공누리 제3유형을 따른다. 인용문은 원자료와 대조할 때만 정정하고, 프로젝트의 해설과 구분한다.
+기여한 코드와 직접 작성한 문서는 저장소의 MIT 조건으로 제공한다. `skills/ko-ste/references/04-native-pairs.md`의 국립국어원 원문 인용은 공공누리 제3유형을 따른다. 인용문은 원자료와 대조할 때만 정정하고, 프로젝트의 해설과 구분한다.
 
-배포 원본은 GitHub다. `skills/ko-ste`는 `npx skills add`가 읽는 독립적인 스킬이며, `.claude-plugin/marketplace.json`은 Claude Code의 설치 진입점이다. 버전을 올릴 때 `pyproject.toml`과 세 plugin manifest의 버전을 함께 바꾼다. 중앙 marketplace 등록이나 npm 레지스트리 발행은 이 저장소의 GitHub 배포와 별도다.
+배포 원본은 GitHub다. `skills/ko-ste`는 `npx skills add`가 읽는 독립적인 스킬이며, `.claude-plugin/marketplace.json`은 Claude Code의 설치 진입점이며 같은 `skills/ko-ste` 폴더만 플러그인으로 설치한다. 버전을 올릴 때 `pyproject.toml`, 세 plugin manifest, marketplace 항목의 버전을 함께 바꾼다. 중앙 marketplace 등록이나 npm 레지스트리 발행은 이 저장소의 GitHub 배포와 별도다.

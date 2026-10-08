@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {
+      "text": "8080과 port 유지",
+      "id": "num",
+      "passed": true,
+      "evidence": "모두 있음"
+    },
+    {
+      "text": "종료 확인이 재시작 지시보다 앞에 나온다",
+      "id": "order",
+      "passed": false,
+      "evidence": "75 < None"
+    },
+    {
+      "text": "셋 이상의 문장이나 단계로 나눈다",
+      "id": "split",
+      "passed": true,
+      "evidence": "5개"
+    }
+  ]
+}

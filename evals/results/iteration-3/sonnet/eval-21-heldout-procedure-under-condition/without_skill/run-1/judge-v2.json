@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "input_sha256": "671b64a34390f2b2680fbf9926bb412d33aa22ea34b6832975039982cf5a128e",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 담당자에게 알린 뒤 / result: 담당자에게 장애 발생 사실을 알린다. / issue: 원문에 없는 알림 내용 '장애 발생 사실'을 지정했다.",
+      "original: 배포가 실패하면 이전 버전으로 롤백하고 담당자에게 알린 뒤 장애 보고서를 작성하세요. / result: 이 순서를 바꾸거나 생략해서는 안 된다. / 순서를 바꾸거나 단계를 생략해서는 안 된다. / issue: 원문에 없는 금지 지시(순서 변경 금지, 생략 금지)를 추가했다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "original: 롤백하고 ... 작성하세요 / result: 반드시 이전 버전으로 롤백해야 하며 ... 작성해야 한다 / issue: 일반 지시(-하세요)를 '반드시 ... 해야 한다'로 바꿔 의무의 강도를 높였다.",
+      "original: 롤백하고 담당자에게 알린 뒤 / result: 이 순서를 바꾸거나 생략해서는 안 된다 / issue: 원문에 없는 금지를 명시해 의무 범위를 확대했다."
+    ],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

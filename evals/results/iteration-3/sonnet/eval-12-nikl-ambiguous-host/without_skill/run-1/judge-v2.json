@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "cccd17082edec5f616806e346ddf7e68b1dea3a1599a063a29b3c67ff41a2777",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 사람이 유일한 숙주임 / result: 두 유형 모두 사람이 유일한 숙주이다 / issue: 원문에는 '사람이 유일한 숙주'가 A형과 B형 모두에 해당한다는 범위 표지가 없다. 편집본은 '두 유형 모두'를 넣어 적용 범위를 두 유형으로 확정했다. 원문은 B형에만 해당하는 뜻으로도 읽힌다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

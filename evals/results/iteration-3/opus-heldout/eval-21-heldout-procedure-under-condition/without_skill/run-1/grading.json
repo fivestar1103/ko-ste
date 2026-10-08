@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {
+      "text": "'배포가 실패하면' 조건 유지",
+      "id": "cond",
+      "passed": true,
+      "evidence": "배포가 실패하면"
+    },
+    {
+      "text": "롤백이 보고서 작성보다 앞에 나온다",
+      "id": "order",
+      "passed": true,
+      "evidence": "38 < 70"
+    },
+    {
+      "text": "셋 이상의 단계로 나눈다",
+      "id": "split",
+      "passed": true,
+      "evidence": "5개"
+    }
+  ]
+}

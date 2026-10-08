@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {
+      "text": "재시작 범위가 두 가지로 읽힌다고 알린다",
+      "id": "flags",
+      "passed": true,
+      "evidence": "확인 필요"
+    },
+    {
+      "text": "'매일 새벽 3시' 앞에서 문장을 나누지 않는다",
+      "id": "no_split",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "'새벽 3시' 유지",
+      "id": "time",
+      "passed": true,
+      "evidence": "새벽 3시"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "expectations": [
+    {
+      "text": "원문과 결과의 문자 유사도가 0.8 이상",
+      "id": "near_identical",
+      "passed": false,
+      "evidence": "0.18"
+    },
+    {
+      "text": "원인 추정 유지",
+      "id": "hedge",
+      "passed": true,
+      "evidence": "수 있"
+    }
+  ]
+}

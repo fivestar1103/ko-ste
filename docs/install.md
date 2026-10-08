@@ -33,6 +33,14 @@ Claude Code 안에서 실행하세요. skills CLI와 marketplace 중 하나로 �
 
 설치한 뒤 `/ko-ste:ko-ste`로 호출하세요. GitHub marketplace 설치 방식은 [Claude Code 공식 문서](https://code.claude.com/docs/en/plugin-marketplaces)에 있습니다.
 
+플러그인으로 설치되는 것은 `skills/ko-ste` 폴더뿐입니다. 평가 기록, 말뭉치 집계, 커버 이미지는 설치되지 않습니다.
+
+marketplace를 추가할 때는 저장소 전체를 내려받습니다. Windows에서 `Filename too long` 오류로 추가가 실패하면, 필요한 폴더만 내려받도록 터미널에서 추가하세요.
+
+```sh
+claude plugin marketplace add fivestar1103/ko-ste --sparse .claude-plugin skills
+```
+
 업데이트는 터미널에서 실행하세요.
 
 ```sh

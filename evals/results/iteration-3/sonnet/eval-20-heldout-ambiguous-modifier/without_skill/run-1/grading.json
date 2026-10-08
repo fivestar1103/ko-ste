@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {
+      "text": "수식 범위가 두 가지로 읽힌다고 알린다",
+      "id": "flags",
+      "passed": true,
+      "evidence": "두 가지"
+    },
+    {
+      "text": "'만' 유지",
+      "id": "only",
+      "passed": true,
+      "evidence": "운영자만"
+    },
+    {
+      "text": "'열 수 없습니다'(금지·불가) 유지",
+      "id": "ban",
+      "passed": false,
+      "evidence": "일치 없음"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "b386d7dab03b3b4f495b03511008fa218f201aa1a53fac14737621d51e23c432",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 업로드 파일은 최대 20MB까지 가능하며 ... 동영상 파일(mp4, mov)은 계정 종류와 관계없이 50MB를 초과할 수 없고 / result: | 일반 계정 | 최대 20MB | 최대 20MB | / issue: 원문은 일반 계정 동영상의 한도를 20MB로 명시하지 않습니다. 동영상 50MB 상한과 일반 20MB 한도 중 20MB가 적용된다는 해석을 표의 사실로 확정해 넣었습니다."
+    ],
+    "dropped": [
+      "original: 동영상 파일(mp4, mov)은 계정 종류와 관계없이 50MB를 초과할 수 없고, 초과 시 업로드가 자동으로 취소되며 / result: ## 제한을 초과하는 경우\n1. 시스템이 업로드를 자동으로 취소합니다. / issue: 원문의 '초과 시'는 바로 앞의 동영상 50MB 제한에만 걸리는 것으로도 읽힙니다. 결과는 이를 모든 크기 제한(20MB, 100MB 포함) 초과 시로 넓혀 조건의 범위를 바꿨고, 덧붙임에서도 이 점을 알리지 않았습니다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}
