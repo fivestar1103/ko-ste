@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "input_sha256": "c62dc883b9580b2588bb3033c236f6777244645ddbf85ccbd88d7de7588e57bb",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "source: 업그레이드 전에 확인하세요. / result: 업그레이드하기 전에 사용 중인 플러그인의 호환성을 확인하세요. / issue: 원문에 없는 확인 대상('사용 중인 플러그인의 호환성')을 추가함 (후보 1)",
+      "source: 업그레이드 전에 확인하세요. / result: 업그레이드하기 전에 플러그인 업데이트 여부를 확인하세요. / issue: 원문에 없는 확인 대상('플러그인 업데이트 여부')을 추가함 (후보 2)",
+      "source: 모든 플러그인이 / result: 기존 플러그인이 모두 / issue: 원문에 없는 한정어 '기존'을 추가해 대상 범위를 좁힘 (후보 2)",
+      "source: 업그레이드 전에 확인하세요. / result: [호환성 목록](링크)에서 사용 중인 플러그인을 확인하세요. / issue: 원문에 없는 호환성 목록과 링크를 확인 수단으로 추가함 (추가 제안)"
+    ],
+    "dropped": [],
+    "certainty_changed": [
+      "source: 정상 동작하지 않습니다 / result: 정상적으로 동작하지 않을 수 있습니다 / issue: 단정 표현을 가능성 표현으로 약화함 (후보 1, 추가 제안)"
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

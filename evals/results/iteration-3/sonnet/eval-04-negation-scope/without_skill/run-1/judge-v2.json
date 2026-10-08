@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "input_sha256": "ec6e741ecd948c97d3685e7f9e811ac725e6c6581debda4b616a2bd2348e117f",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "원문: 업그레이드 전에 확인하세요. / 결과: 업그레이드하기 전에 사용 중인 플러그인의 호환 여부를 확인해 주세요. / 설명: 첫 번째 안에서 확인할 대상('사용 중인 플러그인의 호환 여부')을 새로 정했다. 원문은 확인 대상을 밝히지 않으며 문맥상 유일하게 복원되는 성분도 아니다."
+    ],
+    "dropped": [],
+    "certainty_changed": [
+      "원문: 정상 동작하지 않습니다. / 결과: 정상적으로 동작하지 않을 수 있습니다. / 설명: 첫 번째 안에서 단정이 가능성 표현으로 약해졌다."
+    ],
+    "obligation_changed": [
+      "원문: 업그레이드 전에 확인하세요. / 결과: 업그레이드하기 전에 반드시 이 점을 확인해 주세요. / 설명: 두 번째 안에서 '반드시'가 더해져 지시가 강해졌다."
+    ],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

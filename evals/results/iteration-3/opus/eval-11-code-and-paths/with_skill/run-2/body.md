@@ -1,0 +1,1 @@
+`~/.config/app/settings.json` 파일의 `retry_count` 값을 3 이상으로 설정하면 `--force` 옵션을 쓰지 않아도 재시도할 수 있습니다.

@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "43f706ee1b363e1812e00551c647dc1b1737242a2ac00cda2d0a286157abf1fa",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "원문: 이번 PR에서는 로그인 API에 대한 응답 캐싱을 추가하였으며 / 결과: 로그인 API에 응답 캐싱을 추가했습니다. / 설명: 변경이 이번 PR에서 이루어졌다는 시점·맥락 정보가 본문에서 빠졌습니다. 덧붙임에서 이 생략을 알리고 확인을 요청했습니다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

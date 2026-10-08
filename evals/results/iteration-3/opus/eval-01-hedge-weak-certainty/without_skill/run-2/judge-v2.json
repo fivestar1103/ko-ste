@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "ec6db463322f4aaa24478d64e26f06e049aaca7f99a78c07e2efd655a9c35d1b",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [
+      "original: 발생했을 가능성이 있는 것으로 보이며 / result: 때문일 가능성이 있습니다 / detail: 원문은 '가능성이 있다'에 '~로 보인다'를 겹쳐 추측 강도를 두 번 낮췄다. 결과는 '보이며'를 지워 추측을 한 겹만 남겼으므로 단정 쪽으로 약간 강해졌다. 덧붙임은 이를 중복 표현 정리로 설명하지만 실제로는 추측 강도가 달라졌다."
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

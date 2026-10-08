@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "c2b22d60d7cc202b71120bbd555ce31cb1bf713eeb5cc0ed80942b1d0db1312a",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "original: 재시작할 수 있습니다 / result: 재시작해도 됩니다 / issue: 원문의 '~할 수 있다'는 허용과 능력·가능성으로 모두 읽힌다. 결과는 이를 허용(해도 된다)으로만 좁혀 양태의 종류와 범위가 바뀌었다."
+    ],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

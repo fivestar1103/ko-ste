@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "input_sha256": "1f4359bb6838a8bdd5a8aec969fe8b1e764c1e097044a13dedd6cb880119d888",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: (해당 없음) / result: \"80% 모드\"가 ko-ste 스킬에 정의돼 있는지 먼저 확인하겠습니다. / issue: 원문에 없는 주제(80% 모드, ko-ste 스킬)와 행동 계획이 새로 들어갔다.",
+      "original: (해당 없음) / result: <invoke name=\"Grep\"> ... <parameter name=\"pattern\">80%</parameter> ... <parameter name=\"path\">D:\\kuiper-belt\\projects\\ko-ste\\skills\\ko-ste</parameter> ... / issue: 원문에 없는 도구 호출 텍스트와 파일 경로가 들어갔다. 편집 결과가 아니라 다른 작업의 출력이다."
+    ],
+    "dropped": [
+      "original: 이번 PR에서는 로그인 API에 대한 응답 캐싱을 추가하였으며 / result: (없음) / issue: PR에서 로그인 API에 응답 캐싱을 추가했다는 사실이 빠졌다.",
+      "original: 평균 응답 시간이 약 120ms에서 40ms로 감소하였습니다 / result: (없음) / issue: 평균 응답 시간 수치(약 120ms에서 40ms)와 근사 표지 '약'이 빠졌다.",
+      "original: 캐시 만료 시간은 5분으로 설정되어 있으며 / result: (없음) / issue: 캐시 만료 시간 5분이 빠졌다.",
+      "original: 설정 파일을 통해 변경이 가능합니다 / result: (없음) / issue: 설정 파일로 변경할 수 있다는 허용 정보가 빠졌다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

@@ -9,7 +9,7 @@ sys.path.insert(0, str(ROOT / "evals"))
 sys.path.insert(0, str(ROOT / "skills" / "ko-ste" / "scripts"))
 sys.path.insert(0, str(ROOT / "calibration/scripts"))
 from common import extract_output
-from judge import failed, summarize, valid_result
+from judge import failed, normalize, summarize, valid_result
 from run_evals import grade
 import report
 import dict_check
@@ -99,3 +99,13 @@ def test_failed_cli_cannot_supply_a_graded_answer(monkeypatch, response):
     monkeypatch.setattr(common.subprocess, "Popen", lambda *_args, **_kwargs: Process())
     actual = common.invoke(["cli"], "prompt")
     assert actual["status"] == "error" and "data" not in actual
+
+
+def test_object_items_from_judge_are_kept_as_failures():
+    # 실패 항목을 객체로 돌려준 판정이 미판정으로 빠지면 실패율이 낮게 집계된다.
+    raw = result(obligation_changed=[{"원문": "보내지 않아야", "결과": "보내야", "설명": "금지가 의무로 바뀜"}])
+    assert not valid_result(raw)
+    fixed = normalize(raw)
+    assert valid_result(fixed)
+    assert failed(fixed) is True
+    assert "보내지 않아야" in fixed["obligation_changed"][0]

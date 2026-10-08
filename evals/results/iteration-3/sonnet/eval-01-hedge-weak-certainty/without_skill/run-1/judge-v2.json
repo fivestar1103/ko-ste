@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "a5d838ce2a59c2e320e98a01b91c2c12cce08de5de85fa6ef705a3d0de487aa2",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [
+      "source: DB 커넥션 풀 고갈 때문에 발생했을 가능성이 있는 것으로 보이며 / result: DB 커넥션 풀 고갈이 원인으로 추정되며 / note: 덧붙인 짧은 대안 문장의 문제다. 원문은 '가능성이 있다'에 '것으로 보인다'를 겹친 약한 추측이다. 대안 문장의 '추정되며'는 유력한 원인이라는 뜻에 가까워 확신의 강도가 올라갔다. 본문의 '원인일 가능성이 있으며'는 추측의 강도가 원문과 거의 같다."
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {
+      "text": "30분 유지",
+      "id": "num_30",
+      "passed": true,
+      "evidence": "30분"
+    },
+    {
+      "text": "만료되는 대상(링크)을 밝힌다",
+      "id": "link_subject",
+      "passed": true,
+      "evidence": "만료된 경우 링크"
+    },
+    {
+      "text": "다시 요청해야 한다는 의무를 유지한다",
+      "id": "must_kept",
+      "passed": true,
+      "evidence": "요청해야"
+    }
+  ]
+}

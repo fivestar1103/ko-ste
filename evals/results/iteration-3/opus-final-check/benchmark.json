@@ -1,0 +1,58 @@
+{
+  "conditions-numbers-strict": {
+    "with_skill": {
+      "pass": 16,
+      "total": 16,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 15,
+      "total": 16,
+      "judge": 0,
+      "error": 0
+    }
+  },
+  "pr-strict-mode": {
+    "with_skill": {
+      "pass": 8,
+      "total": 8,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 8,
+      "total": 8,
+      "judge": 0,
+      "error": 0
+    }
+  },
+  "nikl-ambiguous-host": {
+    "with_skill": {
+      "pass": 2,
+      "total": 2,
+      "judge": 2,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 2,
+      "total": 2,
+      "judge": 2,
+      "error": 0
+    }
+  },
+  "heldout-condition-carry-split": {
+    "with_skill": {
+      "pass": 4,
+      "total": 4,
+      "judge": 0,
+      "error": 0
+    },
+    "without_skill": {
+      "pass": 1,
+      "total": 4,
+      "judge": 0,
+      "error": 0
+    }
+  }
+}

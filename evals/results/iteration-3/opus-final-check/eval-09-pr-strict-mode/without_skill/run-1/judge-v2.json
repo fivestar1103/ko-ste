@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "input_sha256": "1e6e913910ea0db5b63ccabf66dde1871d83de102c03d978a2362e22ac412e8d",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 캐시 만료 시간은 5분으로 설정되어 있으며 / edited: 캐시 만료 시간의 기본값은 5분입니다. / issue: 원문은 5분으로 '설정되어 있다'고만 했습니다. 결과는 5분이 '기본값'이라는 성격을 새로 부여했습니다. 현재 설정값이 기본값이라는 근거는 원문에 없습니다.",
+      "original: 약 120ms에서 40ms로 / edited: 약 120ms에서 약 40ms로 / issue: 40ms 앞에 '약'을 새로 붙여 근사 표지를 추가했습니다. 원문에서 '약'이 40ms까지 걸치는지는 확정되지 않습니다."
+    ],
+    "dropped": [
+      "original: 이번 PR에서는 로그인 API에 대한 응답 캐싱을 추가하였으며 / edited: 로그인 API는 응답을 캐시합니다. / issue: 캐싱이 이번 PR에서 새로 추가되었다는 시점·변경 사실이 사라졌습니다. 이 때문에 수치가 이번 변경 전후의 비교라는 맥락도 약해졌습니다."
+    ],
+    "certainty_changed": [
+      "original: 이를 통해 평균 응답 시간이 약 120ms에서 40ms로 감소하였습니다. / edited: 캐시를 사용하면 평균 응답 시간이 약 120ms에서 약 40ms로 줄어듭니다. / issue: 원문은 이번 변경으로 관찰된 과거의 결과(감소하였습니다)를 보고합니다. 결과는 '캐시를 사용하면 … 줄어듭니다'라는 일반적인 조건-결과 진술로 바꾸어 단정의 범위를 넓혔습니다."
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

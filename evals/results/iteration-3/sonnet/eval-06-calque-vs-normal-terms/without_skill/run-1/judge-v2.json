@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "input_sha256": "c019e34d18dad410bbfd68203ebc7c5cd82fcdca1500464500079720b02358d2",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 이 과정에 주의를 지불해야 합니다 / result: 이 과정은 특히 주의해야 합니다 / issue: 원문에 없던 강조 부사 '특히'가 추가되어 주의의 중요도가 높아짐",
+      "original: 타임아웃을 발생시키고 / result: 타임아웃 오류를 내고 / issue: 원문은 타임아웃 발생만 말하는데 '오류'라는 성격 규정이 추가됨(경미)"
+    ],
+    "dropped": [
+      "original: 결정을 만들어 다음 단계로 넘깁니다 / result: 판단한 뒤 다음 단계로 넘깁니다 / issue: 원문에서는 만들어진 '결정'이 다음 단계로 넘기는 대상으로 읽힐 수 있으나, 결과에서는 무엇을 넘기는지 사라짐"
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

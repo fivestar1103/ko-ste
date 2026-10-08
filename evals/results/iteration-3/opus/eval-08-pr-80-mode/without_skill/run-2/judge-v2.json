@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "842c1af1cc555ae5ace98b9d1f741606c77b96a04003920a56122391a4b7ad2b",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "원문: 응답 캐싱을 추가하였으며, 이를 통해 평균 응답 시간이 약 120ms에서 40ms로 감소하였습니다 / 결과: 응답 캐싱을 추가했습니다. 평균 응답 시간이 약 120ms에서 40ms로 줄었습니다. / 설명: 원문은 '이를 통해'로 응답 시간 감소가 캐싱 추가의 결과임을 밝힌다. 결과는 문장을 나누면서 이 연결어를 지워 인과 관계가 명시되지 않는다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "9a91cebe4b7ca9fcc3c06cb8effa48a7494144977a2f175050b3d72a5a7b5ed8",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "type: 주체 / original: 요청이 거부되며 / result: 서버는 요청을 거부합니다 / reason: 원문은 수동형이라 거부하는 주체를 밝히지 않습니다. 원문 문맥만으로는 행위자가 '서버'로 정해지지 않으므로, 유일한 생략 성분을 복원한 것이 아니라 외부 지식으로 주체를 새로 넣은 것입니다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

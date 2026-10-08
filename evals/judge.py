@@ -44,6 +44,28 @@ def valid_result(j: object) -> bool:
             and j.get("notes_quality") in {"useful", "noise", "none"})
 
 
+def normalize(j: object) -> object:
+    """목록 항목을 문자열로 맞춘다.
+
+    판정 지시문이 '원문과 결과의 구절을 제시하라'고 하므로 모델은 항목을
+    {"원문": …, "결과": …, "설명": …} 객체로 돌려주기도 한다. 이를 버리면
+    실패를 찾은 판정만 미판정으로 빠져 실패율이 낮게 집계된다(2026-10-08 확인).
+    """
+    if not isinstance(j, dict):
+        return j
+    out = dict(j)
+    for k in FIELDS:
+        items = out.get(k)
+        if isinstance(items, list):
+            norm = []
+            for v in items:
+                if isinstance(v, dict) and v and all(isinstance(x, str) for x in v.values()):
+                    v = " / ".join(f"{key}: {val}" for key, val in v.items())
+                norm.append(v)
+            out[k] = norm
+    return out
+
+
 def failed(j: dict) -> bool | None:
     if not valid_result(j):
         return None
@@ -63,7 +85,15 @@ def call(prompt: str, model: str) -> dict:
     try:
         result = json.loads(raw)
     except ValueError:
-        return {"status": "error", "error": "Invalid judge JSON"}
+        # JSON 앞뒤에 설명이 붙은 응답: 가장 바깥 객체만 읽는다.
+        m = re.search(r"\{.*\}", raw, re.S)
+        try:
+            result = json.loads(m.group(0)) if m else None
+        except ValueError:
+            result = None
+        if result is None:
+            return {"status": "error", "error": "Invalid judge JSON"}
+    result = normalize(result)
     if not valid_result(result):
         return {"status": "error", "error": "Invalid judge schema"}
     return {"status": "ok", "result": result,
@@ -138,7 +168,8 @@ def main() -> None:
         if args.cached_only or unavailable.is_set():
             return row
         response = call(prompt, args.model)
-        if response["status"] == "error":
+        # 사용 한도·CLI 오류일 때만 남은 판정을 멈춘다. 응답 형식 오류는 그 건만 미판정으로 남긴다.
+        if response["status"] == "error" and response.get("error") not in {"Invalid judge JSON", "Invalid judge schema"}:
             unavailable.set()
         out.write_text(json.dumps(stamp | response, ensure_ascii=False, indent=2), encoding="utf-8")
         print(ev["id"], row["run"], response["status"], flush=True)

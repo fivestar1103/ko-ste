@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "f20faee94ce94a8d4e333ce53c2fe2b74c16f1dd74199fdc5af8b5a208d23ed8",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "원문: 담당자는 / 결과: 장애가 발생하면 서비스를 재시작하십시오. / 설명: 행동 주체 '담당자'가 빠졌다. 결과 문장은 읽는 사람 누구에게나 내리는 지시가 되어, 수행자의 범위가 원문과 달라졌다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "원문: 재시작할 수 있습니다 / 결과: 재시작하십시오 / 설명: 원문의 허용 또는 능력('할 수 있다')이 결과에서 의무 명령으로 바뀌었다. 원문대로라면 재시작하지 않아도 되는데, 결과는 재시작을 반드시 해야 하는 절차로 만든다."
+    ],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

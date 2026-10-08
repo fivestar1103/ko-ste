@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "7a16b74522b91dffe4de9b0d2f3281804ea586ed53dd72e0bd9c68d77989bbd0",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: (해당 없음: 원문에 보고 주기 언급 없음) / result: **주간 보고** / issue: 원문에 없던 보고 주기(주간)를 제목으로 추가함"
+    ],
+    "dropped": [
+      "original: 결제 모듈 테스트 코드 추가 작업은 일부 진행 중이며 / result: 결제 모듈 테스트 코드 추가: 진행 중 / issue: 범위 표지 '일부'가 사라져 부분적으로만 진행 중이라는 의미가 빠짐"
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

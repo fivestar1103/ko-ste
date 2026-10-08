@@ -1,0 +1,16 @@
+{
+  "expectations": [
+    {
+      "text": "'-지 않아야' 의무·금지 유지",
+      "id": "must",
+      "passed": false,
+      "evidence": "일치 없음"
+    },
+    {
+      "text": "'새 토큰을 받기 전까지' 유지",
+      "id": "until",
+      "passed": false,
+      "evidence": "일치 없음"
+    }
+  ]
+}

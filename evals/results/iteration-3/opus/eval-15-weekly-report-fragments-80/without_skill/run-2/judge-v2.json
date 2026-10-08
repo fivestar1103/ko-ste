@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "9e6164354e0dfe569726133301667301ffd165bfec919a4eb77d549d4fa75c4a",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "original: 결제 모듈 테스트 코드 추가 작업은 일부 진행 중이며 / edited: 결제 모듈 테스트 코드 추가: 진행 중 / issue: 범위 표지 '일부'가 빠졌다. 원문은 작업의 일부만 진행 중이라는 뜻인데, 편집본에서는 이 범위 제한이 사라졌다."
+    ],
+    "certainty_changed": [
+      "original: 평균 응답 속도 약 30% 향상된 것으로 보임 / edited: 평균 응답 속도 약 30% 향상(잠정 수치) / issue: 원문의 '~것으로 보임'은 향상이 일어났다는 판단 전체를 추정으로 표현한다. 편집본은 '향상'을 단정하고 수치만 잠정으로 표시해 추측의 범위가 좁아졌다."
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

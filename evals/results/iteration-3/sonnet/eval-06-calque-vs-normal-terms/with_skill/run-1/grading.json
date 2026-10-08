@@ -1,0 +1,34 @@
+{
+  "expectations": [
+    {
+      "text": "'결정을 만들'을 쓰지 않는다",
+      "id": "fix_decision",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "'주의를 지불'을 쓰지 않는다",
+      "id": "fix_attention",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "'응답이 느리' 유지",
+      "id": "keep_slow",
+      "passed": true,
+      "evidence": "응답이 느린"
+    },
+    {
+      "text": "'값을 읽' 유지",
+      "id": "keep_read",
+      "passed": true,
+      "evidence": "값을 읽"
+    },
+    {
+      "text": "의무 '-해야' 유지",
+      "id": "keep_must",
+      "passed": true,
+      "evidence": "해야"
+    }
+  ]
+}

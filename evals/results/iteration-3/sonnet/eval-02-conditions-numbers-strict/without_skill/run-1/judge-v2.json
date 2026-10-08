@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "782754593b63f80c7564652b375cbe082058a9a13e69569aa95eec1d8999d45c",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "original: 초과 시 업로드가 자동으로 취소되며 이미 업로드된 일부 데이터는 24시간 이내에 삭제됩니다 / result: 이미 업로드된 일부 데이터는 24시간 이내에 삭제됩니다. / issue: 원문에서 데이터 삭제는 '초과 시'라는 조건에 묶여 있다. 결과에서는 이 문장이 독립되면서 그 조건이 빠졌다. 그래서 업로드된 데이터가 일반적으로 24시간 안에 삭제된다는 뜻으로 읽힐 수 있다.",
+      "original: 초과 시 / result: 용량 제한을 초과하면 / issue: 원문의 '초과 시'는 바로 앞의 동영상 50MB 한도만 가리킨다고 읽을 수도 있다. 결과는 이를 모든 용량 제한으로 넓혔다. 따라서 적용 범위가 달라졌을 수 있다.",
+      "original: 최대 20MB까지 가능하며 단, 관리자 계정의 경우 100MB까지 허용되나 / result: 업로드 파일은 최대 20MB까지 가능합니다. / 관리자 계정은 최대 100MB까지 가능합니다. / issue: 예외 표지 '단'이 빠졌다. 그래서 20MB 규칙이 모든 계정에 적용되는 것처럼 단정되고, 다음 문장의 관리자 100MB와 충돌하는 것처럼 읽힐 수 있다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

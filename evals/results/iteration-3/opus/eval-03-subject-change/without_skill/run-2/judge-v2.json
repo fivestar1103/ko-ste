@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "6d87aeec19acf2e2706df0faf5c1ea9c454b4ea68e7a1244d5b720c84b5442d8",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "original: 30분이 지나면 만료되고 / result: 링크는 발송 후 30분이 지나면 만료되며 / issue: 원문에 없는 기준 시점 '발송 후'가 추가됨. 원문에서는 30분을 요청 시점부터 세는지 발송 시점부터 세는지 정해져 있지 않음."
+    ],
+    "dropped": [
+      "original: 사용자가 비밀번호 재설정 링크를 요청하면 / result: 비밀번호 재설정 링크를 요청하면 / issue: 요청 주체 '사용자가'가 빠짐. 문맥상 추정은 가능하지만 원문에 명시된 주체가 사라짐."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

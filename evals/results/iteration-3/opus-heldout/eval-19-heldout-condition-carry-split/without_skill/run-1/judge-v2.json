@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "d90e8e31915bf05bc67363aadb3f921d527b6d7d3561e5c57d6cb648b696482b",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "type: 주체 / original: 요청이 거부되며 / result: 서버는 요청을 거부합니다 / explanation: 원문은 거부 주체를 밝히지 않았는데 '서버'라는 주체를 새로 넣었다. 문맥상 주체가 하나로 정해지지 않으며(게이트웨이 등일 수 있음), 덧붙임에서도 이 가능성을 인정한다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "original: 새 토큰을 받기 전까지 같은 요청을 다시 보내지 않아야 합니다 / result: 새 토큰을 받은 후에만 같은 요청을 다시 보내야 합니다 / explanation: 원문은 새 토큰을 받기 전의 재전송을 금지할 뿐이며, 받은 후의 재전송은 허용(선택)으로 남긴다. 결과의 '보내야 합니다'는 새 토큰을 받은 후 재전송하라는 의무로 읽혀 금지가 의무로 바뀌었다. 덧붙임의 부정형 대안('받기 전에 … 다시 보내면 안 됩니다')은 원문 의미를 보존한다."
+    ],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

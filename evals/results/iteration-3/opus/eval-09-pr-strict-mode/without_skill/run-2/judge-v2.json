@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "input_sha256": "745334996aab567c40264ced875e5aa4bc2aa3e53f5d3e81a3993aaf12fd9803",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [
+      "type: 사실(성격 규정) / original: 캐시 만료 시간은 5분으로 설정되어 있으며 / result: 캐시 만료 시간의 기본값은 5분입니다. / issue: 원문은 현재 5분으로 설정되어 있다고만 말합니다. 편집본은 5분이 '기본값'이라는 새 사실을 단정합니다."
+    ],
+    "dropped": [
+      "type: 시점·맥락 / original: 이번 PR에서는 / result: (삭제) / issue: 이 PR에서 일어난 변경이라는 시점·출처 정보가 사라졌습니다.",
+      "type: 행동(변경 사실) / original: 응답 캐싱을 추가하였으며 / result: 로그인 API는 응답을 캐시에 저장합니다. / issue: 캐싱을 새로 '추가했다'는 변경 사실이 현재 동작 서술로 바뀌었습니다. 이 때문에 다음 문장의 응답 시간 감소가 이 변경의 결과라는 연결이 약해졌습니다."
+    ],
+    "certainty_changed": [
+      "original: 약 120ms에서 40ms로 / result: 약 120ms에서 약 40ms로 / issue: 원문의 '약'이 40ms까지 걸치는지 불분명합니다. 편집본은 40ms에도 '약'을 붙여 근사값으로 확정했습니다. 40ms가 정확한 값이라는 읽기를 배제했습니다."
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

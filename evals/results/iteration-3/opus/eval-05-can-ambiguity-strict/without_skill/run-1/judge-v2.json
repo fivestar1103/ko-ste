@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "input_sha256": "6d5d5e3649072ce457490e4c108b853ba754c881a05b3215cd2e5de9e5f6d3ef",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "original: 담당자는 / result: 장애가 발생하면 서비스를 재시작하십시오. / issue: 행위 주체 '담당자'가 삭제되었습니다. 원문은 재시작 주체를 담당자로 한정하지만, 결과는 주체 없는 명령문이 되어 독자 누구에게나 적용되는 것으로 범위가 넓어졌습니다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "original: 재시작할 수 있습니다 / result: 재시작하십시오 / issue: 허가·능력(할 수 있다)이 의무·지시(하십시오)로 강화되었습니다. 원문에서 선택 사항이던 재시작이 결과에서는 필수 행동이 되었습니다."
+    ],
+    "ambiguous_rewrite": true,
+    "notes_quality": "useful"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "c0e5e140bf3276c49bff6028e89f32940dfddd269f296002cf0c8fc233e12e3e",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [
+      "원문: You should back up the database before upgrading. / 결과: 업그레이드하기 전에 데이터베이스를 백업하십시오. / 설명: 권고(should)가 직접 명령문(하십시오)으로 바뀌어 강도가 높아졌다. 원문 강도를 유지하려면 '백업하는 것이 좋습니다' 정도가 맞다."
+    ],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

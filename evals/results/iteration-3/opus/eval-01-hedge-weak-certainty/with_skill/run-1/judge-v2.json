@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "input_sha256": "93e16ee092a68db2d99495c363c27db9955f0bc1d96bc8e2023def181116a5bf",
+  "judge_model": "claude-opus-5-5",
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [
+      "original: 발생했을 가능성이 있는 것으로 보이며 / result: 발생했을 가능성이 있으며 / description: 원문은 '가능성이 있다'에 '~것으로 보인다'라는 추정을 한 겹 더 붙였다. 결과는 '가능성이 있다'만 남겨 추측의 강도가 약간 높아졌다. 원인을 단정하지 않고 가능성으로 제시하는 점은 같다."
+    ],
+    "obligation_changed": [],
+    "ambiguous_rewrite": false,
+    "notes_quality": "none"
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}
