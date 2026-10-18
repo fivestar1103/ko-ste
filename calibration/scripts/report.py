@@ -18,9 +18,7 @@ DOC = ROOT / "skills" / "ko-ste" / "references" / "03-calibration.md"
 DATA = ROOT / "calibration" / "data"
 
 GROUPS = [
-    ("toss", "토스 가이드"),
     ("pre2022", "2022 이전 문서"),
-    ("post2023", "2023 이후 문서"),
     ("model:claude-opus-5-5", "Opus 5.5"),
     ("model:claude-sonnet-5-5", "Sonnet 5.5"),
     ("model:claude-haiku-4-5-20251001", "Haiku 4.5"),

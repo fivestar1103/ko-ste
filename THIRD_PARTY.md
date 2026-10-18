@@ -10,7 +10,7 @@
 | beamonic/no-ai-slop-ko | [원 저장소](https://github.com/beamonic/no-ai-slop-ko), 커밋 `e9e3371`, MIT. 주장·문체 보존과 표현 검토에 참고했다. Copyright (c) 2026 Peter Yang; Copyright (c) 2026 Beamonic. 전문은 `skills/ko-ste/UPSTREAM-LICENSES.md`에 보존했다. |
 | ASD-STE100 / ASD STEMG | [공식 사이트](https://www.asd-ste100.org/). 공개 설명의 목적과 범주를 참고했다. Issue 9 규격 원문을 확보·검증하지 않았고 공식 규칙·승인 사전 전체를 포함하지 않는다. 제휴나 공인을 뜻하지 않는다. |
 | 국립국어원 사전 3종 | 표준국어대사전, 우리말샘, 한국어기초사전의 검색 건수만 기록했다. 용례 본문은 복제하지 않았다. 사전별 집계 단위가 다르고 활용형 검색이 중복될 수 있다. |
-| 공개 개발 문서 14개 자료(13개 저장소와 위키) | `calibration/corpus-manifest.json`에 URL, `calibration/data/corpus-lock.json`에 커밋을 기록했다. 원문과 검토 표본은 Git에서 제외했다. 고정 커밋의 고지는 [검토 기록](docs/license-review.md)에 있다. FE 뉴스·khaiii 위키의 재이용 조건은 확인이 더 필요하다. 집계 공개가 원문 재배포·변형·상업적 이용 허락을 뜻하지 않는다. |
+| 공개 개발 문서 12개 자료(11개 저장소와 위키, 2022-10-31 이전 커밋) | `calibration/corpus-manifest.json`에 URL, `calibration/data/corpus-lock.json`에 커밋을 기록했다. 0.1.x에서 쓰던 토스 저장소 둘(2024년 이후 글)은 0.2.0에서 말뭉치에서 뺐다. 원문과 검토 표본은 Git에서 제외했다. 고정 커밋의 고지는 [검토 기록](docs/license-review.md)에 있다. FE 뉴스·khaiii 위키의 재이용 조건은 확인이 더 필요하다. 집계 공개가 원문 재배포·변형·상업적 이용 허락을 뜻하지 않는다. |
 | 선택 Python 의존성 | `kiwipiepy`·`kiwipiepy_model` 0.24.0은 Apache-2.0이다. 패키지·모델·바이너리를 동봉하지 않고 사용자 환경에 별도로 설치한다. Kiwi의 [LICENSE.txt](https://github.com/bab2min/kiwipiepy/blob/v0.24.0/LICENSE.txt)·[NOTICE](https://github.com/bab2min/kiwipiepy/blob/v0.24.0/NOTICE), 다른 의존성의 조건도 각각 적용된다. 보정에 사용한 Kiwi의 2022년 커밋은 별도 LGPL 고지다. |
 | 과거 평가 자료 | `evals/`에는 국립국어원 문구를 사용한 과거 입력·스냅샷·모델 출력이 있다. 원출력은 보존하며 모두 MIT로 재허락하지 않는다. [평가 자료 고지](evals/NOTICE.md)와 [확인하지 못한 이용 범위](docs/license-review.md)를 함께 따른다. |
 

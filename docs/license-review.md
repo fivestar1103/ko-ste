@@ -35,7 +35,7 @@
 
 | 자료 ID | 확인한 조건 | 확인 범위 |
 |---|---|---|
-| toss-tw | CC BY-NC-SA 4.0 | README의 License 절 |
+| toss-tw | CC BY-NC-SA 4.0 | README의 License 절. 0.2.0에서 말뭉치에서 뺐다. 규칙 근거 문서로만 참고한다. |
 | kiwipiepy | LGPL-2.1-or-later | 보정에 사용한 2022년 커밋의 LICENSE.txt |
 | soynlp | LGPL-3.0 | LICENSE |
 | khaiii | Apache-2.0 | LICENSE와 제3자 NOTICE.md |
@@ -48,7 +48,7 @@
 | fe-news | 루트의 재이용 허락 미확인 | 루트 LICENSE가 없고 README에도 허락을 찾지 못함 |
 | interview-beginner | MIT | LICENSE |
 | tech-interview | MIT | LICENSE |
-| frontend-fundamentals | MIT | LICENSE.md |
+| frontend-fundamentals | MIT | LICENSE.md. 0.2.0에서 말뭉치에서 뺐다. |
 
 GitHub에 공개되어 있다는 이유만으로 일반적인 재이용 허락이 생기지는 않는다. GitHub가 설명하는 열람·fork 권한과 저작물의 재배포·변형 허락은 범위가 다르다. [GitHub 안내](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 

@@ -237,7 +237,7 @@ def main() -> None:
     # 규칙에 걸린 사람 글 문장 표본: 오탐 검토용 (원문이므로 cache에만)
     review = cache / "review"
     review.mkdir(parents=True, exist_ok=True)
-    human = groups["toss"] + groups["pre2022"]
+    human = groups["pre2022"]
     checks = {
         "len_gt17": lambda r: r["eojeol"] > 17,
         "imp_gt14": lambda r: r["mood"] == "imp" and r["eojeol"] > 14,
