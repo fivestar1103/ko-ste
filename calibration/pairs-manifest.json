@@ -97,7 +97,8 @@
       ],
       "license": "CC-BY-SA-2.5",
       "attribution": "Mozilla Contributors",
-      "origin": "MDN 웹 문서 한국어 번역. 2020-12 Git 이전 전의 위키 이력은 없다."
+      "origin": "MDN 웹 문서 한국어 번역. 2020-12 Git 이전 전의 위키 이력은 없다.",
+      "skip_subjects": "convert\\b.*\\b(md|markdown)\\b|markdownlint|prettier|\\bdump \\d{4}|replace all remaining|\\blint\\b"
     },
     {
       "id": "electron",

@@ -254,10 +254,14 @@ def html_sentences(html: str) -> list[str]:
     return units_to_sentences(p.units)
 
 
+def is_html_doc(text: str) -> bool:
+    body = re.sub(r"\A\s*---\n.*?\n---\n", "", text, flags=re.S)
+    return bool(re.search(r"<(p|li|dd|h2)[\s>]", body))
+
+
 def mdn_sentences(text: str) -> list[str]:
     # 2021년 말부터 MDN 번역 문서가 HTML에서 마크다운으로 바뀌었다. 내용으로 고른다.
-    body = re.sub(r"\A\s*---\n.*?\n---\n", "", text, flags=re.S)
-    if re.search(r"<(p|li|dd|h2)[\s>]", body):
+    if is_html_doc(text):
         return html_sentences(text)
     return md_sentences(KUMA_MACRO.sub(lambda m: "{{" + m.group(1) + "}}", text))
 
@@ -529,8 +533,15 @@ def mine(src: dict, cache: Path, cutoff: str, head: str | None) -> tuple[list[di
     pairs: list[dict] = []
     seen: set[tuple[str, str]] = set()
     stats = Counter()
+    skip_subject = re.compile(src["skip_subjects"], re.I) if src.get("skip_subjects") else None
     for sha, adate, subject, path, old_oid, new_oid in rows:
         stats["file_changes"] += 1
+        if skip_subject and skip_subject.search(subject):
+            stats["skipped_subject"] += 1
+            continue
+        if src["format"] == "mdn" and is_html_doc(reader.read(old_oid)) != is_html_doc(reader.read(new_oid)):
+            stats["skipped_format_change"] += 1  # 형식 변환은 사람이 문장을 고친 것이 아니다
+            continue
         old, new = sents(old_oid, path), sents(new_oid, path)
         sm = difflib.SequenceMatcher(None, old, new, autojunk=False)
         for op, i1, i2, j1, j2 in sm.get_opcodes():
