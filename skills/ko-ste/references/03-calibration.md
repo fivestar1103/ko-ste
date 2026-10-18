@@ -13,6 +13,7 @@
 7. 동작 시험
 8. 한계
 9. 재현
+10. 사람이 고친 기술 문서 전후 쌍
 
 ## 1. 자료 목록과 읽은 범위
 
@@ -634,6 +635,7 @@ iteration-3/sonnet
 - 동작 시험은 개발 사례 17개와 새 사례 4개다. 새 사례도 이 스킬을 만든 쪽이 썼다. 생성 모델과 판정 모델이 모두 Claude라 같은 계열의 편향이 있을 수 있다. 사람이 만든 정답과 대조하지 않았다.
 - 후속 Codex 시험은 5개 입력뿐이다. 독립 에이전트를 사용했지만 모델 계열은 같고 시스템 지침의 영향도 남는다. 표본과 장르를 맞춘 사람 독자 평가를 하지 않았다.
 - ASD-STE100 규격 원문을 읽지 않았다. STE와의 대응은 공개 설명과 2차 요약 수준이다.
+- 기술 문서 전후 쌍(10절)은 대부분 영어 문서의 번역이다. 번역 문서에서 고친 방식이 처음부터 한국어로 쓴 글에도 맞는다고 단정하지 않는다. 쌍을 고른 판정자 둘도 모두 Claude이며, 사람 검수는 표본으로만 한다.
 
 ## 9. 재현
 
@@ -664,7 +666,67 @@ uv run --no-project evals/judge.py --iteration 3 --tag opus
 # 사용 한도가 없으면 새 판정 없이 현재 미판정 수만 집계(종료 코드 2)
 uv run --no-project evals/judge.py --iteration 2 --cached-only
 
-# 6) 이 문서의 표 다시 만들기 / 검사
+# 6) 사람이 고친 전후 쌍(10절). 저장소 이력을 받고, 라벨과 재판정은 Claude Code CLI가 필요하다
+uv run python calibration/scripts/mine_pairs.py
+uv run python calibration/scripts/label_pairs.py --source k8s      # 출처마다
+uv run python calibration/scripts/verify_pairs.py --source k8s     # 출처마다
+uv run python calibration/scripts/select_pairs.py
+uv run python evals/human_pairs.py --tag <이름> --model claude-opus-5-5
+
+# 7) 이 문서의 표 다시 만들기 / 검사
 uv run --no-project calibration/scripts/report.py --write
 uv run --no-project calibration/scripts/report.py --check
 ```
+
+## 10. 사람이 고친 기술 문서 전후 쌍
+
+0.2.0에서 더한 자료다. 04-native-pairs.md의 국립국어원 쌍은 공문서다. 기술 문서를 사람이 실제로 어떻게 고치는지 보여 주는 쌍은 없었다. 그래서 공개 기술 문서 번역 저장소의 Git 이력에서 사람이 고친 문장을 모았다.
+
+### 자료
+
+- 출처: `calibration/pairs-manifest.json`. 쿠버네티스, MDN, Rust 책, Vue 2, 타입스크립트 핸드북, 파이토치 튜토리얼, Electron, Helm, Node.js 등 한국어 번역 저장소다. 각 저장소의 이용 조건은 `skills/ko-ste/PAIRS-NOTICE.md`에 있다.
+- 기간: 작성일과 커밋일이 모두 2022-10-31 이전인 커밋만 읽었다. 커밋일만 보면 날짜를 바꿔 다시 쓴 커밋을 놓친다.
+- 뺀 것:
+  - 기계 번역이 섞인 기간과 작성자. 텐서플로 문서는 2020-07부터 GitLocalize 기계 번역과 외주 후편집이 들어와서 그 전 커뮤니티 번역만 읽었다.
+  - 외주 현지화 파이프라인으로 들어온 문자열(VS Code UI)
+  - 이력이 남지 않은 저장소(React 한국어 문서), 이용에 별도 허락이 필요한 저장소(javascript.info)
+  - 형식 변환 커밋(MDN의 HTML→마크다운 변환, lint 정리). 처음 캤을 때 MDN 쌍 11,464개 가운데 8,000개 이상이 변환에서 나온 가짜 쌍이었다.
+  - 뺀 출처와 이유는 manifest의 `excluded`에 있다.
+
+### 캐는 방법
+
+`calibration/scripts/mine_pairs.py`가 한다.
+
+1. 저장소를 blob 없이 받고, 수정된 한국어 파일의 수정 전후 판만 한꺼번에 받는다.
+2. 수정 전후 파일에서 산문만 뽑아 문장으로 나눈다(Kiwi). 코드 블록, 제목, 표, 숏코드는 뺀다.
+3. 바뀐 구간 안에서 문장을 1:1, 1:2(나눔), 2:1(합침)로 짝짓는다. 글자 유사도 0.5 미만은 짝으로 보지 않는다.
+4. 바뀐 방식을 나눈다: 띄어쓰기만, 부호만, 코드·수치·영문이 바뀜, 한두 글자 고침, 다시 씀, 나눔, 합침, 문장 분리만 달라짐(버림).
+5. 나중에 되돌린 수정은 표시해 두고 본보기에서 뺀다.
+
+### 고르는 방법
+
+1. 1차 판정(`label_pairs.py`, `claude-opus-5-5`): 쌍마다 뜻이 같은지, 무엇을 고쳤는지(문체, 문법, 맞춤법, 용어, 내용, 형식), 어느 규칙에 해당하는지, ko-ste 기준으로 나아졌는지, 본보기로 쓸 만한지를 적는다. 영어 원문이 바뀌어서 함께 고친 번역은 대부분 '내용'으로 빠진다.
+2. 재판정(`verify_pairs.py`, `claude-sonnet-5-5`): 1차에서 본보기 후보가 된 쌍만 다른 모델이 더 엄격한 질문으로 다시 본다. 규칙 ID가 맞지 않으면 고친다.
+3. 선택(`select_pairs.py`): 두 판정을 모두 통과한 쌍만 쓴다. 용어만 바꾼 쌍(요소→엘리먼트, 비밀→시크릿)은 뺀다. 번역 프로젝트마다 정한 용어집을 따른 교체라서 다듬기의 본보기가 아니고, 본보기로 두면 독자가 쓰는 기술 용어까지 바꾸게 만들 수 있다(LX-5). 커밋 해시로 5분의 1을 떼어 평가용(`evals/human-pairs/heldout.jsonl`)으로 둔다. 같은 커밋의 쌍은 같은 쪽에 들어간다.
+4. CC BY-SA 출처의 쌍은 `data/pairs-cc-by-sa.jsonl`에만 두고 05-tech-pairs.md에는 넣지 않는다.
+
+판정자 둘 다 Claude다. 사람 검수는 표본으로 한다. 검수 결과는 이 절에 덧붙인다.
+
+<!-- BEGIN:pairs -->
+<!-- END:pairs -->
+
+'뜻 같음'은 1차 판정 기준이다. '본보기 후보'는 1차에서 뜻이 같고, 나아졌고, 문체나 문법을 고쳤고, 되돌리지 않은 쌍이다.
+
+### 규칙별 쌍 수
+
+<!-- BEGIN:pair_rules -->
+<!-- END:pair_rules -->
+
+규칙마다 쌍 수가 고르지 않다. 번역 저장소의 수정은 군말 빼기(RD-2)와 조사·어미(SE-7)가 많고, 긴 문장 나누기(SE-2)와 모호성(AM-)은 적다. 쌍이 적은 규칙은 기존 근거(01-rules.md)를 그대로 쓴다.
+
+### 떼어 둔 쌍으로 본 동작
+
+평가용 쌍의 고치기 전 문장을 앞뒤 문맥과 함께 주고 다듬게 했다(`evals/human_pairs.py`). 스킬 사용과 미사용을 따로 실행하고, 판정자는 어느 쪽 출력인지 모르는 상태에서 사람이 고친 글과 견주었다.
+
+<!-- BEGIN:human_eval -->
+<!-- END:human_eval -->

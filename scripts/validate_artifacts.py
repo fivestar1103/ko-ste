@@ -12,6 +12,41 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills" / "ko-ste"
 
 
+def check_tech_pairs():
+    """기술 문서 전후 쌍: 출처·기간·라이선스 고지와 평가용 쌍의 분리를 확인한다."""
+    manifest = json.loads((ROOT / "calibration/pairs-manifest.json").read_text(encoding="utf-8"))
+    lock = json.loads((ROOT / "calibration/data/pairs-lock.json").read_text(encoding="utf-8"))
+    sources = {s["id"]: s for s in manifest["sources"]}
+    cutoff = manifest["cutoff"][:10]
+    notice = (SKILL / "PAIRS-NOTICE.md").read_text(encoding="utf-8")
+    shipped_ids = set()
+    for name in ("pairs", "pairs-cc-by-sa"):
+        for line in (SKILL / "data" / f"{name}.jsonl").read_text(encoding="utf-8").splitlines():
+            row = json.loads(line)
+            src = sources[row["source"]]
+            assert row["license"] == src["license"], row["id"]
+            # CC BY-SA 문장은 따로 둔 파일에만 둔다
+            assert ("SA" in src["license"]) == (name == "pairs-cc-by-sa"), row["id"]
+            assert row["date"] < min(cutoff, src.get("cutoff", cutoff)[:10]), row["id"]
+            assert row["rules"] and all(re.fullmatch(r"(MP|ST|SE|MO|AM|LX|RD|FM)-\d+", r) for r in row["rules"])
+            assert re.fullmatch(r"[0-9a-f]{40}", row["commit"]) and row["before"] != row["after"]
+            assert f"| {row['source']} |" in notice, f"Missing notice row: {row['source']}"
+            assert any((SKILL / "data/licenses").glob(f"{row['source']}-*.txt")), f"Missing license copy: {row['source']}"
+            assert re.fullmatch(r"[0-9a-f]{40}", lock[row["source"]]["head"])
+            shipped_ids.add(row["id"])
+    heldout = (ROOT / "evals/human-pairs/heldout.jsonl").read_text(encoding="utf-8").splitlines()
+    held_commits = {json.loads(l)["commit"] for l in heldout}
+    assert not shipped_ids & {json.loads(l)["id"] for l in heldout}, "held-out pair leaked into skill data"
+    for name in ("pairs", "pairs-cc-by-sa"):
+        for line in (SKILL / "data" / f"{name}.jsonl").read_text(encoding="utf-8").splitlines():
+            assert json.loads(line)["commit"] not in held_commits, "held-out commit leaked into skill data"
+    reference = (SKILL / "references/05-tech-pairs.md").read_text(encoding="utf-8")
+    assert "../PAIRS-NOTICE.md" in reference
+    share_alike = {s["id"] for s in manifest["sources"] if "SA" in s["license"]}
+    for cell in re.findall(r"^\| (\S+) `[0-9a-f]{7}` \|", reference, re.M):
+        assert cell in sources and cell not in share_alike, f"05-tech-pairs.md must not quote {cell}"
+
+
 def main():
     for folder in (ROOT / "scripts", ROOT / "tests", ROOT / "evals", ROOT / "calibration/scripts", SKILL / "scripts"):
         for path in folder.glob("*.py"):
@@ -57,6 +92,7 @@ def main():
     assert len(re.findall(r"^\| NP-\d\d \|", pairs, re.M)) == 55, "native pairs missing from installed skill"
     assert len(re.findall(r"^\| X-\d\d \|", pairs, re.M)) == 20
     assert "../NIKL-NOTICE.md" in pairs and "공공누리 제3유형" in pairs
+    check_tech_pairs()
     for path in (ROOT / "calibration/data").glob("*.json"):
         json.loads(path.read_text(encoding="utf-8"))
     readme = (ROOT / "README.md").read_text(encoding="utf-8")

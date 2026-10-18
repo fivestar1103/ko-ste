@@ -2,7 +2,7 @@
 
 고르는 조건:
 - label_pairs.py 판정: meaning이 "same", direction이 "better", exemplar가 true,
-  purpose가 style, grammar, term 중 하나
+  purpose가 style, grammar 중 하나
 - verify_pairs.py 재판정: keep이 true. 규칙 ID는 재판정 쪽을 쓴다.
 - 나중에 되돌린 수정이 아님
 
@@ -29,7 +29,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-KEEP_PURPOSE = {"style", "grammar", "term"}
+# 용어만 바꾼 쌍(purpose "term")은 뺀다. 번역 프로젝트의 용어집을 따른 교체라서 일반적인 다듬기의
+# 본보기가 아니다. 본보기로 두면 독자가 쓰는 기술 용어까지 바꾸게 만들 수 있다(LX-5).
+KEEP_PURPOSE = {"style", "grammar"}
 HELDOUT_SHARE = 5  # 커밋 해시 기준 5분의 1을 평가용으로 뗀다
 
 
@@ -51,6 +53,12 @@ def license_file(repo: Path, head: str, preferred: str | None) -> tuple[str, str
                           capture_output=True, text=True, encoding="utf-8").stdout
     return name, text
 
+
+LICENSE_URLS = {
+    "CC-BY-4.0": "https://creativecommons.org/licenses/by/4.0/",
+    "CC-BY-SA-2.5": "https://creativecommons.org/licenses/by-sa/2.5/",
+    "CC-BY-SA-3.0": "https://creativecommons.org/licenses/by-sa/3.0/",
+}
 
 NOTICE_HEAD = """# 전후 쌍 자료의 출처와 이용 조건
 
@@ -98,17 +106,16 @@ def write_reference(rows: list[dict], manifest: dict) -> None:
     order = lambda rid: (rid.split("-")[0], int(rid.split("-")[1]))  # noqa: E731
     parts = [REFERENCE_HEAD.format(cutoff=manifest["cutoff"][:10], total=len(rows))]
     for rule in sorted(by_rule, key=order):
-        # 먼저 출처마다 하나씩 고르고, 모자라면 남은 쌍으로 채운다.
-        picked, sources = [], set()
-        for r in by_rule[rule]:
-            if r["source"] not in sources and len(picked) < PER_RULE:
-                picked.append(r)
-                sources.add(r["source"])
-        for r in by_rule[rule]:
-            if len(picked) == PER_RULE:
-                break
-            if r not in picked:
-                picked.append(r)
+        # 출처와 커밋이 겹치지 않게 고른다. 한 커밋이 같은 낱말을 일괄로 바꾼 경우가 많다.
+        # 1차: 새 출처이면서 새 커밋, 2차: 새 커밋, 3차: 남은 쌍.
+        picked: list[dict] = []
+        for fresh in (lambda r: r["source"] not in {x["source"] for x in picked}
+                      and r["commit"] not in {x["commit"] for x in picked},
+                      lambda r: r["commit"] not in {x["commit"] for x in picked},
+                      lambda r: True):
+            for r in by_rule[rule]:
+                if len(picked) < PER_RULE and r not in picked and fresh(r):
+                    picked.append(r)
         parts.append(f"## {rule}\n\n| 출처 | 고치기 전 | 사람이 고친 글 |\n|---|---|---|\n")
         for r in picked:
             cell = lambda t: t.replace("|", "\\|")  # noqa: E731
@@ -150,6 +157,7 @@ def main() -> None:
             v = verdicts.get(lab["id"])
             if v is None or not v["keep"] or not v["rules"]:
                 continue
+            stat["verified_kept"] += 1
             row = {
                 "id": f"{src['id']}-{p['id']}",
                 "rules": v["rules"],
@@ -198,8 +206,10 @@ def main() -> None:
         name, text = license_file(cache / "mining" / f"{src['id']}.git", head, src.get("license_file"))
         (lic_dir / f"{src['id']}-{Path(name).stem}.txt").write_text(text, encoding="utf-8")
         repo_url = src["repo"].removesuffix(".git")
+        lic_file = f"data/licenses/{src['id']}-{Path(name).stem}.txt"
+        lic = f"[{src['license']}]({LICENSE_URLS[src['license']]})" if src["license"] in LICENSE_URLS else src["license"]
         lines.append(f"| {src['id']} | [{repo_url.split('github.com/')[1]}]({repo_url}) | `{head[:10]}` | "
-                     f"{src['license']} | {src['attribution']} | {n} |\n")
+                     f"{lic}, [사본]({lic_file}) | {src['attribution']} | {n} |\n")
     (ROOT / "skills/ko-ste/PAIRS-NOTICE.md").write_text("".join(lines), encoding="utf-8")
     summary["rules"] = dict(summary["rules"].most_common())
     (ROOT / "calibration/data/pairs-summary.json").write_text(

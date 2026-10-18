@@ -1,5 +1,15 @@
 # 변경 기록
 
+## 0.2.0 — 2026-10-19
+
+- 기술 문서 전후 쌍 추가. 공개 기술 문서 번역 저장소의 Git 이력에서 사람이 고친 문장을 모았다. 작성일과 커밋일이 모두 2022-10-31 이전인 커밋만 썼다.
+  - 스킬: `references/05-tech-pairs.md`(규칙별 대표 쌍), `data/pairs.jsonl`·`data/pairs-cc-by-sa.jsonl`(전체), `scripts/pairs.py`(규칙 ID·낱말로 찾기). 출처별 이용 조건은 `PAIRS-NOTICE.md`와 `data/licenses/`에 있다.
+  - 고치는 순서 5단계에서 기술 문서는 이 쌍을 먼저 찾게 했다. 사용자 수정 쌍(U-)이 여전히 가장 앞선다.
+  - 도구: `calibration/scripts/mine_pairs.py`, `label_pairs.py`, `verify_pairs.py`, `select_pairs.py`. 출처 목록과 뺀 출처의 이유는 `calibration/pairs-manifest.json`에 있다.
+  - 쌍은 Claude가 두 번 판정해 골랐다(Opus 1차, Sonnet 재판정). 용어만 바꾼 쌍은 프로젝트 용어집을 따른 교체라 뺐다. 사람 검수는 표본으로 진행 중이다.
+- 보정 말뭉치의 원문을 2022-10-31 이전 글로 한정했다. 토스 테크니컬 라이팅 가이드 본문과 toss/frontend-fundamentals(둘 다 2024년 이후 글)를 측정에서 뺐다. 남은 묶음의 수치는 바뀌지 않았다. 토스 가이드는 규칙의 근거 문서로 계속 참고한다.
+- 떼어 둔 사람 수정 쌍으로 스킬 사용·미사용을 비교하는 시험(`evals/human_pairs.py`)을 추가했다.
+
 ## 0.1.1 — 2026-10-08
 
 - 사람이 고친 전후 쌍(국립국어원 길잡이 채택 쌍 55개, 제외 쌍 20개)을 설치 스킬의 `references/04-native-pairs.md`로 되돌림. 인용 고지 `NIKL-NOTICE.md`를 스킬 폴더에 함께 둠. 인용문은 바꾸지 않음.

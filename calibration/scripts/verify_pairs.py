@@ -83,7 +83,9 @@ def main() -> None:
     cache = Path(args.cache)
     pairs = {json.loads(l)["id"]: json.loads(l) for l in (cache / "pairs" / f"{args.source}.jsonl").open(encoding="utf-8")}
     labels = [json.loads(l) for l in (cache / "labels" / f"{args.source}.jsonl").open(encoding="utf-8")]
-    cands = [l for l in labels if l["exemplar"] and l["meaning"] == "same" and l["direction"] == "better"]
+    # select_pairs.py가 쓰지 않는 용어 교체(purpose "term")는 다시 보지 않는다.
+    cands = [l for l in labels if l["exemplar"] and l["meaning"] == "same" and l["direction"] == "better"
+             and l["purpose"] in {"style", "grammar"}]
     out_path = cache / "verify" / f"{args.source}.jsonl"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     done = {json.loads(l)["id"] for l in out_path.open(encoding="utf-8")} if out_path.exists() else set()
