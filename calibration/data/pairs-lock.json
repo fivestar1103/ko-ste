@@ -1,0 +1,22 @@
+{
+  "k8s": {
+    "repo": "https://github.com/kubernetes/website.git",
+    "head": "079a4d63f072a54c317689c957307aaa018cfe34",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 453,
+      "duplicate": 80,
+      "file_changes": 3623,
+      "kind.merge": 52,
+      "kind.minor": 227,
+      "kind.punct": 107,
+      "kind.rewrite": 1677,
+      "kind.spacing": 503,
+      "kind.split": 63,
+      "kind.token": 1413,
+      "pairs": 4042,
+      "reflow": 52,
+      "unchanged_sentences": 291803
+    }
+  }
+}
