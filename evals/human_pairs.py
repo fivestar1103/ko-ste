@@ -5,7 +5,7 @@ evals/human-pairs/heldout.jsonl은 calibration/scripts/select_pairs.py가 커밋
 같은 요청을 스킬 있음·없음으로 독립 실행한다(run_evals.py와 같은 방식).
 
 판정자는 어느 설정의 출력인지 모른다. 고치기 전 문장, 사람이 고친 글, 모델 출력을 보고 다음을 적는다.
-- meaning: 모델 출력이 고치기 전 문장의 뜻을 지켰는가
+- 뜻: 모델 출력이 더하거나 뺀 사실, 바꾼 확신·의무 강도(judge.py와 같은 기준)
 - human_fix: 사람이 고친 문제를 모델 출력도 고쳤는가
 - vs_human: 사람이 고친 글과 비교해 어떤가
 판정자도 Claude다. 사람이 고친 글을 정답으로 단정하지 않고 참고로만 준다.
@@ -59,22 +59,35 @@ JUDGE = """너는 한국어 기술 문서 편집 결과를 검사한다. 출력�
 
 '사람이 고친 글'은 실제 문서에서 리뷰를 거쳐 들어간 수정이다. 정답이 아니라 참고다.
 
-- meaning: 편집 결과가 고치기 전 문장의 사실, 조건, 범위, 수치, 확신 정도, 의무·허용 강도를 지켰으면 "same", 바꿨으면 "changed".
-- meaning_issues: changed이면 무엇이 바뀌었는지 구절을 들어 적는다. 아니면 빈 목록.
+먼저 편집 결과가 고치기 전 문장의 뜻을 지켰는지 엄격하게 본다. 너그럽게 넘기지 않는다.
+- added: 고치기 전 문장에 없던 사실, 수치, 원인, 주체, 대상, 행동 지시. 문맥상 하나로만 읽히는 생략 성분 복원은 제외.
+- dropped: 사라지거나 범위가 달라진 사실, 조건, 예외, 숫자, 범위 표지. 정의('~를 말한다')를 일반 서술로 바꾼 것도 여기에 든다.
+- certainty_changed: 추측·단정·계획의 강도가 달라진 곳.
+- obligation_changed: 의무, 금지, 허용, 권고, 능력의 강도가 달라진 곳.
+각 항목에는 고치기 전과 편집 결과의 구절을 들어 적는다. 없으면 빈 목록.
+
+그다음:
 - edited: 편집 결과가 고치기 전 문장과 글자가 다르면 true.
-- human_fix: 사람이 고친 문제(어색한 표현, 문법 오류, 용어 등)를 편집 결과도 고쳤으면 "yes", 일부만 고쳤으면 "partial", 고치지 않았으면 "no".
-- vs_human: 한국어 기술 문서로서 편집 결과가 사람이 고친 글보다 나으면 "better", 비슷하면 "same", 못하면 "worse".
+- human_fix: 사람이 고친 문제(어색한 표현, 문법 오류 등)를 편집 결과도 고쳤으면 "yes", 일부만 고쳤으면 "partial", 고치지 않았으면 "no".
+- vs_human: 뜻을 지켰는지까지 따져서, 한국어 기술 문서로서 편집 결과가 사람이 고친 글보다 나으면 "better", 비슷하면 "same", 못하면 "worse".
 - reason: 한국어 한 문장.
 
 JSON 하나만 출력:
-{{"meaning": "same", "meaning_issues": [], "edited": true, "human_fix": "yes", "vs_human": "same", "reason": ""}}"""
+{{"added": [], "dropped": [], "certainty_changed": [], "obligation_changed": [], "edited": true, "human_fix": "yes", "vs_human": "same", "reason": ""}}"""
+
+
+MEANING_FIELDS = ("added", "dropped", "certainty_changed", "obligation_changed")
 
 
 def valid(j: object) -> bool:
-    return (isinstance(j, dict) and j.get("meaning") in {"same", "changed"}
-            and isinstance(j.get("meaning_issues"), list) and isinstance(j.get("edited"), bool)
+    return (isinstance(j, dict) and all(isinstance(j.get(k), list) for k in MEANING_FIELDS)
+            and isinstance(j.get("edited"), bool)
             and j.get("human_fix") in {"yes", "partial", "no"} and j.get("vs_human") in {"better", "same", "worse"}
             and isinstance(j.get("reason"), str))
+
+
+def meaning(j: dict) -> str:
+    return "changed" if any(j[k] for k in MEANING_FIELDS) else "same"
 
 
 def judge(case: dict, body: str, model: str) -> dict:
@@ -109,7 +122,8 @@ def summarize(base: Path, cases: list[dict]) -> dict:
                 continue
             r = j["result"]
             c["judged"] += 1
-            c[f"meaning.{r['meaning']}"] += 1
+            c[f"meaning.{meaning(r)}"] += 1
+            c.update(k for k in MEANING_FIELDS if r[k])
             c[f"human_fix.{r['human_fix']}"] += 1
             c[f"vs_human.{r['vs_human']}"] += 1
             c["edited"] += int(r["edited"])
@@ -119,7 +133,9 @@ def summarize(base: Path, cases: list[dict]) -> dict:
 
 def write_summary(base: Path, summary: dict, manifest: dict) -> None:
     (base / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    rows = [("판정 완료", "judged"), ("뜻이 바뀜", "meaning.changed"), ("고침", "edited"),
+    rows = [("판정 완료", "judged"), ("뜻이 바뀜", "meaning.changed"), ("　사실을 더함", "added"),
+            ("　사실·범위를 뺌", "dropped"), ("　확신 정도가 바뀜", "certainty_changed"),
+            ("　의무·허용 강도가 바뀜", "obligation_changed"), ("고침", "edited"),
             ("사람이 고친 문제를 고침", "human_fix.yes"), ("일부 고침", "human_fix.partial"),
             ("못 고침", "human_fix.no"), ("사람보다 나음", "vs_human.better"),
             ("사람과 비슷", "vs_human.same"), ("사람보다 못함", "vs_human.worse"), ("미판정", "pending")]
@@ -152,7 +168,7 @@ def main() -> None:
     base = BASE / "results" / args.tag
     base.mkdir(parents=True, exist_ok=True)
     manifest = {"model": args.model, "judge_model": args.judge_model, "skill_sha256": skill_digest(SKILL),
-                "heldout_sha256": digest(heldout), "limit": args.limit, "protocol": 1}
+                "heldout_sha256": digest(heldout), "limit": args.limit, "protocol": 2}
     meta = base / "manifest.json"
     if meta.exists() and json.loads(meta.read_text(encoding="utf-8")) != manifest:
         raise SystemExit("모델·스킬·시험 쌍이 바뀌었습니다. 새 tag를 쓰세요.")
