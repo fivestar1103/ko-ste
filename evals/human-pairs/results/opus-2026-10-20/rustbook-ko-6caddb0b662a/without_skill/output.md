@@ -1,0 +1,1 @@
+Listing 13-1에 나온 `simulated_expensive_calculation` 함수로 이 가상의 알고리즘 호출을 흉내 내 보겠습니다.

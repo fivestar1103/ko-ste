@@ -1,0 +1,1 @@
+일치하는 `platformCommand` 가 없으면 기본 `command` 가 사용된다.

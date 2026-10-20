@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "partial",
+    "vs_human": "worse",
+    "reason": "편집 결과는 '조성하기 위한'을 '조성하기 위해'로 고쳐 뜻을 그대로 지키며 문법 오류를 바로잡았지만, 사람이 '행동입니다'를 '행동은 다음과 같습니다'로 고쳐 목록 도입부를 자연스럽게 다듬은 부분은 반영하지 않아 사람이 고친 글보다 조금 어색합니다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

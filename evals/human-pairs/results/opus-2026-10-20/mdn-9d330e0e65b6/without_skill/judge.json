@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "고치기 전 '그렇다면,'이 편집 결과에서 빠져 앞 문장과 이어 주는 연결 표지가 사라짐"
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "same",
+    "reason": "편집 결과는 사람처럼 '객체들의 배열들의 배열'의 군더더기 '들'을 없애고 '다수의 입력이 있을 수'를 '입력은 여러 개일 수'로 자연스럽게 다듬었지만, 앞 문장과 이어 주는 '그렇다면'을 뺐으므로 전체적으로는 사람이 고친 글과 비슷한 수준이다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

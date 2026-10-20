@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람이 고친 것처럼 '가입을 하고'를 '가입하고'로 줄였고, 문맥상 하나로만 읽히는 '채널'을 보충해 백틱 뒤 띄어쓰기 문제도 함께 없애 뜻을 지키면서 더 자연스럽다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

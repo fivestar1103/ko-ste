@@ -9,7 +9,7 @@
       "name": "ko-ste",
       "source": "./skills/ko-ste",
       "description": "한국어 글의 의미·조건·수치·확신·의무를 보존하며 읽기 쉽게 다듬는다.",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "author": {
         "name": "Hwany",
         "url": "https://github.com/fivestar1103"

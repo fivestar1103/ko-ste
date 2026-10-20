@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 '우리 모두는 그 누구라도'의 중복을 자연스러운 '우리는 누구나'로 고쳤고, 앞 문장 맥락상 하나로만 읽히는 주어 '검토는'을 복원해 뜻을 지키면서도 사람이 고친 글보다 문장의 주어가 분명하다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

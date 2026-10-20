@@ -1,0 +1,1 @@
+이를 위해서는 모든 워커 노드에 `csi.vsphere.vmware.com` CSI 드라이버가 설치되어 있어야 한다.

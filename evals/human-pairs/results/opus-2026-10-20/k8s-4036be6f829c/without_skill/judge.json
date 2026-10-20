@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [
+      "고치기 전 '의존하며'의 단순 나열이 편집 결과 '의존하므로'로 바뀌어, 앞 절이 뒤 절의 원인이라는 인과 관계가 새로 생겼다.",
+      "고치기 전 'iptables에 사용 가능하도록'이 편집 결과 'iptables를 거치도록'으로 바뀌어, 트래픽이 iptables를 통과해야 한다는 더 구체적인 행동으로 의미가 달라졌다."
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "no",
+    "vs_human": "worse",
+    "reason": "편집 결과는 사람이 지운 군더더기 부사 '분명히'를 '당연히'로 바꿔 남겼고, '므로'로 원문에 없던 인과 관계를 더했으며, 트래픽 요건도 '거치도록'으로 바꿔 뜻을 지킨 정도가 사람이 고친 글보다 못하다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

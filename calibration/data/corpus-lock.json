@@ -1,9 +1,4 @@
 {
-  "toss-tw": {
-    "repo": "https://github.com/toss/technical-writing.git",
-    "commit": "68ba335cbe35c877775f092e98177b60da5f3d95",
-    "commit_date": "2026-02-04T21:58:58+09:00"
-  },
   "kiwipiepy": {
     "repo": "https://github.com/bab2min/kiwipiepy.git",
     "commit": "aa5ce04bcb4c25903eaef70e67f34ff9f9556e9e",
@@ -63,10 +58,5 @@
     "repo": "https://github.com/gyoogle/tech-interview-for-developer.git",
     "commit": "5fbd70c7f515d94931af549691614b97696cba55",
     "commit_date": "2022-10-28T01:52:13+09:00"
-  },
-  "frontend-fundamentals": {
-    "repo": "https://github.com/toss/frontend-fundamentals.git",
-    "commit": "161d3d6a0d6d372eacd75036de567511643f6265",
-    "commit_date": "2026-03-08T14:00:01+09:00"
   }
 }

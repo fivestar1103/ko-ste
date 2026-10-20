@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "worse",
+    "reason": "편집 결과는 사람이 고친 '버전에'→'버전의' 문제를 고쳤지만, '것으로'를 '경우로'로 바꾸어 '1.14.0을 제외한 것'을 '버그가 차트 실행을 막는 경우'와 같은 것으로 묶는 어색한 논리가 생겨 사람이 고친 글보다 못하다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

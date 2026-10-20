@@ -35,7 +35,7 @@
 
 | 자료 ID | 확인한 조건 | 확인 범위 |
 |---|---|---|
-| toss-tw | CC BY-NC-SA 4.0 | README의 License 절 |
+| toss-tw | CC BY-NC-SA 4.0 | README의 License 절. 0.2.0에서 말뭉치에서 뺐다. 규칙 근거 문서로만 참고한다. |
 | kiwipiepy | LGPL-2.1-or-later | 보정에 사용한 2022년 커밋의 LICENSE.txt |
 | soynlp | LGPL-3.0 | LICENSE |
 | khaiii | Apache-2.0 | LICENSE와 제3자 NOTICE.md |
@@ -48,11 +48,27 @@
 | fe-news | 루트의 재이용 허락 미확인 | 루트 LICENSE가 없고 README에도 허락을 찾지 못함 |
 | interview-beginner | MIT | LICENSE |
 | tech-interview | MIT | LICENSE |
-| frontend-fundamentals | MIT | LICENSE.md |
+| frontend-fundamentals | MIT | LICENSE.md. 0.2.0에서 말뭉치에서 뺐다. |
 
 GitHub에 공개되어 있다는 이유만으로 일반적인 재이용 허락이 생기지는 않는다. GitHub가 설명하는 열람·fork 권한과 저작물의 재배포·변형 허락은 범위가 다르다. [GitHub 안내](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
 위키의 고지가 확인되지 않은 점, FE 뉴스와 학습 노트에 외부 글이 섞일 수 있다는 점, 비상업 조건의 자료를 상업적 목적에 쓰는 경우는 추가 확인 대상이다. 기존 집계를 재현한 사실을 그 용도의 권리 확인으로 표시하지 않는다.
+
+## 기술 문서 전후 쌍(0.2.0)
+
+검토일: 2026-10-20. 쌍을 캔 저장소의 고정 HEAD 커밋에서 루트 라이선스 파일을 읽어 사본을 `skills/ko-ste/data/licenses/`에 두었다.
+
+| 출처 | 확인한 조건 | 조치 |
+|---|---|---|
+| kubernetes/website, tldr-pages/tldr | CC BY 4.0 | 저작자, 저장소, 고정 커밋, 라이선스 링크, 발췌·마크업 제거 사실을 PAIRS-NOTICE.md에 적는다. |
+| mdn/translated-content | 산문 CC BY-SA 2.5 | 쌍을 `data/pairs-cc-by-sa.jsonl`에만 두고 05-tech-pairs.md에 인용하지 않는다. 고쳐 배포하면 같은 조건을 따른다고 고지한다. |
+| adambard/learnxinyminutes-docs | CC BY-SA 3.0 | 같은 방식. 이번 선택에서는 채택된 쌍이 없다. |
+| electron/electron, nodejs/nodejs-ko, nodejs/nodejs.org, helm/helm-www, vuejs-kr/kr.vuejs.org, typescript-kr | MIT | 저작권 고지와 허락 문구가 든 라이선스 파일 사본을 함께 배포한다. |
+| PyTorchKorea/tutorials-kr | BSD-3-Clause | 같은 방식. |
+| tensorflow/docs-l10n | Apache-2.0 | 라이선스 전문 사본을 함께 배포한다. |
+| rinthel/rust-lang-book-ko | MIT 또는 Apache-2.0 | MIT를 골라 사본을 둔다. |
+
+뺀 출처와 이유(기계 번역 의심, 별도 허락제, 이용 조건 파일 없음 등)는 `calibration/pairs-manifest.json`의 `excluded`에 있다. 쌍의 `rules`, `purpose`, `label_note`는 프로젝트의 분류이며 출처 저장소의 견해가 아니다. 이 기록은 법률 자문이 아니다.
 
 ## 선택 Python 도구의 의존성
 

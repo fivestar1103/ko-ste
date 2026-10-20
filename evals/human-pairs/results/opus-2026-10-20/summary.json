@@ -1,0 +1,32 @@
+{
+  "with_skill": {
+    "added": 1,
+    "certainty_changed": 1,
+    "dropped": 4,
+    "edited": 56,
+    "human_fix.no": 10,
+    "human_fix.partial": 2,
+    "human_fix.yes": 46,
+    "judged": 58,
+    "meaning.changed": 4,
+    "meaning.same": 54,
+    "vs_human.better": 34,
+    "vs_human.same": 15,
+    "vs_human.worse": 9
+  },
+  "without_skill": {
+    "added": 11,
+    "certainty_changed": 6,
+    "dropped": 15,
+    "edited": 58,
+    "human_fix.no": 1,
+    "human_fix.yes": 57,
+    "judged": 58,
+    "meaning.changed": 23,
+    "meaning.same": 35,
+    "obligation_changed": 3,
+    "vs_human.better": 29,
+    "vs_human.same": 13,
+    "vs_human.worse": 16
+  }
+}

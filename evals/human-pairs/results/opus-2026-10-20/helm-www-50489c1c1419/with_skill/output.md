@@ -1,0 +1,1 @@
+이것은 종류(kind)가 `CustomResourceDefinition`인 YAML 파일이다.

@@ -13,7 +13,7 @@ uv run python calibration/scripts/report.py --check
 
 의미 보존이나 모호성 처리의 동작을 바꾸면 해당 실패를 재현하는 사례로 확인한다. 자동 검사 통과와 사람의 의미 판단은 별도로 기록한다. 모델 호출에는 인증과 사용량이 필요하며 CI의 필수 검사는 모델을 호출하지 않는다.
 
-말뭉치 측정은 `calibration/scripts/fetch_corpus.py`와 `calibration/scripts/measure.py`로 재현한다. 새 스킬 버전의 성과를 주장하려면 스킬 해시, 모델 식별자, 입력, 원출력과 미판정 수를 기록한다. 수정에 사용한 사례의 성적을 독립적인 최종 성능으로 쓰지 않는다.
+말뭉치 측정은 `calibration/scripts/fetch_corpus.py`와 `calibration/scripts/measure.py`로 재현한다. 말뭉치와 전후 쌍의 원문은 2022-10-31 이전에 쓴 글만 쓴다. 출처를 더할 때는 `calibration/pairs-manifest.json`에 이용 조건, 저작자 표시, 기계 번역이 섞였는지를 적는다. 전후 쌍은 `mine_pairs.py`, `label_pairs.py`, `verify_pairs.py`, `select_pairs.py` 순서로 다시 만든다. 라벨과 재판정에는 Claude Code CLI가 필요하다. 새 스킬 버전의 성과를 주장하려면 스킬 해시, 모델 식별자, 입력, 원출력과 미판정 수를 기록한다. 수정에 사용한 사례의 성적을 독립적인 최종 성능으로 쓰지 않는다.
 
 기여한 코드와 직접 작성한 문서는 저장소의 MIT 조건으로 제공한다. `skills/ko-ste/references/04-native-pairs.md`의 국립국어원 원문 인용은 공공누리 제3유형을 따른다. 인용문은 원자료와 대조할 때만 정정하고, 프로젝트의 해설과 구분한다.
 
