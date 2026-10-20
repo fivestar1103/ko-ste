@@ -12,6 +12,8 @@
 | marketplace | Claude Code 2.1.292로 manifest 검사 후 공개 GitHub marketplace 추가·플러그인 설치 |
 | 측정 재현 | 고정 말뭉치와 Kiwi 0.24.0으로 기존 집계 JSON과 일치 |
 | 동작 | 개발 사례, 별도 Codex 입력과 독립 판정. 실패와 불확실한 판정을 모두 보존 |
+| 기술 문서 전후 쌍 | 2022-10-31 이전 Git 이력에서 캔 쌍을 Claude 두 번 판정으로 고름. 출처·기간·이용 조건·평가용 분리를 형식 검사가 확인. 사람 검수는 표본 98쌍 |
+| 사람 수정 쌍 시험 | 떼어 둔 58쌍으로 스킬 사용·미사용을 비교하고 사람이 고친 글과 블라인드로 견줌(`evals/human_pairs.py`) |
 
 CI는 모델을 호출하지 않는다. 공개 소스의 고정 커밋을 받아 설치·자동 검사·말뭉치 집계를 다시 확인한다.
 
@@ -37,6 +39,18 @@ uv run python calibration/scripts/measure.py
 기본 fetch는 `calibration/data/corpus-lock.json`의 커밋을 따른다. 새 커밋을 선택하는 `--refresh-lock`은 별도 판단이다. 원문 말뭉치는 `calibration/cache/`에만 두며 Git으로 배포하지 않는다.
 
 표본 추출 전에 파일 경로의 각 부분을 소문자로 정렬한다. 운영체제의 기본 경로 정렬에 맡기면 같은 seed에서도 다른 표본이 뽑힐 수 있다. 빈 표본의 백분위는 JSON `null`로 기록하며, 집계 대조는 허용 오차 없이 모든 값을 비교한다.
+
+## 기술 문서 전후 쌍
+
+```sh
+uv run python calibration/scripts/mine_pairs.py
+uv run python calibration/scripts/label_pairs.py --source k8s      # 출처마다
+uv run python calibration/scripts/verify_pairs.py --source k8s     # 출처마다
+uv run python calibration/scripts/select_pairs.py
+uv run python calibration/scripts/report.py --write
+```
+
+`mine_pairs.py`는 `calibration/data/pairs-lock.json`의 HEAD 커밋을 따르고, 작성일과 커밋일이 모두 2022-10-31 이전인 커밋만 읽는다. 원문은 `calibration/cache/`에만 둔다. 라벨과 재판정은 Claude Code CLI가 필요하며 실행마다 판정이 조금씩 다를 수 있다.
 
 ## 모델 동작 시험
 

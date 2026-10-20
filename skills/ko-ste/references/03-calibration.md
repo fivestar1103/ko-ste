@@ -710,7 +710,7 @@ uv run --no-project calibration/scripts/report.py --check
 3. 선택(`select_pairs.py`): 두 판정을 모두 통과한 쌍만 쓴다. 용어만 바꾼 쌍(요소→엘리먼트, 비밀→시크릿)은 뺀다. 번역 프로젝트마다 정한 용어집을 따른 교체라서 다듬기의 본보기가 아니고, 본보기로 두면 독자가 쓰는 기술 용어까지 바꾸게 만들 수 있다(LX-5). 문체 규칙(FM-)만 걸린 쌍도 뺀다. 대부분 문서 전체의 어미를 맞추려고 '합니다'를 '한다'로 바꾼 것이라, 한 문장만 떼어 보이면 높임 수준을 바꾸라는 본보기로 읽힐 수 있다(MP-6). 커밋 해시로 5분의 1을 떼어 평가용(`evals/human-pairs/heldout.jsonl`)으로 둔다. 같은 커밋의 쌍은 같은 쪽에 들어간다.
 4. CC BY-SA 출처의 쌍은 `data/pairs-cc-by-sa.jsonl`에만 두고 05-tech-pairs.md에는 넣지 않는다.
 
-판정자 둘 다 Claude다. 사람 검수는 표본으로 한다. 검수 결과는 이 절에 덧붙인다.
+판정자 둘 다 Claude다. 사람 검수는 스킬에 넣은 쌍에서 출처별로 고르게 뽑은 표본 98쌍으로 한다(`calibration/scripts/review_sample.py`, seed 13). 표본의 쌍 id와 검수 결과는 `calibration/data/pairs-review.json`에 남긴다. 검수 결과가 나오면 이 절에 덧붙인다.
 
 <!-- BEGIN:pairs -->
 | 출처 | 캔 쌍 | 판정한 쌍 | 뜻 같음 | 본보기 후보 | 재판정 통과 | 스킬에 넣음 | 평가용 |
