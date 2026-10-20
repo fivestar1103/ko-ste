@@ -12,8 +12,15 @@
 
 | 출처 | 저장소 | 고정 커밋 | 이용 조건 | 저작자 표시 | 쌍 |
 |---|---|---|---|---|---|
-| k8s | [kubernetes/website](https://github.com/kubernetes/website) | `079a4d63f0` | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), [사본](data/licenses/k8s-LICENSE.txt) | The Kubernetes Authors | 70 |
+| k8s | [kubernetes/website](https://github.com/kubernetes/website) | `079a4d63f0` | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), [사본](data/licenses/k8s-LICENSE.txt) | The Kubernetes Authors | 69 |
 | tf-l10n | [tensorflow/docs-l10n](https://github.com/tensorflow/docs-l10n) | `7cb584af65` | Apache-2.0, [사본](data/licenses/tf-l10n-LICENSE.txt) | The TensorFlow Authors | 3 |
+| pytorch-kr | [PyTorchKorea/tutorials-kr](https://github.com/PyTorchKorea/tutorials-kr) | `84b7db6e02` | BSD-3-Clause, [사본](data/licenses/pytorch-kr-LICENSE.txt) | PyTorch & PyTorch Korea User Group contributors | 18 |
 | vue2-kr | [vuejs-kr/kr.vuejs.org](https://github.com/vuejs-kr/kr.vuejs.org) | `83f83fff15` | MIT, [사본](data/licenses/vue2-kr-LICENSE.txt) | Yuxi Evan You, Vue.js 한국 사용자 모임 | 13 |
-| ts-kr | [typescript-kr/typescript-kr.github.io](https://github.com/typescript-kr/typescript-kr.github.io) | `3fad5f8dab` | MIT, [사본](data/licenses/ts-kr-LICENSE.txt) | typescript-kr 기여자 | 2 |
+| rustbook-ko | [rinthel/rust-lang-book-ko](https://github.com/rinthel/rust-lang-book-ko) | `3743b95644` | MIT OR Apache-2.0, [사본](data/licenses/rustbook-ko-LICENSE-APACHE.txt) | The Rust Project Developers, rust-lang-book-ko 번역자 | 44 |
+| ts-kr | [typescript-kr/typescript-kr.github.io](https://github.com/typescript-kr/typescript-kr.github.io) | `3fad5f8dab` | MIT, [사본](data/licenses/ts-kr-LICENSE.txt) | typescript-kr 기여자 | 1 |
 | nodejs-org | [nodejs/nodejs.org](https://github.com/nodejs/nodejs.org) | `79b82efc20` | MIT, [사본](data/licenses/nodejs-org-LICENSE.txt) | Node.js Website WG contributors | 4 |
+| mdn | [mdn/translated-content](https://github.com/mdn/translated-content) | `1ecc7930d7` | [CC-BY-SA-2.5](https://creativecommons.org/licenses/by-sa/2.5/), [사본](data/licenses/mdn-LICENSE.txt) | Mozilla Contributors | 10 |
+| electron | [electron/electron](https://github.com/electron/electron) | `bcc5c510df` | MIT, [사본](data/licenses/electron-LICENSE.txt) | Electron contributors, GitHub Inc. | 19 |
+| nodejs-ko | [nodejs/nodejs-ko](https://github.com/nodejs/nodejs-ko) | `ab14802dc2` | MIT, [사본](data/licenses/nodejs-ko-LICENSE.txt) | nodejs-ko contributors | 35 |
+| helm-www | [helm/helm-www](https://github.com/helm/helm-www) | `dc74ea9bf0` | MIT, [사본](data/licenses/helm-www-LICENSE.txt) | Microsoft Corporation, Helm 문서 기여자 | 19 |
+| tldr | [tldr-pages/tldr](https://github.com/tldr-pages/tldr) | `5bb1a66dfe` | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), [사본](data/licenses/tldr-LICENSE.txt) | the tldr-pages team and contributors | 1 |

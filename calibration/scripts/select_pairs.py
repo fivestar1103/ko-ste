@@ -158,6 +158,11 @@ def main() -> None:
             if v is None or not v["keep"] or not v["rules"]:
                 continue
             stat["verified_kept"] += 1
+            # 문체 규칙(FM-)만 걸린 쌍은 문서 전체의 어미를 맞춘 수정이다. 한 문장만 떼어 보이면
+            # 높임 수준을 바꾸라는 본보기로 읽힐 수 있다(MP-6).
+            if all(r.startswith("FM-") for r in v["rules"]):
+                stat["style_only_dropped"] += 1
+                continue
             row = {
                 "id": f"{src['id']}-{p['id']}",
                 "rules": v["rules"],
