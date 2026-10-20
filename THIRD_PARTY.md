@@ -1,10 +1,11 @@
 # 자료 출처와 이용 조건
 
-직접 작성한 규칙·설명·예문·Python·CI 코드는 MIT로 제공한다. 외부 인용문과 의존성에는 각 자료의 조건이 적용된다. 저장소 전체가 같은 조건의 MIT 자료는 아니다. 설치되는 스킬(`skills/ko-ste/`)에는 국립국어원 전후 쌍 인용이 들어 있으며, 그 인용은 MIT가 아니라 공공누리 제3유형을 따른다. 보정 말뭉치 원문은 어디에도 동봉하지 않는다.
+직접 작성한 규칙·설명·예문·Python·CI 코드는 MIT로 제공한다. 외부 인용문과 의존성에는 각 자료의 조건이 적용된다. 저장소 전체가 같은 조건의 MIT 자료는 아니다. 설치되는 스킬(`skills/ko-ste/`)에는 국립국어원 전후 쌍 인용과 공개 기술 문서의 전후 쌍이 들어 있으며, 이 인용들은 MIT가 아니라 각 출처의 조건을 따른다. 보정 말뭉치 원문은 어디에도 동봉하지 않는다.
 
 | 자료 | 이용 조건과 사용 범위 |
 |---|---|
 | 국립국어원 「쉬운 공문서 쓰기 길잡이」(2022, 발간등록번호 11-1371028-000915-01) | [배포 페이지](https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=&etc_seq=700&pageIndex=1), [공공누리 제3유형](https://www.kogl.or.kr/info/licenseType3.do): 출처표시·변경금지, 상업적 이용 가능. `skills/ko-ste/references/04-native-pairs.md`의 보기·권장 표현은 원문 인용이며 쪽수를 붙였다. 인용문은 변경하지 않고 프로젝트 해설과 구분한다. 고지는 [`skills/ko-ste/NIKL-NOTICE.md`](skills/ko-ste/NIKL-NOTICE.md)에 있으며 설치 파일에 함께 들어간다. |
+| 기술 문서 전후 쌍(0.2.0) | 공개 기술 문서 한국어 번역 저장소 13곳의 Git 이력에서 2022-10-31 이전에 사람이 고친 문장을 발췌했다. 설치 스킬의 `references/05-tech-pairs.md`, `data/pairs.jsonl`, `data/pairs-cc-by-sa.jsonl`, 평가용 `evals/human-pairs/`에 있다. 문장은 MIT가 아니라 각 출처의 조건(CC BY 4.0, CC BY-SA 2.5, MIT, BSD-3-Clause, Apache-2.0)을 따른다. CC BY-SA 출처의 문장은 별도 파일에만 둔다. 출처·고정 커밋·저작자 표시는 [`skills/ko-ste/PAIRS-NOTICE.md`](skills/ko-ste/PAIRS-NOTICE.md), 라이선스 사본은 `skills/ko-ste/data/licenses/`에 있다. 수집 대상과 뺀 출처의 이유는 `calibration/pairs-manifest.json`에 있다. |
 | Viva Republica, toss/technical-writing | [원 저장소](https://github.com/toss/technical-writing), 커밋 `68ba335cbe35c877775f092e98177b60da5f3d95`, CC BY-NC-SA 4.0. 일반적인 편집 원칙과 대조하고 말뭉치를 집계했다. 원문 설명·예문·번역은 배포 스킬에 포함하지 않는다. 원문은 제외된 `calibration/cache/`에만 받으며 원래 조건을 따른다. |
 | danyuchn/asd-ste100-skill | [원 저장소](https://github.com/danyuchn/asd-ste100-skill), 커밋 `32511c6`, MIT. 두 모드, 의미 보존, 출력 설계를 참고했다. 영어 규칙을 번역하거나 공식 사전을 복제하지 않았다. Copyright (c) 2026 Dustin Yuchen Teng. 전문은 `skills/ko-ste/UPSTREAM-LICENSES.md`에 보존했다. |
 | beamonic/no-ai-slop-ko | [원 저장소](https://github.com/beamonic/no-ai-slop-ko), 커밋 `e9e3371`, MIT. 주장·문체 보존과 표현 검토에 참고했다. Copyright (c) 2026 Peter Yang; Copyright (c) 2026 Beamonic. 전문은 `skills/ko-ste/UPSTREAM-LICENSES.md`에 보존했다. |
