@@ -13,4 +13,8 @@
 
 과거 기록은 당시의 입력·원출력·실패를 확인하기 위해 보존한다. 모델이 원문을 고친 결과에 대해 변경금지 조건을 충족하거나 별도의 재배포 허락을 확보했다고 주장하지 않는다. 외부 인용의 변형 결과를 예문 상품·훈련 데이터·수정 가능한 공개 데이터셋으로 재이용하려면 권리자의 추가 허락 또는 개별 이용 근거를 확인해야 한다.
 
+## 사람 수정 쌍 시험(`human-pairs/`)
+
+`human-pairs/heldout.jsonl`의 `before`·`after`·`prev`·`next`는 공개 기술 문서 번역 저장소의 Git 이력에서 발췌한 문장이다. 각 문장은 출처의 이용 조건을 따른다(CC BY 4.0, CC BY-SA 2.5, MIT, BSD-3-Clause, Apache-2.0). 출처, 저작자 표시, 라이선스 사본은 [`skills/ko-ste/PAIRS-NOTICE.md`](../skills/ko-ste/PAIRS-NOTICE.md)와 `skills/ko-ste/data/licenses/`에 있다. `human-pairs/results/`의 모델 출력은 이 문장들을 고친 결과다. 고친 결과도 원 문장의 이용 조건을 따른다. CC BY-SA 출처(`mdn-`로 시작하는 id)의 문장과 그 수정 결과는 CC BY-SA를 따른다.
+
 최신 설치 스킬은 `skills/ko-ste/`에 있다. 과거 스냅샷을 최신 스킬로 설치하지 않는다. [배포 검토 기록](../docs/license-review.md)과 [국립국어원 인용 고지](../skills/ko-ste/NIKL-NOTICE.md)를 함께 확인한다.

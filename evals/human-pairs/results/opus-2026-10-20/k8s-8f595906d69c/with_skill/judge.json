@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 '배포할'을 '배포될'로 바로잡아 사람이 고친 문제를 해결했고, 긴 문장을 '그러나'로 나눠 뜻을 바꾸지 않고 읽기 쉽게 했다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

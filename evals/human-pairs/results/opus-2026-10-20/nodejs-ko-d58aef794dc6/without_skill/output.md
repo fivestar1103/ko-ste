@@ -1,0 +1,1 @@
+이를 완화하기 위해 OpenSSL은 DES 기반 암호를 `HIGH` 그룹에서 `MEDIUM` 그룹으로 옮겼습니다.

@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람이 고친 이중 피동 '보여지는'을 '리스트 13-5처럼'으로 줄여 같은 문제를 해결했고, '블럭→블록', '저장 할→저장할' 같은 표기와 띄어쓰기 및 '결과를 저장하기 보단'의 어색한 구조까지 뜻을 바꾸지 않고 다듬어 사람이 고친 글보다 낫다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

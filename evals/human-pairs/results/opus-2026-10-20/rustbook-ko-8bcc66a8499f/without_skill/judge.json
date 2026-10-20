@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 이중 피동 '보여지는'을 고친 데 더해 띄어쓰기('13-4 에', '추출 해볼')까지 바로잡아 뜻을 지키면서 더 자연스럽지만, '리스트'를 '예제'로 바꾸면 문서 안 용어가 어긋날 수 있고, 뒤에 오는 코드 목록을 이끄는 콜론을 마침표로 바꾼 점은 아쉽다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

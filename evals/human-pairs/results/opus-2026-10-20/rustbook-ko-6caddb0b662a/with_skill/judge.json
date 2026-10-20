@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 어색한 이중 피동 '보여지는'을 '나오는'으로 고쳐 사람이 고친 문제를 해결했고, '13-1 에'의 불필요한 띄어쓰기까지 바로잡아 뜻을 그대로 지키면서 사람이 고친 글보다 더 자연스럽다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

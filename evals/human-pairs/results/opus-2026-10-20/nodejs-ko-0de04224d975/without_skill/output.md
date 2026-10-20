@@ -1,0 +1,1 @@
+contextify: `vm.createContext`와 `vm.runInNewContext`를 많이 사용할 때 메모리를 과도하게 소비하는 문제를 수정했습니다. (Ali Ijaz Sheikh)

@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [
+      "'메모리 소비 문제' → '메모리를 과도하게 소비하는 문제': 고치기 전 문장에 없던 정도 표현 '과도하게'를 넣음"
+    ],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "worse",
+    "reason": "조사 '과'를 '와'로 바르게 고쳤지만, 원문에 없던 '과도하게'를 덧붙여 문제의 성격을 해석해 넣었으므로 조사만 고친 사람의 수정보다 못하다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}
