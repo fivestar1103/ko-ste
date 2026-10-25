@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [
+      "'배포할 것입니다'(단정적 미래 서술)가 '배포할 예정입니다'(계획·예정 표현)로 바뀌어 단정의 강도가 다소 약해짐"
+    ],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람이 고친 조사 오류('변경사항을'→'변경 사항은')를 똑같이 바로잡았고, 불필요한 쉼표, '부 버전 (' 띄어쓰기, '올리며'의 어색한 연결까지 다듬어 더 자연스럽지만, '것입니다'를 '예정입니다'로 바꿔 단정의 강도가 약간 달라졌습니다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

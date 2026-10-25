@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람처럼 '이것은'을 '이 함수는'으로 바꿨고, '이미 완료되지 않았다면'과 '생성을 다룹니다'라는 번역투도 '아직 생성되지 않았다면', '생성하는 일도 처리합니다'로 자연스럽게 고쳤으며, 조건과 '또한'의 뜻도 그대로 지켰다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

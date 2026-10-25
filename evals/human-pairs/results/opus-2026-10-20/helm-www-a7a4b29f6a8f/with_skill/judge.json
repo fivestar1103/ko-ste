@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "same",
+    "reason": "편집 결과는 '릴리스가 수행되지 않는다'를 '릴리스가 나오지 않는다'로 바꿔 사람이 고친 글과 똑같고, 뜻의 추가·누락이나 강도 변화도 없다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

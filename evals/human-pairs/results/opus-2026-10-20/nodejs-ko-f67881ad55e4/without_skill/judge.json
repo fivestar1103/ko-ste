@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [
+      "고치기 전 '직접적인 영향을 받기 어려울 것으로 보입니다'(가능성이 낮다는 추측)가 편집 결과 '직접적인 영향을 받지 않을 것으로 보입니다'(영향이 없다는 쪽)로 바뀌어 단정의 강도가 세졌다."
+    ],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "worse",
+    "reason": "편집 결과는 사람이 고친 것처럼 '사용자들이'의 불필요한 복수 표지를 없앴지만 '받기 어려울'을 '받지 않을'로 바꿔 추측의 강도를 바꿨으므로 원문의 뜻을 그대로 지킨 사람이 고친 글보다 못하다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

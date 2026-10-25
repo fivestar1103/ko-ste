@@ -1,0 +1,1 @@
+iptables 프록시는 분명히 iptables에 의존하며, 플러그인은 iptables가 컨테이너 트래픽을 사용할 수 있도록 해야 한다.

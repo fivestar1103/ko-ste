@@ -18,9 +18,7 @@ DOC = ROOT / "skills" / "ko-ste" / "references" / "03-calibration.md"
 DATA = ROOT / "calibration" / "data"
 
 GROUPS = [
-    ("toss", "토스 가이드"),
     ("pre2022", "2022 이전 문서"),
-    ("post2023", "2023 이후 문서"),
     ("model:claude-opus-5-5", "Opus 5.5"),
     ("model:claude-sonnet-5-5", "Sonnet 5.5"),
     ("model:claude-haiku-4-5-20251001", "Haiku 4.5"),
@@ -126,12 +124,38 @@ def sec_judge() -> str:
     return _collect("judge.md")
 
 
+def sec_pairs(p: dict) -> str:
+    rows = []
+    tot = [0] * 7
+    for sid, c in p["sources"].items():
+        vals = [c.get("mined", 0), c.get("labeled", 0), c.get("meaning.same", 0), c.get("exemplar_candidates", 0),
+                c.get("verified_kept", 0), c.get("shipped", 0), c.get("heldout", 0)]
+        tot = [a + b for a, b in zip(tot, vals)]
+        rows.append([sid] + vals)
+    rows.append(["합계"] + tot)
+    return table(["출처", "캔 쌍", "판정한 쌍", "뜻 같음", "본보기 후보", "재판정 통과", "스킬에 넣음", "평가용"], rows)
+
+
+def sec_pair_rules(p: dict) -> str:
+    rows = [[rule, n] for rule, n in sorted(p["rules"].items(), key=lambda kv: (-kv[1], kv[0]))]
+    return table(["규칙", "스킬에 넣은 쌍"], rows)
+
+
+def sec_human_eval() -> str:
+    parts = []
+    for f in sorted((ROOT / "evals" / "human-pairs" / "results").glob("*/summary.md")):
+        parts.append(f.read_text(encoding="utf-8").strip().replace("# ", "", 1))
+    return "\n\n".join(parts) or "(아직 없음)"
+
+
 def build() -> dict[str, str]:
     m = json.loads((DATA / "measure.json").read_text(encoding="utf-8"))
     d = json.loads((DATA / "dict-collocations.json").read_text(encoding="utf-8"))
+    p = json.loads((DATA / "pairs-summary.json").read_text(encoding="utf-8"))
     return {
         "corpus": sec_corpus(m), "length": sec_length(m), "mood": sec_mood(m), "struct": sec_struct(m),
         "expr": sec_expr(m), "lines": sec_lines(m), "dict": sec_dict(d), "evals": sec_evals(), "judge": sec_judge(),
+        "pairs": sec_pairs(p), "pair_rules": sec_pair_rules(p), "human_eval": sec_human_eval(),
     }
 
 

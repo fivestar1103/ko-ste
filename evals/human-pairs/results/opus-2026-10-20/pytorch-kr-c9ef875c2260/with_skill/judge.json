@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람이 고친 '에서부터→으로부터'를 똑같이 반영했고, 사람이 남겨 둔 비표준 표현 '그리고 나서'도 표준어 '그러고 나서'로 바로잡았으며, 뜻은 그대로 지켰다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

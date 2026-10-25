@@ -1,0 +1,8 @@
+{
+  "model": "claude-opus-5-5",
+  "judge_model": "claude-opus-5-5",
+  "skill_sha256": "0d849fea513cc009ade2ef8d1444f7bd245eefa55bc2186756d5514ff0730549",
+  "heldout_sha256": "8ba1c701590a690e11069b718bfb474793686c73d7fe3ce935a8f20557c5b7da",
+  "limit": null,
+  "protocol": 2
+}

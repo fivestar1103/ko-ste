@@ -1,0 +1,247 @@
+{
+  "k8s": {
+    "repo": "https://github.com/kubernetes/website.git",
+    "head": "079a4d63f072a54c317689c957307aaa018cfe34",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 453,
+      "duplicate": 80,
+      "file_changes": 3623,
+      "kind.merge": 52,
+      "kind.minor": 227,
+      "kind.punct": 107,
+      "kind.rewrite": 1677,
+      "kind.spacing": 503,
+      "kind.split": 63,
+      "kind.token": 1413,
+      "pairs": 4042,
+      "reflow": 52,
+      "unchanged_sentences": 291803
+    }
+  },
+  "tf-l10n": {
+    "repo": "https://github.com/tensorflow/docs-l10n.git",
+    "head": "7cb584af651df3863a3bebc93674163f8dc6db7b",
+    "cutoff": "2020-07-01T00:00:00+09:00",
+    "stats": {
+      "commits": 110,
+      "duplicate": 87,
+      "file_changes": 410,
+      "kind.merge": 2,
+      "kind.minor": 29,
+      "kind.punct": 8,
+      "kind.rewrite": 171,
+      "kind.spacing": 13,
+      "kind.split": 3,
+      "kind.token": 40,
+      "pairs": 266,
+      "reflow": 1,
+      "unchanged_sentences": 28936
+    }
+  },
+  "pytorch-kr": {
+    "repo": "https://github.com/PyTorchKorea/tutorials-kr.git",
+    "head": "84b7db6e020c098cf38a0dfaf036007c24057bb1",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 400,
+      "duplicate": 5,
+      "file_changes": 915,
+      "kind.merge": 11,
+      "kind.minor": 77,
+      "kind.punct": 13,
+      "kind.rewrite": 329,
+      "kind.spacing": 200,
+      "kind.split": 3,
+      "kind.token": 232,
+      "pairs": 865,
+      "unchanged_sentences": 27084
+    }
+  },
+  "vue2-kr": {
+    "repo": "https://github.com/vuejs-kr/kr.vuejs.org.git",
+    "head": "83f83fff159605dfbe539de50b5bf7d537d5418d",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 1865,
+      "duplicate": 4,
+      "file_changes": 2301,
+      "kind.merge": 1,
+      "kind.minor": 48,
+      "kind.punct": 11,
+      "kind.rewrite": 538,
+      "kind.spacing": 101,
+      "kind.split": 4,
+      "kind.token": 96,
+      "pairs": 799,
+      "unchanged_sentences": 56441
+    }
+  },
+  "rustbook-ko": {
+    "repo": "https://github.com/rinthel/rust-lang-book-ko.git",
+    "head": "3743b95644f0aa882da2f42c421da1ce3f668ead",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 1634,
+      "duplicate": 16,
+      "file_changes": 3017,
+      "kind.merge": 20,
+      "kind.minor": 271,
+      "kind.punct": 40,
+      "kind.rewrite": 743,
+      "kind.spacing": 464,
+      "kind.split": 31,
+      "kind.token": 230,
+      "pairs": 1799,
+      "reflow": 2,
+      "unchanged_sentences": 35560
+    }
+  },
+  "ts-kr": {
+    "repo": "https://github.com/typescript-kr/typescript-kr.github.io.git",
+    "head": "3fad5f8dab80e88a9190aae8c3256ce0b9bc7869",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 115,
+      "duplicate": 9,
+      "file_changes": 240,
+      "kind.merge": 16,
+      "kind.minor": 44,
+      "kind.punct": 18,
+      "kind.rewrite": 389,
+      "kind.spacing": 85,
+      "kind.split": 8,
+      "kind.token": 123,
+      "pairs": 683,
+      "reflow": 1,
+      "unchanged_sentences": 10368
+    }
+  },
+  "nodejs-org": {
+    "repo": "https://github.com/nodejs/nodejs.org.git",
+    "head": "79b82efc20fa9a79530d2b606663d87b51f92287",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 179,
+      "duplicate": 8,
+      "file_changes": 265,
+      "kind.merge": 1,
+      "kind.minor": 23,
+      "kind.punct": 4,
+      "kind.rewrite": 27,
+      "kind.spacing": 2,
+      "kind.token": 54,
+      "pairs": 111,
+      "unchanged_sentences": 10776
+    }
+  },
+  "mdn": {
+    "repo": "https://github.com/mdn/translated-content.git",
+    "head": "1ecc7930d7f1ea62f88d4237ad3eac8bc959f64f",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 585,
+      "duplicate": 63,
+      "file_changes": 9055,
+      "kind.merge": 32,
+      "kind.minor": 82,
+      "kind.punct": 63,
+      "kind.rewrite": 927,
+      "kind.spacing": 105,
+      "kind.split": 34,
+      "kind.token": 546,
+      "pairs": 1789,
+      "skipped_format_change": 70,
+      "skipped_subject": 3444,
+      "unchanged_sentences": 158734
+    }
+  },
+  "electron": {
+    "repo": "https://github.com/electron/electron.git",
+    "head": "bcc5c510df7abedb85fd11843e3607e9115c0566",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 309,
+      "duplicate": 18,
+      "file_changes": 1220,
+      "kind.merge": 13,
+      "kind.minor": 333,
+      "kind.punct": 32,
+      "kind.rewrite": 495,
+      "kind.spacing": 90,
+      "kind.split": 6,
+      "kind.token": 397,
+      "pairs": 1366,
+      "reflow": 1,
+      "unchanged_sentences": 92128
+    }
+  },
+  "nodejs-ko": {
+    "repo": "https://github.com/nodejs/nodejs-ko.git",
+    "head": "ab14802dc2e7288bdc4353a24176dce2f4ba9dff",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 339,
+      "duplicate": 36,
+      "file_changes": 721,
+      "kind.merge": 4,
+      "kind.minor": 125,
+      "kind.punct": 33,
+      "kind.rewrite": 398,
+      "kind.spacing": 103,
+      "kind.split": 9,
+      "kind.token": 118,
+      "pairs": 790,
+      "unchanged_sentences": 20663
+    }
+  },
+  "helm-www": {
+    "repo": "https://github.com/helm/helm-www.git",
+    "head": "dc74ea9bf052d34f94004b30407cded73ca838f4",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 1324,
+      "duplicate": 47,
+      "file_changes": 1362,
+      "kind.merge": 37,
+      "kind.minor": 99,
+      "kind.punct": 25,
+      "kind.rewrite": 771,
+      "kind.spacing": 234,
+      "kind.split": 47,
+      "kind.token": 144,
+      "pairs": 1357,
+      "reflow": 86,
+      "unchanged_sentences": 142529
+    }
+  },
+  "tldr": {
+    "repo": "https://github.com/tldr-pages/tldr.git",
+    "head": "5bb1a66dfe9e09c1865dacee038ae1ee399745fd",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 108,
+      "file_changes": 399,
+      "kind.merge": 1,
+      "kind.punct": 18,
+      "kind.rewrite": 13,
+      "kind.spacing": 15,
+      "kind.token": 29,
+      "pairs": 76,
+      "unchanged_sentences": 2553
+    }
+  },
+  "learnx": {
+    "repo": "https://github.com/adambard/learnxinyminutes-docs.git",
+    "head": "78548dd09e4e5e9bd9ee235e3d59b43dfeccea05",
+    "cutoff": "2022-10-31T00:00:00+09:00",
+    "stats": {
+      "commits": 34,
+      "file_changes": 42,
+      "kind.rewrite": 4,
+      "kind.token": 1,
+      "pairs": 5,
+      "unchanged_sentences": 538
+    }
+  }
+}

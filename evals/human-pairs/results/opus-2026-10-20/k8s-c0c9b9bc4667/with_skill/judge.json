@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람이 고친 것처럼 '필드의 사용을 선택할 수 있다'를 '필드를 사용할 수 있다'로 바꾸었고, 군더더기인 '만약'과 '수행'까지 덜어 뜻을 바꾸지 않으면서 더 간결해졌다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

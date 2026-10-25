@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [
+      "고치기 전 '들어가기 앞서 소개'의 '소개'가 편집 결과 '들어가기에 앞서'에서 빠졌다."
+    ],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "worse",
+    "reason": "편집 결과는 '앞서'를 '에 앞서'로 고친 점은 사람과 같지만, 제목의 핵심어 '소개'를 빠뜨려 뜻이 달라졌으므로 사람이 고친 글보다 못하다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

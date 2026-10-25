@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "partial",
+    "vs_human": "worse",
+    "reason": "편집 결과는 '기본 `command` 가 사용'으로 끊긴 문장을 '사용된다'로 완결해 뜻을 그대로 지켰지만, 앞 문장('명령어를 사용한다')과 맞춰 능동형 '를 사용한다'로 고친 사람의 수정과 달리 피동형을 남겨 문체 일관성이 조금 떨어진다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

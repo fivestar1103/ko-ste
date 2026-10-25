@@ -1,0 +1,199 @@
+{
+  "_note": "사람이 고친 전후 쌍을 Git 이력에서 캔다. ChatGPT 공개(2022-11-30) 전에 쓴 글만 쓰려고, 작성일과 커밋일이 모두 cutoff 이전인 커밋만 읽는다. 원문은 calibration/cache/에만 둔다(.gitignore). mine_pairs.py가 받은 HEAD 커밋을 calibration/data/pairs-lock.json에 남긴다.",
+  "cutoff": "2022-10-31T00:00:00+09:00",
+  "sources": [
+    {
+      "id": "k8s",
+      "repo": "https://github.com/kubernetes/website.git",
+      "format": "md",
+      "paths": [
+        ":(glob)content/ko/**/*.md"
+      ],
+      "license": "CC-BY-4.0",
+      "attribution": "The Kubernetes Authors",
+      "origin": "쿠버네티스 문서 한국어 번역. 한국어 현지화 팀의 리뷰를 거친다."
+    },
+    {
+      "id": "tf-l10n",
+      "repo": "https://github.com/tensorflow/docs-l10n.git",
+      "format": "tf",
+      "paths": [
+        ":(glob)site/ko/**/*.md",
+        ":(glob)site/ko/**/*.ipynb"
+      ],
+      "license": "Apache-2.0",
+      "attribution": "The TensorFlow Authors",
+      "origin": "텐서플로 문서 한국어 번역. 2020-07부터 GitLocalize 기계 번역과 외주 후편집이 들어와서 그 전 커뮤니티 번역만 읽는다.",
+      "cutoff": "2020-07-01T00:00:00+09:00",
+      "exclude_authors": "gitlocalize|\\[bot\\]"
+    },
+    {
+      "id": "pytorch-kr",
+      "repo": "https://github.com/PyTorchKorea/tutorials-kr.git",
+      "format": "sphinx",
+      "paths": [
+        ":(glob)*_source/**/*.rst",
+        ":(glob)*_source/**/*.py",
+        ":(glob)*.rst"
+      ],
+      "license": "BSD-3-Clause",
+      "attribution": "PyTorch & PyTorch Korea User Group contributors",
+      "origin": "파이토치 튜토리얼 한국어 번역. 파이토치 한국 사용자 모임."
+    },
+    {
+      "id": "vue2-kr",
+      "repo": "https://github.com/vuejs-kr/kr.vuejs.org.git",
+      "format": "md",
+      "paths": [
+        ":(glob)src/**/*.md"
+      ],
+      "license": "MIT",
+      "attribution": "Yuxi Evan You, Vue.js 한국 사용자 모임",
+      "origin": "Vue 2 문서 한국어 번역."
+    },
+    {
+      "id": "rustbook-ko",
+      "repo": "https://github.com/rinthel/rust-lang-book-ko.git",
+      "format": "md",
+      "paths": [
+        ":(glob)src/*.md",
+        ":(glob)second-edition/src/*.md",
+        ":(glob)2018-edition/src/*.md",
+        ":(glob)first-edition/src/*.md"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "attribution": "The Rust Project Developers, rust-lang-book-ko 번역자",
+      "origin": "러스트 프로그래밍 언어(The Book) 한국어 번역.",
+      "license_file": "LICENSE-MIT"
+    },
+    {
+      "id": "ts-kr",
+      "repo": "https://github.com/typescript-kr/typescript-kr.github.io.git",
+      "format": "md",
+      "paths": [
+        ":(glob)pages/**/*.md"
+      ],
+      "license": "MIT",
+      "attribution": "typescript-kr 기여자",
+      "origin": "타입스크립트 핸드북 한국어 번역."
+    },
+    {
+      "id": "nodejs-org",
+      "repo": "https://github.com/nodejs/nodejs.org.git",
+      "format": "md",
+      "paths": [
+        ":(glob)locale/ko/**/*.md"
+      ],
+      "license": "MIT",
+      "attribution": "Node.js Website WG contributors",
+      "origin": "Node.js 웹사이트 한국어 번역."
+    },
+    {
+      "id": "mdn",
+      "repo": "https://github.com/mdn/translated-content.git",
+      "format": "mdn",
+      "paths": [
+        ":(glob)files/ko/**/*.html",
+        ":(glob)files/ko/**/*.md"
+      ],
+      "license": "CC-BY-SA-2.5",
+      "attribution": "Mozilla Contributors",
+      "origin": "MDN 웹 문서 한국어 번역. 2020-12 Git 이전 전의 위키 이력은 없다.",
+      "skip_subjects": "convert\\b.*\\b(md|markdown)\\b|markdownlint|prettier|\\bdump \\d{4}|replace all remaining|\\blint\\b"
+    },
+    {
+      "id": "electron",
+      "repo": "https://github.com/electron/electron.git",
+      "format": "md",
+      "paths": [
+        ":(glob)docs-translations/ko-KR/**/*.md"
+      ],
+      "license": "MIT",
+      "attribution": "Electron contributors, GitHub Inc.",
+      "origin": "Electron 문서 한국어 번역(2015~2017). 저장소 안의 docs-translations에 있었다."
+    },
+    {
+      "id": "nodejs-ko",
+      "repo": "https://github.com/nodejs/nodejs-ko.git",
+      "format": "md",
+      "paths": [
+        ":(glob)source/_posts/*.md",
+        ":(glob)articles/_posts/*.md",
+        ":(glob)weekly/_posts/*.md"
+      ],
+      "license": "MIT",
+      "attribution": "nodejs-ko contributors",
+      "origin": "Node.js 한국 커뮤니티의 블로그·주간 소식·기사 번역. 리뷰를 거쳐 올렸다."
+    },
+    {
+      "id": "helm-www",
+      "repo": "https://github.com/helm/helm-www.git",
+      "format": "md",
+      "paths": [
+        ":(glob)content/ko/**/*.md"
+      ],
+      "license": "MIT",
+      "attribution": "Microsoft Corporation, Helm 문서 기여자",
+      "origin": "Helm 문서 한국어 번역(2020~)."
+    },
+    {
+      "id": "tldr",
+      "repo": "https://github.com/tldr-pages/tldr.git",
+      "format": "md",
+      "paths": [
+        ":(glob)pages.ko/**/*.md"
+      ],
+      "license": "CC-BY-4.0",
+      "attribution": "the tldr-pages team and contributors",
+      "origin": "명령어 요약 페이지 한국어판. 짧은 지시문이 많다."
+    },
+    {
+      "id": "learnx",
+      "repo": "https://github.com/adambard/learnxinyminutes-docs.git",
+      "format": "md",
+      "paths": [
+        ":(glob)ko-kr/*.markdown"
+      ],
+      "license": "CC-BY-SA-3.0",
+      "attribution": "Learn X in Y minutes contributors",
+      "origin": "프로그래밍 언어 요약 문서 한국어판."
+    }
+  ],
+  "excluded": [
+    {
+      "id": "react-ko",
+      "repo": "https://github.com/reactjs/ko.react.dev.git",
+      "reason": "2023년 react.dev로 옮기며 저장소 이력을 영어 원본으로 다시 시작했다. 2019~2022년 한국어 번역 이력이 기본 브랜치에 남아 있지 않다."
+    },
+    {
+      "id": "vscode-loc",
+      "repo": "https://github.com/microsoft/vscode-loc.git",
+      "reason": "현지화 외주 파이프라인(MLCP, Transifex)으로 들어온 문자열이다. 기계 번역 후편집일 수 있어 사람이 쓴 글로 단정할 수 없다."
+    },
+    {
+      "id": "jsinfo-ko",
+      "repo": "https://github.com/javascript-tutorial/ko.javascript.info.git",
+      "reason": "이용 조건이 별도 허락제다. 저장소에 쌍을 넣을 수 없다."
+    },
+    {
+      "id": "pydocs-ko",
+      "repo": "https://github.com/python/python-docs-ko.git",
+      "reason": "기본 브랜치의 이력이 짧다. 버전별 브랜치 구조를 따로 살펴야 한다."
+    },
+    {
+      "id": "gatsby-ko",
+      "repo": "https://github.com/gatsbyjs/gatsby-ko.git",
+      "reason": "저장소에 이용 조건 파일이 없다."
+    },
+    {
+      "id": "laravel-kr",
+      "repo": "https://github.com/laravelkr/docs.git",
+      "reason": "버전별 브랜치에 번역이 나뉘어 있다. 여러 브랜치를 읽는 기능을 붙인 뒤 다룬다."
+    },
+    {
+      "id": "godot-l10n",
+      "repo": "https://github.com/godotengine/godot-docs-l10n.git",
+      "reason": "Weblate 번역이며 기계 번역 제안을 받아들인 문장이 섞였을 수 있다."
+    }
+  ]
+}

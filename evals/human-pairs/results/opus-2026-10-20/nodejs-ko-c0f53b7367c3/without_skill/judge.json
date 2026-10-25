@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 사람이 고친 '프로젝트의 개선을 위한'의 명사구 문제를 '프로젝트를 개선하려는'으로 똑같이 고쳤고, 나열을 쉼표로 정리하고 '기여자를 더 많이 모으고'로 다듬어 뜻을 지키면서 사람이 고친 글보다 더 자연스럽습니다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}

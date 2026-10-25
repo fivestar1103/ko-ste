@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "result": {
+    "added": [],
+    "dropped": [],
+    "certainty_changed": [],
+    "obligation_changed": [],
+    "edited": true,
+    "human_fix": "yes",
+    "vs_human": "better",
+    "reason": "편집 결과는 뜻을 바꾸지 않았고, 사람이 고친 '나열이 되기→나열되기'를 똑같이 고쳤으며, 구어체 '왜냐면'을 '왜냐하면'으로, 군더더기 '요소들과 그리고'와 불필요한 복수 표지 '-들'도 함께 다듬어 사람이 고친 글보다 자연스럽습니다."
+  },
+  "actual_models": [
+    "claude-opus-5-5"
+  ]
+}
